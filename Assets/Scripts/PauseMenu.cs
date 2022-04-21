@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject pauseMenu;
     public GameObject pauseButton;
     public bool isPaused;
@@ -23,8 +24,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PauseGame(){
-        if (MapGenerator.scoreNumber > PlayerPrefs.GetInt("HighestScore", 0))
-                PlayerPrefs.SetInt("HighestScore", (int)MapGenerator.scoreNumber);
+        // if (gameManager.score > PlayerPrefs.GetInt("HighestScore", 0))
+        //         PlayerPrefs.SetInt("HighestScore", (int) gameManager.score);
 
         pauseMenu.SetActive(true);
         pauseButton.SetActive(false);
@@ -40,7 +41,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void GoToMainMenu(){
-         Time.timeScale = 1f;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScreen");
     }
 

@@ -407,6 +407,7 @@ RectTransform:
   - {fileID: 1322242296}
   - {fileID: 28684664}
   - {fileID: 2111814364}
+  - {fileID: 1245145108}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2060,12 +2061,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513ec25ac1a6c4245827867e70044abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationUp: 45
+  gameManager: {fileID: 1881568170}
+  testing: 0
+  accelerationUp: 40
   velocityLimit: 10
   floatabilityIndex: 0.95
   gameOver: 0
   ps: {fileID: 1502786733}
-  gameOverText: {fileID: 1322242297}
+--- !u!1 &1245145107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1245145108}
+  - component: {fileID: 1245145110}
+  - component: {fileID: 1245145109}
+  m_Layer: 5
+  m_Name: CoinsText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1245145108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245145107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.98, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 302970094}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 579.46, y: -182}
+  m_SizeDelta: {x: 1123.73, y: 149.79}
+  m_Pivot: {x: 0.5, y: 0.49999997}
+--- !u!114 &1245145109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245145107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 43d59b5c638b0664db55f3a4e4d130ef, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 225
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Coins:  0'
+--- !u!222 &1245145110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245145107}
+  m_CullTransparentMesh: 1
 --- !u!1 &1278346611
 GameObject:
   m_ObjectHideFlags: 0
@@ -7386,16 +7467,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14773785946793845affeac1a73cd6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1243314448}
+  gameManager: {fileID: 1881568170}
   baseSpeed: 5
   obstaclePrefab: {fileID: 2659956773425402027, guid: 1a1d48879504a0d4a93f6859f157a25e, type: 3}
+  coinPrefab: {fileID: 506220476534158357, guid: 4eb50551e2e5df84491e13f5060c6386, type: 3}
   minYpositionObstacle: -5
   maxYpositionObstacle: 5
+  minYpositionCoin: -4
+  maxYpositionCoin: 4
   minYscaleObstacle: 2
   maxYscaleObstacle: 6
   maxXspeed: 20
   speedIncreaseFactor: 40
-  scoreText: {fileID: 1278346613}
 --- !u!4 &1566922838
 Transform:
   m_ObjectHideFlags: 0
@@ -8013,6 +8096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1881568169}
   - component: {fileID: 1881568168}
+  - component: {fileID: 1881568170}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8032,6 +8116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92525d287e10b7045b83487ffb1c4f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1881568170}
   pauseMenu: {fileID: 28684663}
   pauseButton: {fileID: 2111814363}
   isPaused: 0
@@ -8049,7 +8134,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1884160570
+
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881568167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62edcdd8afdae146963665bd5e6b43f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverText: {fileID: 1322242297}
+  gameOver: 0
+  score: 0
+  coins: 0
+  scoreText: {fileID: 1278346613}
+  coinsText: {fileID: 1245145109}
+--- !u!1 &2072647209
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

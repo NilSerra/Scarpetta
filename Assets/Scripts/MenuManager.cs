@@ -8,9 +8,12 @@ public class MenuManager : MonoBehaviour
 {
 
     public Text highestScoreText;
+    public Text totalCoinsText;
     void Start() {
         float highestScore = PlayerPrefs.GetInt("HighestScore", 0);
-        highestScoreText.text = "HIGHEST SCORE "+highestScore+" m";
+        float totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        highestScoreText.text = "HIGHEST SCORE " + highestScore+" m";
+        totalCoinsText.text = "Total Coins: " + totalCoins;
     }
     public void PlayGame(){
         SceneManager.LoadScene("MainScene");

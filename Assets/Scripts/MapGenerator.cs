@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MapGenerator : MonoBehaviour
 {
-
-    public Player player;
+    public GameManager gameManager;
     private GameObject floor;
     private GameObject ceiling;
     private GameObject floor_2;
@@ -20,14 +19,24 @@ public class MapGenerator : MonoBehaviour
     private GameObject obstacle2;
     private GameObject obstacle3;
     private GameObject obstacle4;
+    private GameObject coin;
+    private GameObject[] entityBlock1;
+    private GameObject[] entityBlock2;
+    private float entityBlock1MinX;
+    private float entityBlock2MinX;
+    private float entityBlockSeparation;
 
     public GameObject obstaclePrefab;
+    public GameObject coinPrefab;
 
     private float minXseparation = 5;
     private float maxXseparation = 7;
 
     public float minYpositionObstacle = -5;
     public float maxYpositionObstacle = 5;
+
+    public float minYpositionCoin = -4;
+    public float maxYpositionCoin = 4;
 
     public float minYscaleObstacle = 2;
     public float maxYscaleObstacle = 6;
@@ -36,59 +45,64 @@ public class MapGenerator : MonoBehaviour
 
     public int speedIncreaseFactor = 60;
 
-    public static float scoreNumber=0;
-
-    public Text scoreText;
-
     // Start is called before the first frame update
     void Start()
     {
-        scoreNumber = 0;
         floor = GameObject.Find("/MapGenerator/Floor");
         ceiling = GameObject.Find("/MapGenerator/Ceiling");
         floor_2 = GameObject.Find("/MapGenerator/Floor_2");
         ceiling_2 = GameObject.Find("/MapGenerator/Ceiling_2");
 
 
-        obstacle0 = createObstacle(10f);
-        obstacle1 = createObstacle(obstacle0.transform.position.x);
-        obstacle2 = createObstacle(obstacle1.transform.position.x);
-        obstacle3 = createObstacle(obstacle2.transform.position.x);
-        obstacle4 = createObstacle(obstacle3.transform.position.x);
+        // obstacle0 = createObstacle(10f);
+        // obstacle1 = createObstacle(obstacle0.transform.position.x);
+        // obstacle2 = createObstacle(obstacle1.transform.position.x);
+        // obstacle3 = createObstacle(obstacle2.transform.position.x);
+        // obstacle4 = createObstacle(obstacle3.transform.position.x);
 
-    }
+        coin = createCoin(20f); 
 
+        entityBlockSeparation = 30;
+        entityBlock1 = new GameObject[5];
+        entityBlock2 = new GameObject[5];
+        entityBlock1MinX = 15;
+        entityBlock2MinX = 15 + entityBlockSeparation;
+        generateEntityBlock(entityBlock1, entityBlock1MinX);
+        generateEntityBlock(entityBlock2, entityBlock2MinX);
 
-    private GameObject createObstacle(float position){
-        GameObject obst = GameObject.Instantiate(obstaclePrefab);
-        obst.transform.position = new Vector3(position+Random.Range(minXseparation, maxXseparation), Random.Range(minYpositionObstacle, maxYpositionObstacle), 0);
-        return obst;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(!player.gameOver){
+        if(!gameManager.gameOver){
             baseSpeed = Mathf.Min(maxXspeed, baseSpeed+Time.deltaTime/speedIncreaseFactor);
-
-            minXseparation = baseSpeed*0.8f;
-            maxXseparation = baseSpeed*1.2f;
-
-            scoreNumber += baseSpeed*baseSpeed*Time.deltaTime;
-            scoreText.text = "Score: "+(int)scoreNumber+" m";
-
+            gameManager.incScore(baseSpeed*baseSpeed*Time.deltaTime);
+            minXseparation = baseSpeed*0.9f;
+            maxXseparation = baseSpeed*1.3f;
 
             moveBackground(floor);
             moveBackground(floor_2);
             moveBackground(ceiling);
             moveBackground(ceiling_2);
 
-            moveObstacle(obstacle0, obstacle4);
-            moveObstacle(obstacle1, obstacle0);
-            moveObstacle(obstacle2, obstacle1);
-            moveObstacle(obstacle3, obstacle2);
-            moveObstacle(obstacle4, obstacle3);
+            moveCoin(coin);
+
+            entityBlock1MinX = moveEntityBlock(entityBlock1, entityBlock1MinX);
+            entityBlock2MinX = moveEntityBlock(entityBlock2, entityBlock2MinX);
+
+            if(entityBlock1MinX < -45){
+                entityBlock1MinX += 2 * entityBlockSeparation;
+                destroyEntityBlock(entityBlock1);
+                generateEntityBlock(entityBlock1, entityBlock1MinX);
+            }
+            else if(entityBlock2MinX < -45){
+                entityBlock2MinX += 2 * entityBlockSeparation;
+                destroyEntityBlock(entityBlock2);
+                generateEntityBlock(entityBlock2, entityBlock2MinX);
+            }
+
         }
         else{
             baseSpeed=0;
@@ -96,6 +110,40 @@ public class MapGenerator : MonoBehaviour
                 SceneManager.LoadScene("MainScene");
                 baseSpeed = 5;
             }
+        }
+    }
+
+    private GameObject createCoin(float position){
+        GameObject obst = GameObject.Instantiate(coinPrefab);
+        obst.transform.position = new Vector3(position+Random.Range(minXseparation, maxXseparation), Random.Range(minYpositionObstacle, maxYpositionObstacle), 0);
+        return obst;
+    }
+
+    private float moveEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
+        for(int i=0; i < entityBlock.Length; i++){
+            entityBlock[i].transform.position -= new Vector3(baseSpeed, 0, 0) * Time.deltaTime;
+        }
+        return entityBlockMinX - (baseSpeed * Time.deltaTime);
+    }
+
+    private void generateEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
+        for(int i=0; i < entityBlock.Length; i++){
+            entityBlock[i] = GameObject.Instantiate(obstaclePrefab);
+            if(i == 0){
+                entityBlock[i].transform.position = new Vector3(entityBlockMinX+ Random.Range(minXseparation, maxXseparation), Random.Range(minYpositionObstacle, maxYpositionObstacle), 0);
+            }
+            else{
+                entityBlock[i].transform.position = new Vector3(entityBlock[i-1].transform.position.x + Random.Range(minXseparation, maxXseparation), Random.Range(minYpositionObstacle, maxYpositionObstacle), 0);
+                if(entityBlock[i].transform.position.x > entityBlockMinX + entityBlockSeparation){
+                    entityBlock[i].SetActive(false);
+                }
+            }
+        }
+    }
+
+    private void destroyEntityBlock(GameObject[] entityBlock){
+        for(int i=0; i < entityBlock.Length; i++){
+            Destroy(entityBlock[i]);
         }
     }
 
@@ -108,13 +156,13 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
-    private void moveObstacle(GameObject obst, GameObject prevObst){
+    private void moveCoin(GameObject coin){
         
-        obst.transform.position -= new Vector3(baseSpeed, 0, 0) * Time.deltaTime;
-        if (obst.transform.position.x <= -15)
+        coin.transform.position -= new Vector3(baseSpeed, 0, 0) * Time.deltaTime;
+        if (coin.transform.position.x <= -15)
         {
-            obst.transform.position = new Vector3(prevObst.transform.position.x+Random.Range(minXseparation, maxXseparation), Random.Range(minYpositionObstacle, maxYpositionObstacle), 0);
-            obst.transform.localScale = new Vector3(obst.transform.localScale.x, Random.Range(minYscaleObstacle, maxYscaleObstacle),0);
+            coin.transform.position = new Vector3(coin.transform.position.x+20+Random.Range(minXseparation, maxXseparation), Random.Range(minYpositionCoin, maxYpositionCoin), 0);
+            coin.SetActive(true);
         }
     }
 }
