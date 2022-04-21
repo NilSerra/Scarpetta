@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class FloorMovement : MonoBehaviour
 {
 
-    public Player player;
+    public GameManager gameManager;
     private GameObject floor;
     private GameObject ceiling;
     private GameObject floor_2;
@@ -78,7 +78,7 @@ public class FloorMovement : MonoBehaviour
     void Update()
     {
         
-        if(!player.gameOver){
+        if(!gameManager.gameOver){
             baseSpeed = Mathf.Min(maxXspeed, baseSpeed+Time.deltaTime/speedIncreaseFactor);
 
             minXseparation = baseSpeed*0.8f;
