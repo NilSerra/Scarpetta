@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+using UnityEditor.Animations;
 
 public class Player : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class Player : MonoBehaviour
     public ParticleSystem ps;
     private ParticleSystem.EmissionModule em;
 
+    public Animator playerAnimator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,8 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         em = ps.emission;
         em.enabled = false;
+
+        playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
     }
 
     // Update is called once per frame
@@ -28,6 +34,12 @@ public class Player : MonoBehaviour
         if(Input.GetButton("Jump") && !gameManager.gameOver){
             body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
             em.enabled = true;
+
+            if(!playerAnimator.GetBool("isFlying")){
+                playerAnimator.Play("Jump");
+                playerAnimator.SetBool("isFlying", true);
+            }
+            
         }
         else if(Input.GetButtonUp("Jump")){
             body.AddForce(Vector2.up*0f, ForceMode2D.Force);
@@ -50,7 +62,14 @@ public class Player : MonoBehaviour
             case "Obstacle":
                 if(!testing){
                     body.velocity = new Vector2(0f,0f);
+                    playerAnimator.Play("Die");
                     gameManager.EndGame();
+                }
+                break;
+            case "Ground":
+                if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
+                    playerAnimator.Play("Land");
+                    playerAnimator.SetBool("isFlying", false);
                 }
                 break;
             default:
