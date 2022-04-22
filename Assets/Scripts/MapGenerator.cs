@@ -14,19 +14,12 @@ public class MapGenerator : MonoBehaviour
 
     public float baseSpeed = 5f;
 
-    // private GameObject obstacle0;
-    // private GameObject obstacle1;
-    // private GameObject obstacle2;
-    // private GameObject obstacle3;
-    // private GameObject obstacle4;
-    // private GameObject coin;
     private GameObject[] entityBlock1;
     private GameObject[] entityBlock2;
     private float entityBlock1MinX;
     private float entityBlock2MinX;
     private float entityBlockSeparation;
 
-    // public GameObject obstaclePrefab;
     public GameObject coinBallPrefab;
     public GameObject coinLinePrefab;
     public GameObject wall4BlocksPrefab;
@@ -35,9 +28,6 @@ public class MapGenerator : MonoBehaviour
 
     private float minXseparation = 5;
     private float maxXseparation = 7;
-
-    // private float minYpositionObstacle = -5;
-    // private float maxYpositionObstacle = 5;
     
     private float minYpositionWall4 = -2.9f;
     private float maxYpositionWall4 = 2.9f;
@@ -53,9 +43,6 @@ public class MapGenerator : MonoBehaviour
     
     private float minYpositionCoinBall = -3;
     private float maxYpositionCoinBall = 3;
-
-    // private float minYscaleObstacle = 2;
-    // private float maxYscaleObstacle = 6;
 
     public float maxXspeed = 20;
 
@@ -157,10 +144,6 @@ public class MapGenerator : MonoBehaviour
                 maxY = maxYpositionWall6;
             }
             else{
-                // entityBlock[i] = GameObject.Instantiate(obstaclePrefab);
-                // entityBlock[i].transform.localScale = new Vector3(entityBlock[i].transform.localScale.x, Random.Range(minYscaleObstacle*100, maxYscaleObstacle*100)/100,0);
-                // minY = minYpositionObstacle;
-                // maxY = maxYpositionObstacle;
                 minY = 0;
                 maxY = 0 ;
             }
