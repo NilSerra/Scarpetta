@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GameManager gameManager;
+    public GameObject projectilePrefab;
     public bool testing = false;
     public float accelerationUp=50f;
     Rigidbody2D body;
@@ -23,6 +24,13 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.S) && !gameManager.gameOver){
+            shootProjectile(body.transform.position);
+        }
+    }
+
     void FixedUpdate()
     {
         if(Input.GetButton("Jump") && !gameManager.gameOver){
@@ -57,5 +65,10 @@ public class Player : MonoBehaviour
                 break;
         }
         
+    }
+
+    public void shootProjectile(Vector3 position){
+        GameObject newProjectile = GameObject.Instantiate(projectilePrefab);
+        newProjectile.transform.position = new Vector3(position.x+0.5f, position.y, position.z);
     }
 }

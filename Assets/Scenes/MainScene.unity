@@ -1750,6 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1881568170}
+  projectilePrefab: {fileID: 7664900100991383791, guid: dbf9771e41591df4aa053d206650a2d3, type: 3}
   testing: 0
   accelerationUp: 40
   ps: {fileID: 1502786733}
@@ -6990,14 +6991,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1881568170}
   baseSpeed: 5
-  obstaclePrefab: {fileID: 2659956773425402027, guid: 1a1d48879504a0d4a93f6859f157a25e, type: 3}
-  coinPrefab: {fileID: 506220476534158357, guid: 4eb50551e2e5df84491e13f5060c6386, type: 3}
-  minYpositionObstacle: -5
-  maxYpositionObstacle: 5
-  minYpositionCoin: -4
-  maxYpositionCoin: 4
-  minYscaleObstacle: 2
-  maxYscaleObstacle: 6
+  coinBallPrefab: {fileID: 236707830581945670, guid: 05990412e65f7c14ba1723d28c18771a, type: 3}
+  coinLinePrefab: {fileID: 5812931581645596059, guid: 359f6c189826f51479213ff2a7c32545, type: 3}
+  wall4BlocksPrefab: {fileID: 8626312041113584646, guid: 55410bf30dd547749b0507becd139884, type: 3}
+  wall5BlocksPrefab: {fileID: 5523002531106344640, guid: 34407725effc954458f82dae38093f0e, type: 3}
+  wall6BlocksPrefab: {fileID: 3536352280776002934, guid: e1be4f735f1c89d488546e20c5b479c0, type: 3}
   maxXspeed: 20
   speedIncreaseFactor: 40
 --- !u!4 &1566922838
