@@ -71,6 +71,9 @@ public class Player : MonoBehaviour
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
                 }
+                else if (!gameManager.gameOver){
+                    playerAnimator.Play("Run");
+                }
                 break;
             default:
                 break;
