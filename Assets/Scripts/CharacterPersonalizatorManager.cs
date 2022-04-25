@@ -104,16 +104,16 @@ public class CharacterPersonalizatorManager : MonoBehaviour
 
         for(int i = 0; i < spriteList.Count; ++i){
             GameObject element = GameObject.Instantiate(listElementPrefab);
-            GameObject imageObject = element.transform.GetChild(0).gameObject;
-            GameObject textObject = element.transform.GetChild(1).gameObject;
-            GameObject buttonObject = element.transform.GetChild(2).gameObject;
+            GameObject imageObject = element.transform.Find("ImageItem").gameObject;
+            GameObject textObject = element.transform.Find("ItemPrice").gameObject;
+            GameObject buttonObject = element.transform.Find("BackButton").gameObject;
 
             imageObject.GetComponent<Image>().sprite = spriteList[i];
             if (imageObject.GetComponent<Image>().sprite == null){
                 imageObject.GetComponent<Image>().color = new Color32(255,255,225,0);
             }
             int price = i < spriteList.Count ? spriteCost[i] : 0;
-            textObject.GetComponent<Text>().text = price + " coins";
+            textObject.GetComponent<Text>().text = price.ToString();
             Button button = buttonObject.GetComponent<Button>();
             int tempIndex = i; //needs to be like this
             button.onClick.AddListener(() => ChangeEquipment(title, tempIndex));
@@ -127,112 +127,50 @@ public class CharacterPersonalizatorManager : MonoBehaviour
         Debug.Log(title + " pressed, item " + elementIndex);
         switch (title){
                 case "head":
-                    if (PlayerOwnsItem(GetPlayerPrefNameForItem("head", elementIndex))){
-                        headSprite.sprite = headSprites[elementIndex];
-                        SetPlayerEquipmentForItem("head", elementIndex);
-
-                    }
-                    else if (PlayerHasMoney(headSpritesCost[elementIndex])){
-                        PlayerBoughtItem(GetPlayerPrefNameForItem("head", elementIndex), headSpritesCost[elementIndex]);
-                        headSprite.sprite = headSprites[elementIndex];
-                        SetPlayerEquipmentForItem("head", elementIndex);
-
-                        Debug.Log("Item bought for " + headSpritesCost[elementIndex] + " coins.");
-                    }
-                    else{
-                        Debug.Log("Not enough coins.");
-                    }
+                    ActionButtonPressed("head", elementIndex, headSprite, null, headSprites, headSpritesCost);
                     break;
                 case "body":
-                    if (PlayerOwnsItem(GetPlayerPrefNameForItem("body", elementIndex))){
-                        bodySprite.sprite = bodySprites[elementIndex];
-                        SetPlayerEquipmentForItem("body", elementIndex);
-
-                    }
-                    else if (PlayerHasMoney(bodySpritesCost[elementIndex])){
-                        PlayerBoughtItem(GetPlayerPrefNameForItem("body", elementIndex), bodySpritesCost[elementIndex]);
-                        bodySprite.sprite = bodySprites[elementIndex];
-                        SetPlayerEquipmentForItem("body", elementIndex);
-
-                        Debug.Log("Item bought for " + bodySpritesCost[elementIndex] + " coins.");
-                    }
-                    else{
-                        Debug.Log("Not enough coins.");
-                    }
+                    ActionButtonPressed("body", elementIndex, bodySprite, null, bodySprites, bodySpritesCost);
                     break;
                 case "legs":
-                    if (PlayerOwnsItem(GetPlayerPrefNameForItem("legs", elementIndex))){
-                        leg1Sprite.sprite = legSprites[elementIndex];
-                        leg2Sprite.sprite = legSprites[elementIndex];
-                        SetPlayerEquipmentForItem("legs", elementIndex);
-
-                    }
-                    else if (PlayerHasMoney(legSpritesCost[elementIndex])){
-                        PlayerBoughtItem(GetPlayerPrefNameForItem("legs", elementIndex), legSpritesCost[elementIndex]);
-                        leg1Sprite.sprite = legSprites[elementIndex];
-                        leg2Sprite.sprite = legSprites[elementIndex];
-                        SetPlayerEquipmentForItem("legs", elementIndex);
-
-                        Debug.Log("Item bought for " + legSpritesCost[elementIndex] + " coins.");
-                    }
-                    else{
-                        Debug.Log("Not enough coins.");
-                    }
+                    ActionButtonPressed("legs", elementIndex, leg1Sprite, leg2Sprite, legSprites, legSpritesCost);
                     break;
                 case "hands": 
-                    if (PlayerOwnsItem(GetPlayerPrefNameForItem("hands", elementIndex))){
-                        hand1Sprite.sprite = handSprites[elementIndex];
-                        hand2Sprite.sprite = handSprites[elementIndex];
-                        SetPlayerEquipmentForItem("hands", elementIndex);
-
-                    }
-                    else if (PlayerHasMoney(handSpritesCost[elementIndex])){
-                        PlayerBoughtItem(GetPlayerPrefNameForItem("hands", elementIndex), handSpritesCost[elementIndex]);
-                        hand1Sprite.sprite = handSprites[elementIndex];
-                        hand2Sprite.sprite = handSprites[elementIndex];
-                        SetPlayerEquipmentForItem("hands", elementIndex);
-
-                        Debug.Log("Item bought for " + handSpritesCost[elementIndex] + " coins.");
-                    }
-                    else{
-                        Debug.Log("Not enough coins.");
-                    }
+                    ActionButtonPressed("hands", elementIndex, hand1Sprite, hand2Sprite, handSprites, handSpritesCost);
                     break;
                 case "accessory":
-                    if (PlayerOwnsItem(GetPlayerPrefNameForItem("accessory", elementIndex))){
-                        accessorySprite.sprite = accessorySprites[elementIndex];
-                        SetPlayerEquipmentForItem("accessory", elementIndex);
-
-                    }
-                    else if (PlayerHasMoney(accessorySpritesCost[elementIndex])){
-                        PlayerBoughtItem(GetPlayerPrefNameForItem("accessory", elementIndex), accessorySpritesCost[elementIndex]);
-                        accessorySprite.sprite = accessorySprites[elementIndex];
-                        SetPlayerEquipmentForItem("accessory", elementIndex);
-
-                        Debug.Log("Item bought for " + accessorySpritesCost[elementIndex] + " coins.");
-                    }
-                    else{
-                        Debug.Log("Not enough coins.");
-                    }
+                    ActionButtonPressed("accessory", elementIndex, accessorySprite, null, accessorySprites, accessorySpritesCost);
                     break;
                 case "gun":
-                    if (PlayerOwnsItem(GetPlayerPrefNameForItem("gun", elementIndex))){
-                        gunSprite.sprite = gunSprites[elementIndex];
-                        SetPlayerEquipmentForItem("gun", elementIndex);
-                    }
-                    else if (PlayerHasMoney(gunSpritesCost[elementIndex])){
-                        PlayerBoughtItem(GetPlayerPrefNameForItem("gun", elementIndex), gunSpritesCost[elementIndex]);
-                        gunSprite.sprite = gunSprites[elementIndex];
-                        SetPlayerEquipmentForItem("gun", elementIndex);
-                        Debug.Log("Item bought for " + gunSpritesCost[elementIndex] + " coins.");
-                    }
-                    else{
-                        Debug.Log("Not enough coins.");
-                    }
+                    ActionButtonPressed("gun", elementIndex, gunSprite, null, gunSprites, gunSpritesCost);
                     break;
                 default:
                     break;
             }
+    }
+
+    private void ActionButtonPressed(string bodyPart, int elementIndex, SpriteRenderer sprite, SpriteRenderer sprite2, List<Sprite> spriteList, List<int> costList){
+        if (PlayerOwnsItem(GetPlayerPrefNameForItem(bodyPart, elementIndex))){
+            sprite.sprite = spriteList[elementIndex];
+            if (sprite2 != null){
+                sprite2.sprite = spriteList[elementIndex];
+            }
+            SetPlayerEquipmentForItem(bodyPart, elementIndex);
+
+        }
+        else if (PlayerHasMoney(costList[elementIndex])){
+            PlayerBoughtItem(GetPlayerPrefNameForItem(bodyPart, elementIndex), costList[elementIndex]);
+            sprite.sprite = spriteList[elementIndex];
+            if (sprite2 != null){
+                sprite2.sprite = spriteList[elementIndex];
+            }
+            SetPlayerEquipmentForItem(bodyPart, elementIndex);
+
+            Debug.Log("Item bought for " + costList[elementIndex] + " coins.");
+        }
+        else{
+            Debug.Log("Not enough coins.");
+        }
     }
 
     public static string GetPlayerPrefNameForItem(string bodyPart, int index){
@@ -257,7 +195,6 @@ public class CharacterPersonalizatorManager : MonoBehaviour
     }
 
     private int GetPlayerEquipmentForItem(string bodyPart){
-        Debug.Log(bodyPart + "->" + PlayerPrefs.GetInt(GetPlayerEquipmentPrefName(bodyPart), 0));
         return PlayerPrefs.GetInt(GetPlayerEquipmentPrefName(bodyPart), 0);
     }
 
