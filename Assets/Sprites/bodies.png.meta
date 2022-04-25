@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1743194722132219160
-    second: bodies_1
+    second: bodies_0
   - first:
       213: -1845904194501359650
-    second: bodies_1
+    second: bodies_0
   - first:
       213: -4517594066516188971
     second: bodies_3
@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: -414415189203497752
     second: bodies_5
+  - first:
+      213: -7739112529119816975
+    second: bodies_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,15 +121,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bodies_1
+      name: bodies_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 36
-        width: 22
-        height: 30
+        x: 0
+        y: 0
+        width: 26
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +145,12 @@ TextureImporter:
       name: bodies_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 36
-        width: 22
-        height: 30
+        x: 52
+        y: 0
+        width: 26
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +166,12 @@ TextureImporter:
       name: bodies_3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 22
-        height: 30
+        x: 78
+        y: 0
+        width: 26
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +187,12 @@ TextureImporter:
       name: bodies_4
       rect:
         serializedVersion: 2
-        x: 28
-        y: 2
-        width: 22
-        height: 30
+        x: 104
+        y: 0
+        width: 26
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +208,12 @@ TextureImporter:
       name: bodies_5
       rect:
         serializedVersion: 2
-        x: 54
-        y: 2
-        width: 22
-        height: 30
+        x: 130
+        y: 0
+        width: 26
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,6 +221,27 @@ TextureImporter:
       bones: []
       spriteID: 8eccff1c493bf3af0800000000000000
       internalID: -414415189203497752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bodies_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2d9098826299490800000000000000
+      internalID: -7739112529119816975
       vertices: []
       indices: 
       edges: []
