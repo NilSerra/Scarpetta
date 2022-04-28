@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
         em.enabled = false;
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
+        playerAnimator.Play("Run");
     }
 
     // Update is called once per frame
@@ -67,13 +68,15 @@ public class Player : MonoBehaviour
                 }
                 break;
             case "Ground":
+            
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
                 }
-                else if (!gameManager.gameOver){
-                    playerAnimator.Play("Run");
-                }
+                // else if (!gameManager.gameOver){
+                //     playerAnimator.Play("Run");
+                // }
+                
                 break;
             default:
                 break;
