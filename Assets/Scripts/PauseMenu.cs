@@ -26,9 +26,12 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame(){
         // if (gameManager.score > PlayerPrefs.GetInt("HighestScore", 0))
         //         PlayerPrefs.SetInt("HighestScore", (int) gameManager.score);
-
-        pauseMenu.SetActive(true);
-        pauseButton.SetActive(false);
+        if(pauseMenu){
+            pauseMenu.SetActive(true);
+        }
+        if(pauseButton){
+            pauseButton.SetActive(false);
+        }
         Time.timeScale = 0f;
         isPaused=true;
     }

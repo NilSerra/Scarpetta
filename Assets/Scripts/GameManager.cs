@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this);
         score = 0;
         coins = 0;
         gameOverText.gameObject.SetActive(false);
