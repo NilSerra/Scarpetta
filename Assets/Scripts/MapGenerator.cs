@@ -107,7 +107,9 @@ public class MapGenerator : MonoBehaviour
 
     private float moveEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
         for(int i=0; i < entityBlock.Length; i++){
-            entityBlock[i].transform.position -= new Vector3(baseSpeed, 0, 0) * Time.deltaTime;
+            if(entityBlock[i]){
+                entityBlock[i].transform.position -= new Vector3(baseSpeed, 0, 0) * Time.deltaTime;
+            }
         }
         return entityBlockMinX - (baseSpeed * Time.deltaTime);
     }

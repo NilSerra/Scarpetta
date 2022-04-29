@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1881568170}
-  projectilePrefab: {fileID: 7664900100991383791, guid: dbf9771e41591df4aa053d206650a2d3, type: 3}
+  projectilePrefab: {fileID: 5522781717507625630, guid: dbf9771e41591df4aa053d206650a2d3, type: 3}
   testing: 0
   accelerationUp: 40
   ps: {fileID: 1502786733}
