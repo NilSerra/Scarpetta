@@ -8,14 +8,20 @@ using UnityEditor.Animations;
 public class Player : MonoBehaviour
 {
     public GameManager gameManager;
+    public GameObject projectilePrefab;
     public bool testing = false;
     public float accelerationUp=50f;
     Rigidbody2D body;
-
     public ParticleSystem ps;
     private ParticleSystem.EmissionModule em;
 
+
     public Animator playerAnimator;
+
+    private float fireRate = 0.5f;
+    private float nextFire = 0f;
+    private bool useTouch;
+
 
 
     // Start is called before the first frame update
@@ -25,29 +31,60 @@ public class Player : MonoBehaviour
         em = ps.emission;
         em.enabled = false;
 
+
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
+
+        if(SystemInfo.deviceType == DeviceType.Desktop){
+            useTouch = false;
+        }
+         else if(SystemInfo.deviceType == DeviceType.Handheld){
+            useTouch = true;
+        }
+
     }
 
     // Update is called once per frame
+    void Update()
+    {
+
+        if(!useTouch){
+            if(Input.GetKeyDown(KeyCode.S) || (Input.GetMouseButtonDown(0) && Input.mousePosition.x < Screen.width / 2.0)){
+                ShootProjectile(body.transform.position);
+            }
+
+        }
+        else{ 
+            var tapCount = Input.touchCount;
+            for (var i = 0 ; i < tapCount ; i++) {
+                var touch = Input.GetTouch(i);
+                if(touch.position.x < Screen.width / 2.0){
+                    ShootProjectile(body.transform.position);
+                }
+            }
+        }
+    }
+
     void FixedUpdate()
     {
-        if(Input.GetButton("Jump") && !gameManager.gameOver){
-            body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
-            em.enabled = true;
-
-            if(!playerAnimator.GetBool("isFlying")){
-                playerAnimator.Play("Jump");
-                playerAnimator.SetBool("isFlying", true);
+        if(!useTouch){
+            if((Input.GetButton("Jump")) || (Input.GetMouseButton(0) && Input.mousePosition.x >= Screen.width / 2.0) && !gameManager.gameOver){
+                Fly();
             }
-            
+            else{
+                em.enabled = false;
+            }
         }
-        else if(Input.GetButtonUp("Jump")){
-            body.AddForce(Vector2.up*0f, ForceMode2D.Force);
+        else{ 
             em.enabled = false;
-        }
-        else{
-            em.enabled = false;
+            var tapCount = Input.touchCount;
+            for (var i = 0 ; i < tapCount ; i++) {
+                var touch = Input.GetTouch(i);
+                if(touch.position.x >= Screen.width / 2.0 && !gameManager.gameOver){
+                    Fly();
+                    break;
+                }
+            }
         }
     }
 
@@ -80,6 +117,24 @@ public class Player : MonoBehaviour
                 break;
             default:
                 break;
+        }
+        
+    }
+
+    private void Fly(){
+        body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
+        em.enabled = true;
+        
+        if(!playerAnimator.GetBool("isFlying")){
+            playerAnimator.Play("Jump");
+            playerAnimator.SetBool("isFlying", true);
+        }
+    }
+
+    public void ShootProjectile(Vector3 position){
+        if(!gameManager.gameOver && Time.time > nextFire){
+            GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);
+            nextFire = Time.time + fireRate;
         }
         
     }
