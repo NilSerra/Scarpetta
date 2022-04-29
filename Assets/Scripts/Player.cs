@@ -122,8 +122,10 @@ public class Player : MonoBehaviour
     }
 
     private void Fly(){
-        body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
-        em.enabled = true;
+        if(!gameManager.gameOver){
+            body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
+            em.enabled = true;
+        }
         
         if(!playerAnimator.GetBool("isFlying")){
             playerAnimator.Play("Jump");
