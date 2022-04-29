@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
                 var touch = Input.GetTouch(i);
                 if(touch.position.x >= Screen.width / 2.0 && !gameManager.gameOver){
                     Fly();
+                    break;
                 }
             }
         }
