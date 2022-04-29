@@ -140,7 +140,7 @@ public class MapGenerator : MonoBehaviour
                 minY = minYpositionWall5;
                 maxY = maxYpositionWall5;
             }
-            else if(random > 0){
+            else if(random >= 0){
                 entityBlock[i] = GameObject.Instantiate(wall6BlocksPrefab);
                 minY = minYpositionWall6;
                 maxY = maxYpositionWall6;
