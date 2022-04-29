@@ -40,8 +40,14 @@ public class Player : MonoBehaviour
                 ShootProjectile(body.transform.position);
             }
         }
-        else if(Input.GetTouch(0).position.x < Screen.width / 2.0){
-            ShootProjectile(body.transform.position);
+        else{ 
+            var tapCount = Input.touchCount;
+            for (var i = 0 ; i < tapCount ; i++) {
+                var touch = Input.GetTouch(i);
+                if(touch.position.x < Screen.width / 2.0){
+                    ShootProjectile(body.transform.position);
+                }
+            }
         }
     }
 
@@ -51,12 +57,19 @@ public class Player : MonoBehaviour
             if((Input.GetButton("Jump")) || (Input.GetMouseButton(0) && Input.mousePosition.x >= Screen.width / 2.0) && !gameManager.gameOver){
                 Fly();
             }
+            else{
+                em.enabled = false;
+            }
         }
-        else if(Input.GetTouch(0).position.x >= Screen.width / 2.0  && !gameManager.gameOver){
-            Fly();
-        }
-        else{
+        else{ 
             em.enabled = false;
+            var tapCount = Input.touchCount;
+            for (var i = 0 ; i < tapCount ; i++) {
+                var touch = Input.GetTouch(i);
+                if(touch.position.x >= Screen.width / 2.0 && !gameManager.gameOver){
+                    Fly();
+                }
+            }
         }
     }
 
