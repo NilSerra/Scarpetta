@@ -19,6 +19,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void GoToOptions(){
+        SceneManager.LoadScene("CharacterPersonalizationScreen");
+    }
+
+
     public void QuitGame(){
         Application.Quit();
     }
