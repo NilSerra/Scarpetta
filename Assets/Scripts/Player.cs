@@ -16,13 +16,9 @@ public class Player : MonoBehaviour
     Rigidbody2D body;
     public ParticleSystem ps;
     private ParticleSystem.EmissionModule em;
-
-
     public Animator playerAnimator;
-
     private float fireRate = 0.5f;
     private float nextFire = 0f;
-    private bool useTouch;
 
 
 
@@ -37,19 +33,12 @@ public class Player : MonoBehaviour
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
 
-        if(SystemInfo.deviceType == DeviceType.Desktop){
-            useTouch = false;
-        }
-         else if(SystemInfo.deviceType == DeviceType.Handheld){
-            useTouch = true;
-        }
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!useTouch){
+        if(!gameManager.useTouch){
             if(Input.GetKeyDown(KeyCode.S) || (Input.GetMouseButtonDown(0) && Input.mousePosition.x < Screen.width / 2.0)){
                 ShootProjectile(body.transform.position);
             }
@@ -67,7 +56,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(!useTouch){
+        if(!gameManager.useTouch){
             if((Input.GetButton("Jump")) || (Input.GetMouseButton(0) && Input.mousePosition.x >= Screen.width / 2.0) && !gameManager.gameOver){
                 Fly();
             }
@@ -93,8 +82,7 @@ public class Player : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Coin":
-                // body.velocity = new Vector2(0f,10f);
-                gameManager.incCoins();
+                gameManager.IncCoins();
                 collision.gameObject.SetActive(false);
                 break;
             case "Obstacle":
@@ -117,9 +105,6 @@ public class Player : MonoBehaviour
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
                 }
-                // else if (!gameManager.gameOver){
-                //     playerAnimator.Play("Run");
-                // }
                 break;
             case "Shield":
                 hasShield = true;
@@ -127,13 +112,20 @@ public class Player : MonoBehaviour
                 break;
             case "Gun":
                 ammo += 3;
-                gameManager.setAmmo(ammo);
+                gameManager.SetAmmo(ammo);
+                collision.gameObject.SetActive(false);
+                break;
+            case "ArrowUp":
+                body.velocity = new Vector2(0f,12f);
+                collision.gameObject.SetActive(false);
+                break;
+            case "ArrowDown":
+                body.velocity = new Vector2(0f,-10f);
                 collision.gameObject.SetActive(false);
                 break;
             default:
                 break;
         }
-        
     }
 
     private void Fly(){
@@ -151,7 +143,7 @@ public class Player : MonoBehaviour
     public void ShootProjectile(Vector3 position){
         if(ammo > 0 && !gameManager.gameOver && Time.time > nextFire){
             ammo -= 1;
-            gameManager.setAmmo(ammo);
+            gameManager.SetAmmo(ammo);
             GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
