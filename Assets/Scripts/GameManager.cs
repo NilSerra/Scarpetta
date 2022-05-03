@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
             scoreText.text = "Score: " + (int) score + " m";
             coinsText.text = "Coins:  " + coins;
             ammoText.text = "Bullets:  " + ammo;
+
         }
     }
 
