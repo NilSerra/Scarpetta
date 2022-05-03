@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         if(!gameOver && SceneManager.GetActiveScene().name == "HelpSystem"){
             scoreText.text = "Score: " + (int) score + " m";
             coinsText.text = "Coins:  " + coins;
+            ammoText.text = "Bullets:  " + ammo;
         }
     }
 
