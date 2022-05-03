@@ -111,7 +111,7 @@ public class MapGenerator : MonoBehaviour
                 baseSpeed = 5;
             }
         }
-        playerAnimator.SetFloat("runningSpeed", Mathf.Clamp(baseSpeed-4, 1, 4));
+        playerAnimator.SetFloat("runningSpeed", Mathf.Clamp(baseSpeed/5.0f, 1, 4));
     }
 
     private float moveEntityBlock(GameObject[] entityBlock, float entityBlockMinX){

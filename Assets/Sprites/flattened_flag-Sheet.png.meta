@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: 436dae094cc1cc84d97f63a56198b1ca
+guid: 970beb459dbec7c40bc1983bf8c38112
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8400935615395884938
-    second: arrows_up-Sheet_0
+      213: 3779308099568569956
+    second: flattened_flag-Sheet_0
   - first:
-      213: 5965581997259923514
-    second: arrows_up-Sheet_1
+      213: 115771972740965514
+    second: flattened_flag-Sheet_1
   - first:
-      213: 3806061476190491353
-    second: arrows_up-Sheet_2
+      213: 6689872521978140170
+    second: flattened_flag-Sheet_2
   - first:
-      213: 6520370963079606799
-    second: arrows_up-Sheet_3
+      213: -4224795127507104829
+    second: flattened_flag-Sheet_3
+  - first:
+      213: 7301112068287132475
+    second: flattened_flag-Sheet_4
+  - first:
+      213: 8437790553218112993
+    second: flattened_flag-Sheet_5
+  - first:
+      213: 3590405522166792768
+    second: flattened_flag-Sheet_6
+  - first:
+      213: 7825219894754238309
+    second: flattened_flag-Sheet_7
+  - first:
+      213: -3152746186415407010
+    second: flattened_flag-Sheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrows_up-Sheet_0
+      name: flattened_flag-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 62
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670966f5191e96b80800000000000000
-      internalID: -8400935615395884938
+      spriteID: 46e8a8361bcc27430800000000000000
+      internalID: 3779308099568569956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrows_up-Sheet_1
+      name: flattened_flag-Sheet_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 62
         y: 0
-        width: 128
-        height: 128
+        width: 62
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a30a42138310ac250800000000000000
-      internalID: 5965581997259923514
+      spriteID: a84eb2eeefd4b9100800000000000000
+      internalID: 115771972740965514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrows_up-Sheet_2
+      name: flattened_flag-Sheet_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 124
         y: 0
-        width: 128
-        height: 128
+        width: 62
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d212a94fb8d1d430800000000000000
-      internalID: 3806061476190491353
+      spriteID: a0657214d9337dc50800000000000000
+      internalID: 6689872521978140170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arrows_up-Sheet_3
+      name: flattened_flag-Sheet_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 186
         y: 0
-        width: 128
-        height: 128
+        width: 62
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +207,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f02b12238d20d7a50800000000000000
-      internalID: 6520370963079606799
+      spriteID: 3cb432827338e55c0800000000000000
+      internalID: -4224795127507104829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flattened_flag-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33729f3eb2c25560800000000000000
+      internalID: 7301112068287132475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flattened_flag-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed56b58dcd091570800000000000000
+      internalID: 8437790553218112993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flattened_flag-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0424a54bccea3d130800000000000000
+      internalID: 3590405522166792768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flattened_flag-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f5524d804c89c60800000000000000
+      internalID: 7825219894754238309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flattened_flag-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e500eb32c023f34d0800000000000000
+      internalID: -3152746186415407010
       vertices: []
       indices: 
       edges: []

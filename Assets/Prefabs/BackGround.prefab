@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4072191109795621353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.33, z: 10}
+  m_LocalPosition: {x: 0, y: 4.2, z: 10}
   m_LocalScale: {x: -10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 4072191110207428675}
@@ -381,7 +381,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   widthThresold: {x: -40, y: 0}
   layer0: {fileID: 4072191109795621353}
-  layer0Parallax: 0.9
+  layer0Parallax: 1
   layer1: {fileID: 4072191110173270632}
   layer1Parallax: 0.7
   layer2: {fileID: 4072191110114836187}
@@ -389,7 +389,7 @@ MonoBehaviour:
   layer3: {fileID: 4072191110536643635}
   layer3Parallax: 0.2
   floor: {fileID: 4072191110861845917}
-  floorParallax: 0.9
+  floorParallax: 1
   background: {fileID: 4072191109622706196}
   map: {fileID: 0}
 --- !u!1 &4072191110536643635
@@ -581,7 +581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4072191110861845917}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 6}
+  m_LocalPosition: {x: 0, y: -0.7, z: 6}
   m_LocalScale: {x: -10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 4072191110207428675}
