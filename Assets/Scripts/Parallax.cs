@@ -14,10 +14,15 @@ public class Parallax : MonoBehaviour
     public float layer2Parallax = 0.4f;
     public GameObject layer3;
     public float layer3Parallax = 0.2f;
+
+    public GameObject floor;
+    public float floorParallax = 1f;
     private GameObject layer0_copy;
     private GameObject layer1_copy;
     private GameObject layer2_copy;
     private GameObject layer3_copy;
+
+    private GameObject floor_copy;
     public GameObject background;
 
     public MapGenerator map;
@@ -32,6 +37,7 @@ public class Parallax : MonoBehaviour
         layer1_copy = cloneBackgroundElement(layer1);
         layer2_copy = cloneBackgroundElement(layer2);
         layer3_copy = cloneBackgroundElement(layer3);
+        floor_copy = cloneBackgroundElement(floor);
     }
 
     private GameObject cloneBackgroundElement(GameObject layer){
@@ -51,11 +57,13 @@ public class Parallax : MonoBehaviour
         moveBackground(layer1, layer1_copy, speed, layer1Parallax);
         moveBackground(layer2, layer2_copy, speed, layer2Parallax);
         moveBackground(layer3, layer3_copy, speed, layer3Parallax);
+        moveBackground(floor, floor_copy, speed, floorParallax);
 
         moveBackground(layer0_copy, layer0, speed, layer0Parallax);
         moveBackground(layer1_copy, layer1, speed, layer1Parallax);
         moveBackground(layer2_copy, layer2, speed, layer2Parallax);
         moveBackground(layer3_copy, layer3, speed, layer3Parallax);
+        moveBackground(floor_copy, floor, speed, floorParallax);
     }
 
     private void moveBackground(GameObject b1, GameObject b2, float speed, float parallaxFactor){

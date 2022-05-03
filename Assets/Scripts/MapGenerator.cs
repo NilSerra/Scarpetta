@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MapGenerator : MonoBehaviour
 {
+
+    public GameObject player;
+    public Animator playerAnimator;
     public GameManager gameManager;
     private GameObject floor;
     private GameObject ceiling;
@@ -48,6 +51,9 @@ public class MapGenerator : MonoBehaviour
         GenerateEntityBlock(entityBlock1, entityBlock1MinX);
         GenerateEntityBlock(entityBlock2, entityBlock2MinX);
 
+        playerAnimator = player.GetComponentInChildren(typeof(Animator)) as Animator;
+        playerAnimator.SetFloat("runningSpeed", 1);
+
     }
 
     // Update is called once per frame
@@ -83,6 +89,7 @@ public class MapGenerator : MonoBehaviour
                 baseSpeed = 5;
             }
         }
+        playerAnimator.SetFloat("runningSpeed", Mathf.Clamp(baseSpeed/5.0f, 1, 4));
     }
 
     private float MoveEntityBlock(GameObject[] entityBlock, float entityBlockMinX){

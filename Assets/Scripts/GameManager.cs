@@ -29,9 +29,9 @@ public class GameManager : MonoBehaviour
     void FixedUpdate()
     {
         if(!gameOver && SceneManager.GetActiveScene().name == "MainScene"){
-            scoreText.text = "Score: " + (int) score + " m";
-            coinsText.text = "Coins:  " + coins;
-            ammoText.text = "Bullets:  " + ammo;
+            scoreText.text = ((int) score).ToString();
+            coinsText.text = coins.ToString();
+            ammoText.text = ammo.ToString();
         }
         // do the same for the help system scene
         if(!gameOver && SceneManager.GetActiveScene().name == "HelpSystem"){
