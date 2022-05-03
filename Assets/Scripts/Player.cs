@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+using UnityEditor.Animations;
 
 public class Player : MonoBehaviour
 {
@@ -13,9 +15,13 @@ public class Player : MonoBehaviour
     public ParticleSystem ps;
     private ParticleSystem.EmissionModule em;
 
+
+    public Animator playerAnimator;
+
     private float fireRate = 0.5f;
     private float nextFire = 0f;
     private bool useTouch;
+
 
 
     // Start is called before the first frame update
@@ -24,21 +30,29 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         em = ps.emission;
         em.enabled = false;
+
+
+        playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
+        playerAnimator.Play("Run");
+
         if(SystemInfo.deviceType == DeviceType.Desktop){
             useTouch = false;
         }
          else if(SystemInfo.deviceType == DeviceType.Handheld){
             useTouch = true;
         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if(!useTouch){
             if(Input.GetKeyDown(KeyCode.S) || (Input.GetMouseButtonDown(0) && Input.mousePosition.x < Screen.width / 2.0)){
                 ShootProjectile(body.transform.position);
             }
+
         }
         else{ 
             var tapCount = Input.touchCount;
@@ -86,8 +100,20 @@ public class Player : MonoBehaviour
             case "Obstacle":
                 if(!testing){
                     body.velocity = new Vector2(0f,0f);
+                    playerAnimator.Play("Die");
                     gameManager.EndGame();
                 }
+                break;
+            case "Ground":
+            
+                if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
+                    playerAnimator.Play("Land");
+                    playerAnimator.SetBool("isFlying", false);
+                }
+                // else if (!gameManager.gameOver){
+                //     playerAnimator.Play("Run");
+                // }
+                
                 break;
             default:
                 break;
@@ -96,8 +122,15 @@ public class Player : MonoBehaviour
     }
 
     private void Fly(){
-        body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
-        em.enabled = true;
+        if(!gameManager.gameOver){
+            body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
+            em.enabled = true;
+        }
+        
+        if(!playerAnimator.GetBool("isFlying")){
+            playerAnimator.Play("Jump");
+            playerAnimator.SetBool("isFlying", true);
+        }
     }
 
     public void ShootProjectile(Vector3 position){
