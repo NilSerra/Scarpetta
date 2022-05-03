@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(!gameOver && SceneManager.GetActiveScene().name == "MainScene"){
-            scoreText.text = "Score: " + (int) score + " m";
-            coinsText.text = "Coins:  " + coins;
+            scoreText.text = "m " + (int) score;
+            coinsText.text = coins.ToString();
         }
     }
 
