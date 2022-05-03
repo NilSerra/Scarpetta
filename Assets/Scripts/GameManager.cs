@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     //Game Over
     public Text gameOverText;
     public bool gameOver = false;
-
     //Score
     public float score;
     public int coins;
@@ -34,17 +33,23 @@ public class GameManager : MonoBehaviour
             coinsText.text = coins.ToString();
             ammoText.text = ammo.ToString();
         }
+        // do the same for the help system scene
+        if(!gameOver && SceneManager.GetActiveScene().name == "HelpSystem"){
+            scoreText.text = "Score: " + (int) score + " m";
+            coinsText.text = "Coins:  " + coins;
+            ammoText.text = "Bullets:  " + ammo;
+        }
     }
 
-    public void incScore(float currentScore){
+    public void IncScore(float currentScore){
         score += currentScore;
     }
 
-    public void incCoins(){
+    public void IncCoins(){
         coins++;
     }
 
-    public void setAmmo(int currentAmmo){
+    public void SetAmmo(int currentAmmo){
         ammo = currentAmmo;
     }
     public void EndGame() {

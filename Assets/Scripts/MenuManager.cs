@@ -23,6 +23,10 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("CharacterPersonalizationScreen");
     }
 
+    public void PlayTutorial(){
+        SceneManager.LoadScene("HelpSystem");
+    }
+
 
     public void QuitGame(){
         Application.Quit();
