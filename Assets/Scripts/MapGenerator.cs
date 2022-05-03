@@ -27,8 +27,6 @@ public class MapGenerator : MonoBehaviour
     public GameObject wall4BlocksPrefab;
     public GameObject wall5BlocksPrefab;
     public GameObject wall6BlocksPrefab;
-    public GameObject shieldPrefab;
-    public GameObject gunPowerUpPrefab;
 
     private float minXseparation = 5;
     private float maxXseparation = 7;
@@ -147,20 +145,10 @@ public class MapGenerator : MonoBehaviour
                 minY = minYpositionWall5;
                 maxY = maxYpositionWall5;
             }
-            else if(random > 5){
+            else if(random > 0){
                 entityBlock[i] = GameObject.Instantiate(wall6BlocksPrefab);
                 minY = minYpositionWall6;
                 maxY = maxYpositionWall6;
-            }
-            else if(random > 2){
-                entityBlock[i] = GameObject.Instantiate(shieldPrefab);
-                minY = minYpositionCoinLine;
-                maxY = maxYpositionCoinLine;
-            }
-            else if(random >= 0){
-                entityBlock[i] = GameObject.Instantiate(gunPowerUpPrefab);
-                minY = minYpositionCoinLine;
-                maxY = maxYpositionCoinLine;
             }
             else{
                 minY = 0;

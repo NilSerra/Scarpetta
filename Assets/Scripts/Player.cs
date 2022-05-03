@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     public GameManager gameManager;
     public GameObject projectilePrefab;
     public bool testing = false;
-    public bool hasShield = false;
-    public int ammo = 0;
     public float accelerationUp=50f;
     Rigidbody2D body;
     public ParticleSystem ps;
@@ -49,10 +47,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(!useTouch){
             if(Input.GetKeyDown(KeyCode.S) || (Input.GetMouseButtonDown(0) && Input.mousePosition.x < Screen.width / 2.0)){
                 ShootProjectile(body.transform.position);
             }
+
         }
         else{ 
             var tapCount = Input.touchCount;
@@ -99,20 +99,13 @@ public class Player : MonoBehaviour
                 break;
             case "Obstacle":
                 if(!testing){
-                    if(hasShield){
-                        hasShield = false;
-                        // Destroy block animation
-                        collision.gameObject.SetActive(false);
-                    }
-                    else{
-                        body.velocity = new Vector2(0f,0f);
-                        playerAnimator.Play("Die");
-                        gameManager.EndGame();
-                    }
-                    
+                    body.velocity = new Vector2(0f,0f);
+                    playerAnimator.Play("Die");
+                    gameManager.EndGame();
                 }
                 break;
             case "Ground":
+            
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
@@ -120,15 +113,7 @@ public class Player : MonoBehaviour
                 // else if (!gameManager.gameOver){
                 //     playerAnimator.Play("Run");
                 // }
-                break;
-            case "Shield":
-                hasShield = true;
-                collision.gameObject.SetActive(false);
-                break;
-            case "Gun":
-                ammo += 3;
-                gameManager.setAmmo(ammo);
-                collision.gameObject.SetActive(false);
+                
                 break;
             default:
                 break;
@@ -137,10 +122,8 @@ public class Player : MonoBehaviour
     }
 
     private void Fly(){
-        if(!gameManager.gameOver){
-            body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
-            em.enabled = true;
-        }
+        body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
+        em.enabled = true;
         
         if(!playerAnimator.GetBool("isFlying")){
             playerAnimator.Play("Jump");
@@ -149,9 +132,7 @@ public class Player : MonoBehaviour
     }
 
     public void ShootProjectile(Vector3 position){
-        if(ammo > 0 && !gameManager.gameOver && Time.time > nextFire){
-            ammo -= 1;
-            gameManager.setAmmo(ammo);
+        if(!gameManager.gameOver && Time.time > nextFire){
             GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
