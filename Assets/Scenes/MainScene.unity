@@ -1391,6 +1391,8 @@ MonoBehaviour:
   layer3Parallax: 0.2
   background: {fileID: 1566688589}
   map: {fileID: 1566922837}
+  tutorial: {fileID: 0}
+  isTutorial: 0
 --- !u!4 &983280922
 Transform:
   m_ObjectHideFlags: 0
@@ -7050,8 +7052,13 @@ MonoBehaviour:
   wall4BlocksPrefab: {fileID: 8626312041113584646, guid: 55410bf30dd547749b0507becd139884, type: 3}
   wall5BlocksPrefab: {fileID: 5523002531106344640, guid: 34407725effc954458f82dae38093f0e, type: 3}
   wall6BlocksPrefab: {fileID: 3536352280776002934, guid: e1be4f735f1c89d488546e20c5b479c0, type: 3}
+  doubleWallPrefab: {fileID: 5598875082786253857, guid: e234d7928b5cff64387c773ea8bf99ba, type: 3}
+  doubleWall1Prefab: {fileID: 5142028847831297377, guid: f51ee9eda995184499807286651ea769, type: 3}
+  doubleWall2Prefab: {fileID: 6507367244384799213, guid: 2815eeac91d94b045950781166e8241c, type: 3}
   shieldPrefab: {fileID: 3271492532639100017, guid: 545907d1f1463ad479d5adae846755e8, type: 3}
   gunPowerUpPrefab: {fileID: 1697878235714752504, guid: 111985949ec2d834ba4debcc8d8e63c3, type: 3}
+  arrowUpPrefab: {fileID: 4744154613839282912, guid: e527d3302b5fc0240ba5f26497bd6ceb, type: 3}
+  arrowDownPrefab: {fileID: 7528409414495124365, guid: 637cf2e59f78a4d4f9dfbddad66a31ab, type: 3}
   maxXspeed: 20
   speedIncreaseFactor: 40
 --- !u!4 &1566922838

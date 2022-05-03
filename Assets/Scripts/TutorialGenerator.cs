@@ -17,6 +17,8 @@ public class TutorialGenerator : MonoBehaviour
     public GameObject wall6BlocksPrefab;
     public GameObject shieldPrefab;
     public GameObject gunPowerUpPrefab;
+    public GameObject arrowUpPrefab;
+    public GameObject arrowDownPrefab;
     public float maxXspeed = 20;
     public int speedIncreaseFactor = 60;
 
@@ -30,6 +32,7 @@ public class TutorialGenerator : MonoBehaviour
     public bool hint4shown = false;
     public bool hint5shown = false;
     public bool hint6shown = false;
+    public bool hint7shown = false;
 
 
     // Start is called before the first frame update
@@ -43,7 +46,7 @@ public class TutorialGenerator : MonoBehaviour
         floor_2 = GameObject.Find("/TutorialGenerator/Floor_2");
         ceiling_2 = GameObject.Find("/TutorialGenerator/Ceiling_2");
 
-        entityBlock = new GameObject[7];
+        entityBlock = new GameObject[9];
         entityBlockMinX = 15;
 
         generateEntityBlock(entityBlock, entityBlockMinX);
@@ -56,7 +59,7 @@ public class TutorialGenerator : MonoBehaviour
         if (!gameManager.gameOver){
 
             baseSpeed = Mathf.Min(maxXspeed, baseSpeed+Time.deltaTime/speedIncreaseFactor);
-            gameManager.incScore(baseSpeed*baseSpeed*Time.deltaTime);
+            gameManager.IncScore(baseSpeed*baseSpeed*Time.deltaTime);
 
             moveBackground(floor);
             moveBackground(floor_2);
@@ -80,7 +83,7 @@ public class TutorialGenerator : MonoBehaviour
     private void generateEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
         for(int i=0; i < entityBlock.Length; i++){
             
-            // put wall, wall, coinLine, shield, wall, gunPowerUp, wall in the array
+            // put wall, wall, coinLine, shield, wall, gunPowerUp, wall, arrow up, arrow down
             if(i==0){
                 entityBlock[i] = GameObject.Instantiate(wall5BlocksPrefab);
             }
@@ -101,6 +104,12 @@ public class TutorialGenerator : MonoBehaviour
             }
             else if(i==6){
                 entityBlock[i] = GameObject.Instantiate(wall6BlocksPrefab);
+            }
+            else if(i==7){
+                entityBlock[i] = GameObject.Instantiate(arrowUpPrefab);
+            }
+            else if(i==8){
+                entityBlock[i] = GameObject.Instantiate(arrowDownPrefab);
             }
 
             //Placing the entities in the next entityBlock
@@ -124,6 +133,12 @@ public class TutorialGenerator : MonoBehaviour
             }
             else if(i == 6){
                 entityBlock[i].transform.position = new Vector3(entityBlock[i-1].transform.position.x + 18, -2.1f, 0);
+            }
+            else if(i == 7){
+                entityBlock[i].transform.position = new Vector3(entityBlock[i-1].transform.position.x + 16, 0, 0);
+            }
+            else if(i == 8){
+                entityBlock[i].transform.position = new Vector3(entityBlock[i-1].transform.position.x + 16, 0, 0);
             }
         }
     }
@@ -214,7 +229,18 @@ public class TutorialGenerator : MonoBehaviour
             }
         }
 
-        if (entityBlock[6].transform.position.x <= -14){
+        if (entityBlock[7].transform.position.x <= 6 && !hint7shown){
+            Time.timeScale = 0;
+            popupPanel.SetActive(true);
+            popupPanel.GetComponentInChildren<Text>().text = "Be careful with arrow up and down";
+            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                popupPanel.SetActive(false);
+                Time.timeScale = 1;
+                hint7shown = true;
+            }
+        }
+
+        if (entityBlock[8].transform.position.x <= -14){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
             popupPanel.GetComponentInChildren<Text>().text = "You have completed the tutorial";

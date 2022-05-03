@@ -2076,21 +2076,10 @@ MonoBehaviour:
   wall6BlocksPrefab: {fileID: 3536352280776002934, guid: e1be4f735f1c89d488546e20c5b479c0, type: 3}
   shieldPrefab: {fileID: 3271492532639100017, guid: 545907d1f1463ad479d5adae846755e8, type: 3}
   gunPowerUpPrefab: {fileID: 1697878235714752504, guid: 111985949ec2d834ba4debcc8d8e63c3, type: 3}
+  arrowUpPrefab: {fileID: 4744154613839282912, guid: e527d3302b5fc0240ba5f26497bd6ceb, type: 3}
+  arrowDownPrefab: {fileID: 7528409414495124365, guid: 637cf2e59f78a4d4f9dfbddad66a31ab, type: 3}
   maxXspeed: 20
   speedIncreaseFactor: 60
-  entityWallX: 0
-  entityWallY: 0
-  wall: {fileID: 0}
-  wall2: {fileID: 0}
-  entityCoinLineX: 0
-  entityCoinLineY: 0
-  coinLine: {fileID: 0}
-  entityShieldX: 0
-  entityShieldY: 0
-  shield: {fileID: 0}
-  entityGunPowerUpX: 0
-  entityGunPowerUpY: 0
-  gunPowerUp: {fileID: 0}
   entityBlock: []
   popupPanel: {fileID: 1922745664}
   popupPanel2: {fileID: 1603241446}
@@ -2100,6 +2089,7 @@ MonoBehaviour:
   hint4shown: 0
   hint5shown: 0
   hint6shown: 0
+  hint7shown: 0
 --- !u!4 &1239715923
 Transform:
   m_ObjectHideFlags: 0
