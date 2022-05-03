@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     //Game Over
     public Text gameOverText;
     public bool gameOver = false;
-
     //Score
     public float score;
     public int coins;
@@ -36,15 +35,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void incScore(float currentScore){
+    public void IncScore(float currentScore){
         score += currentScore;
     }
 
-    public void incCoins(){
+    public void IncCoins(){
         coins++;
     }
 
-    public void setAmmo(int currentAmmo){
+    public void SetAmmo(int currentAmmo){
         ammo = currentAmmo;
     }
     public void EndGame() {
