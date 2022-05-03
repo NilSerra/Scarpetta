@@ -8,6 +8,7 @@ public class MapGenerator : MonoBehaviour
 {
 
     public GameObject player;
+    public Animator playerAnimator;
     public GameManager gameManager;
     private GameObject floor;
     private GameObject ceiling;
@@ -66,7 +67,8 @@ public class MapGenerator : MonoBehaviour
         generateEntityBlock(entityBlock1, entityBlock1MinX);
         generateEntityBlock(entityBlock2, entityBlock2MinX);
 
-        player.playerAnimator.SetFloat("runningSpeed", 1);
+        playerAnimator = player.GetComponentInChildren(typeof(Animator)) as Animator;
+        playerAnimator.SetFloat("runningSpeed", 1);
 
     }
 
@@ -107,7 +109,7 @@ public class MapGenerator : MonoBehaviour
                 baseSpeed = 5;
             }
         }
-        player.playerAnimator.SetFloat("runningSpeed", baseSpeed);
+        playerAnimator.SetFloat("runningSpeed", Mathf.Clamp(baseSpeed-4, 1, 4));
     }
 
     private float moveEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
