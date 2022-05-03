@@ -14,21 +14,26 @@ public class GameManager : MonoBehaviour
     //Score
     public float score;
     public int coins;
+    public int ammo;
     public Text scoreText;
     public Text coinsText;
+    public Text ammoText;
 
     void Start()
     {
         score = 0;
         coins = 0;
+        ammo = 0;
         gameOverText.gameObject.SetActive(false);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(!gameOver && SceneManager.GetActiveScene().name == "MainScene"){
-            scoreText.text = "m " + (int) score;
-            coinsText.text = coins.ToString();
+            scoreText.text = "Score: " + (int) score + " m";
+            coinsText.text = "Coins:  " + coins;
+            ammoText.text = "Bullets:  " + ammo;
+
         }
     }
 
@@ -40,6 +45,9 @@ public class GameManager : MonoBehaviour
         coins++;
     }
 
+    public void setAmmo(int currentAmmo){
+        ammo = currentAmmo;
+    }
     public void EndGame() {
         if (score > PlayerPrefs.GetInt("HighestScore", 0))
             PlayerPrefs.SetInt("HighestScore", (int) score);
