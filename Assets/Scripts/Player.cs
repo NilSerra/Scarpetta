@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     public Animator playerAnimator;
     private float fireRate = 0.5f;
     private float nextFire = 0f;
-    private bool useTouch;
 
 
 
@@ -34,19 +33,12 @@ public class Player : MonoBehaviour
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
 
-        if(SystemInfo.deviceType == DeviceType.Desktop){
-            useTouch = false;
-        }
-         else if(SystemInfo.deviceType == DeviceType.Handheld){
-            useTouch = true;
-        }
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!useTouch){
+        if(!gameManager.useTouch){
             if(Input.GetKeyDown(KeyCode.S) || (Input.GetMouseButtonDown(0) && Input.mousePosition.x < Screen.width / 2.0)){
                 ShootProjectile(body.transform.position);
             }
@@ -64,7 +56,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(!useTouch){
+        if(!gameManager.useTouch){
             if((Input.GetButton("Jump")) || (Input.GetMouseButton(0) && Input.mousePosition.x >= Screen.width / 2.0) && !gameManager.gameOver){
                 Fly();
             }

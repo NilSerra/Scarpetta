@@ -18,12 +18,21 @@ public class GameManager : MonoBehaviour
     public Text coinsText;
     public Text ammoText;
 
+    public bool useTouch;
+
     void Start()
     {
         score = 0;
         coins = 0;
         ammo = 0;
         gameOverText.gameObject.SetActive(false);
+        
+        if(SystemInfo.deviceType == DeviceType.Desktop){
+            useTouch = false;
+        }
+         else if(SystemInfo.deviceType == DeviceType.Handheld){
+            useTouch = true;
+        }
     }
 
     void FixedUpdate()

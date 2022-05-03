@@ -166,7 +166,12 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[0].transform.position.x <= 6 && !hint1shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Press space to fly and avoid walls";
+            if (gameManager.useTouch){
+                popupPanel.GetComponentInChildren<Text>().text = "Tap on the right to fly and avoid walls";
+            }
+            else{
+                popupPanel.GetComponentInChildren<Text>().text = "Press space to fly and avoid walls";
+            }
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
@@ -210,7 +215,7 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[5].transform.position.x <= 6 && !hint5shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Collect gun power up to shoot";
+            popupPanel.GetComponentInChildren<Text>().text = "Collect gun to shoot";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
@@ -221,7 +226,12 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[6].transform.position.x <= 6 && !hint6shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Press s to shoot and destroy walls";
+            if (gameManager.useTouch){
+                popupPanel.GetComponentInChildren<Text>().text = "Tap on the left to shoot and destroy walls";
+            }
+            else{
+                popupPanel.GetComponentInChildren<Text>().text = "Press s to shoot and destroy walls";
+            }
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.S)){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
