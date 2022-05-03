@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
             scoreText.text = "Score: " + (int) score + " m";
             coinsText.text = "Coins:  " + coins;
         }
+        // do the same for the help system scene
+        if(!gameOver && SceneManager.GetActiveScene().name == "HelpSystem"){
+            scoreText.text = "Score: " + (int) score + " m";
+            coinsText.text = "Coins:  " + coins;
+        }
     }
 
     public void incScore(float currentScore){

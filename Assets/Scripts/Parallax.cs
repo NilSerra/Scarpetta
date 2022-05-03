@@ -21,6 +21,9 @@ public class Parallax : MonoBehaviour
     public GameObject background;
 
     public MapGenerator map;
+    public TutorialGenerator tutorial;
+
+    public bool isTutorial = false;
 
     void Start()
     {
@@ -39,6 +42,10 @@ public class Parallax : MonoBehaviour
 
     void Update() {
         float speed = map == null ? 5 : map.baseSpeed;
+        if (isTutorial)
+        {
+            speed = tutorial.baseSpeed;
+        }
 
         moveBackground(layer0, layer0_copy, speed, layer0Parallax);
         moveBackground(layer1, layer1_copy, speed, layer1Parallax);
