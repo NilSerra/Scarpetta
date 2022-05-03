@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+   
     //Game Over
     public Text gameOverText;
     public bool gameOver = false;
@@ -16,12 +17,8 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text coinsText;
 
-    //Coins
-
-
     void Start()
     {
-        DontDestroyOnLoad(this);
         score = 0;
         coins = 0;
         gameOverText.gameObject.SetActive(false);
@@ -29,9 +26,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(!gameOver){
-            scoreText.text = "Score: " + (int) score + " m";
-            coinsText.text = "Coins:  " + coins;
+        if(!gameOver && SceneManager.GetActiveScene().name == "MainScene"){
+            scoreText.text = "m " + (int) score;
+            coinsText.text = coins.ToString();
         }
     }
 
