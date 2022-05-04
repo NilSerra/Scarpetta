@@ -137,21 +137,21 @@ public class MapGenerator : MonoBehaviour
             else if(random > 60){
                 // 4 Blocks Wall
                 entityBlock[i] = GameObject.Instantiate(wall4BlocksPrefab);
-                maxY = 2.9f;
+                maxY = 3.35f;
                 minXseparation = baseSpeed*0.95f;
                 maxXseparation = baseSpeed*1.05f;
             }
             else if(random > 30){
                 // 5 Blocks Wall
                 entityBlock[i] = GameObject.Instantiate(wall5BlocksPrefab);
-                maxY = 2.44f;
+                maxY = 2.9f;
                 minXseparation = baseSpeed*1.05f;
                 maxXseparation = baseSpeed*1.15f;
             }
             else if(random > 15){
                 // 6 Blocks Wall
                 entityBlock[i] = GameObject.Instantiate(wall6BlocksPrefab);
-                maxY = 2.06f;
+                maxY = 2.55f;
                 minXseparation = baseSpeed*1.10f;
                 maxXseparation = baseSpeed*1.2f;
             }

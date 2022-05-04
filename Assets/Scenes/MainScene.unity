@@ -1294,6 +1294,7 @@ GameObject:
   - component: {fileID: 1243314447}
   - component: {fileID: 1243314446}
   - component: {fileID: 1243314448}
+  - component: {fileID: 1243314449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1396,7 +1397,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243314443}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1435,6 +1436,39 @@ MonoBehaviour:
   accelerationUp: 40
   ps: {fileID: 1502786733}
   playerAnimator: {fileID: 839670899}
+--- !u!60 &1243314449
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243314443}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.19698238, y: 0.44493055}
+      - {x: -0.21901035, y: 0.43869328}
+      - {x: -0.33140612, y: 0.32764292}
+      - {x: -0.33316326, y: -0.40314364}
+      - {x: -0.23139286, y: -0.72477007}
+      - {x: 0.27009964, y: -0.7452276}
+      - {x: 0.30894852, y: -0.40283537}
+      - {x: 0.31607962, y: 0.32629728}
 --- !u!1 &1245145107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!198 &1502786733
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -6518,12 +6552,12 @@ MonoBehaviour:
   baseSpeed: 5
   coinBallPrefab: {fileID: 236707830581945670, guid: 05990412e65f7c14ba1723d28c18771a, type: 3}
   coinLinePrefab: {fileID: 5812931581645596059, guid: 359f6c189826f51479213ff2a7c32545, type: 3}
-  wall4BlocksPrefab: {fileID: 8626312041113584646, guid: 55410bf30dd547749b0507becd139884, type: 3}
-  wall5BlocksPrefab: {fileID: 5523002531106344640, guid: 34407725effc954458f82dae38093f0e, type: 3}
-  wall6BlocksPrefab: {fileID: 3536352280776002934, guid: e1be4f735f1c89d488546e20c5b479c0, type: 3}
+  wall4BlocksPrefab: {fileID: 5855049430468456770, guid: 55410bf30dd547749b0507becd139884, type: 3}
+  wall5BlocksPrefab: {fileID: 1076475492510167180, guid: 34407725effc954458f82dae38093f0e, type: 3}
+  wall6BlocksPrefab: {fileID: 988071243743933995, guid: e1be4f735f1c89d488546e20c5b479c0, type: 3}
   doubleWallPrefab: {fileID: 5598875082786253857, guid: e234d7928b5cff64387c773ea8bf99ba, type: 3}
-  doubleWall1Prefab: {fileID: 5142028847831297377, guid: f51ee9eda995184499807286651ea769, type: 3}
-  doubleWall2Prefab: {fileID: 6507367244384799213, guid: 2815eeac91d94b045950781166e8241c, type: 3}
+  doubleWall1Prefab: {fileID: 4991001225675428795, guid: f51ee9eda995184499807286651ea769, type: 3}
+  doubleWall2Prefab: {fileID: 4759142763650191571, guid: 2815eeac91d94b045950781166e8241c, type: 3}
   shieldPrefab: {fileID: 3271492532639100017, guid: 545907d1f1463ad479d5adae846755e8, type: 3}
   gunPowerUpPrefab: {fileID: 1697878235714752504, guid: 111985949ec2d834ba4debcc8d8e63c3, type: 3}
   arrowUpPrefab: {fileID: 4744154613839282912, guid: e527d3302b5fc0240ba5f26497bd6ceb, type: 3}
