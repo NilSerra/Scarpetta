@@ -31,7 +31,6 @@ public class Projectile : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Obstacle":
-                collision.gameObject.SetActive(false);
                 Destroy(this.gameObject);
                 AudioSource.PlayClipAtPoint(breakWall, transform.position);
                 break;

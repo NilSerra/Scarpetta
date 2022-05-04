@@ -7,8 +7,6 @@ TagManager:
   - Coin
   - Obstacle
   - Ground
-  - Shield
-  - Gun
   layers:
   - Default
   - TransparentFX
