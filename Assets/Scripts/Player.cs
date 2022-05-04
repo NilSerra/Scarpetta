@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
     public int ammo = 0;
     public float accelerationUp=50f;
     Rigidbody2D body;
-    public ParticleSystem ps;
-    private ParticleSystem.EmissionModule em;
+    // public ParticleSystem ps;
+    // private ParticleSystem.EmissionModule em;
     public Animator playerAnimator;
     private float fireRate = 0.5f;
     private float nextFire = 0f;
@@ -45,8 +45,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        em = ps.emission;
-        em.enabled = false;
+        // em = ps.emission;
+        // em.enabled = false;
         shield = this.transform.Find("ShieldPlayerPrefab").gameObject;
 
         LoadSkin();
@@ -99,12 +99,12 @@ public class Player : MonoBehaviour
             if((Input.GetButton("Jump")) || (Input.GetMouseButton(0) && Input.mousePosition.x >= Screen.width / 2.0) && !gameManager.gameOver){
                 Fly();
             }
-            else{
-                em.enabled = false;
-            }
+            // else{
+            //     em.enabled = false;
+            // }
         }
         else{ 
-            em.enabled = false;
+            // em.enabled = false;
             var tapCount = Input.touchCount;
             for (var i = 0 ; i < tapCount ; i++) {
                 var touch = Input.GetTouch(i);
@@ -132,14 +132,14 @@ public class Player : MonoBehaviour
                         shield.SetActive(false);
                         // Destroy block animation
 
-                        Transform[] allChildren = collision.gameObject.GetComponentsInChildren<Transform>();
-                        foreach (Transform child in allChildren)
-                        {
-                            Animator blockAnimator = child.gameObject.GetComponent<Animator>();
-                            blockAnimator.Play("block_destoy");
-                        }
+                        // Transform[] allChildren = collision.gameObject.GetComponentsInChildren<Transform>();
+                        // foreach (Transform child in allChildren)
+                        // {
+                        //     Animator blockAnimator = child.gameObject.GetComponent<Animator>();
+                        //     blockAnimator.Play("block_destoy");
+                        // }
                         
-                        collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                        // collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                         collision.gameObject.SetActive(false);
                         AudioSource.PlayClipAtPoint(breakWall, transform.position);
                     }
@@ -191,7 +191,7 @@ public class Player : MonoBehaviour
     private void Fly(){
         if(!gameManager.gameOver){
             body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
-            em.enabled = true;
+            // em.enabled = true;
             // stop the runningSound sound
             //runningSound.Stop();
         }
