@@ -116,7 +116,15 @@ public class Player : MonoBehaviour
                     if(hasShield){
                         hasShield = false;
                         // Destroy block animation
-                        collision.gameObject.SetActive(false);
+
+                        Transform[] allChildren = collision.gameObject.GetComponentsInChildren<Transform>();
+                        foreach (Transform child in allChildren)
+                        {
+                            Animator blockAnimator = child.gameObject.GetComponent<Animator>();
+                            blockAnimator.Play("block_destoy");
+                        }
+                        
+                        collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     }
                     else{
                         body.velocity = new Vector2(0f,0f);

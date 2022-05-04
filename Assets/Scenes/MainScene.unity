@@ -6627,7 +6627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 839670898}
-  playerAnimator: {fileID: 0}
+  playerAnimator: {fileID: 839670899}
   gameManager: {fileID: 1881568170}
   baseSpeed: 5
   coinBallPrefab: {fileID: 236707830581945670, guid: 05990412e65f7c14ba1723d28c18771a, type: 3}
