@@ -125,37 +125,12 @@ public class Player : MonoBehaviour
                 collision.gameObject.SetActive(false);
                 AudioSource.PlayClipAtPoint(coinPickup, transform.position);
                 break;
-            case "Obstacle":
-                if(!testing){
-                    if(hasShield){
-                        hasShield = false;
-                        shield.SetActive(false);
-                        // Destroy block animation
-
-                        Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
-                        foreach(Animator anim in animators){
-                            anim.Play("block_destroy");
-                        }
-                        collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-
-                        AudioSource.PlayClipAtPoint(breakWall, transform.position);
-                    }
-                    else{
-                        body.velocity = new Vector2(0f,0f);
-                        playerAnimator.Play("Die");
-                        gameManager.EndGame();
-                        AudioSource.PlayClipAtPoint(gameOver, transform.position);
-                    }
-                    
-                }
-                break;
             case "Ground":
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
                     // play the runningSound sound
                     //runningSound.PlayOneShot(runningSound, 0.5f);
-
                 }
                 break;
             case "Shield":
@@ -181,6 +156,28 @@ public class Player : MonoBehaviour
                 AudioSource.PlayClipAtPoint(arrows, transform.position);
                 break;
             default:
+                if(!testing){
+                    if(hasShield){
+                        hasShield = false;
+                        shield.SetActive(false);
+                        // Destroy block animation
+
+                        Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
+                        foreach(Animator anim in animators){
+                            anim.Play("block_destroy");
+                        }
+                        collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+                        AudioSource.PlayClipAtPoint(breakWall, transform.position);
+                    }
+                    else{
+                        body.velocity = new Vector2(0f,0f);
+                        playerAnimator.Play("Die");
+                        gameManager.EndGame();
+                        AudioSource.PlayClipAtPoint(gameOver, transform.position);
+                    }
+                    
+                }
                 break;
         }
     }
