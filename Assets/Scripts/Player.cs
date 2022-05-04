@@ -134,11 +134,6 @@ public class Player : MonoBehaviour
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
                 }
-                //this if to solve the problem of first time playing there is no animation playing
-                if (!gameManager.gameOver){
-                    playerAnimator.Play("Run");
-                    playerAnimator.SetBool("isFlying", false);
-                }
                 break;
             case "Shield":
                 hasShield = true;
