@@ -29,6 +29,11 @@ public class Projectile : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Obstacle":
+                Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
+                foreach(Animator anim in animators){
+                    anim.Play("block_destroy");
+                }
+                collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 Destroy(this.gameObject);
                 break;
             default:

@@ -131,15 +131,12 @@ public class Player : MonoBehaviour
                         shield.SetActive(false);
                         // Destroy block animation
 
-                        Transform[] allChildren = collision.gameObject.GetComponentsInChildren<Transform>();
-                        foreach (Transform child in allChildren)
-                        {
-                            Animator blockAnimator = child.gameObject.GetComponent<Animator>();
-                            blockAnimator.Play("block_destoy");
+                        Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
+                        foreach(Animator anim in animators){
+                            anim.Play("block_destroy");
                         }
-                        
                         collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                        collision.gameObject.SetActive(false);
+
                         AudioSource.PlayClipAtPoint(breakWall, transform.position);
                     }
                     else{
