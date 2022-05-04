@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileVelocity: 30
+  breakWall: {fileID: 8300000, guid: 542741810fa004f74b592bba9af3b3a7, type: 3}
 --- !u!50 &1574025650770166503
 Rigidbody2D:
   serializedVersion: 4

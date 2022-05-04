@@ -3129,7 +3129,12 @@ MonoBehaviour:
   leg2Sprite: {fileID: 2131194724}
   accessorySprite: {fileID: 2131194721}
   gunSprite: {fileID: 2131194720}
---- !u!1 &1268173592
+  coinPickup: {fileID: 8300000, guid: b6186da35600d42b5b9e402bb00dc4e9, type: 3}
+  breakWall: {fileID: 8300000, guid: 542741810fa004f74b592bba9af3b3a7, type: 3}
+  gameOver: {fileID: 8300000, guid: 07214b24e79d34ca4baa43b4e00b17e3, type: 3}
+  powerUp: {fileID: 8300000, guid: 291c1bb4adbb749b89dce7671f260512, type: 3}
+  shoot: {fileID: 8300000, guid: 9e4ffe3236be849e6a6ee914603866b6, type: 3}
+--- !u!1 &1502786732
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

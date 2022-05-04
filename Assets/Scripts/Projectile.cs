@@ -7,11 +7,13 @@ public class Projectile : MonoBehaviour
 {
     public float projectileVelocity = 30f;
     private Rigidbody2D body;
+    public AudioClip breakWall;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+    
     }
 
     // Update is called once per frame
@@ -29,8 +31,8 @@ public class Projectile : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Obstacle":
-                collision.gameObject.SetActive(false);
                 Destroy(this.gameObject);
+                AudioSource.PlayClipAtPoint(breakWall, transform.position);
                 break;
             default:
                 break;

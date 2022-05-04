@@ -31,6 +31,15 @@ public class Player : MonoBehaviour
     public SpriteRenderer gunSprite;
 
 
+    //public AudioSource runningSound;
+    public AudioClip coinPickup;
+    public AudioClip breakWall;
+    public AudioClip gameOver;
+    public AudioClip powerUp;
+    public AudioClip shoot;
+    public AudioClip arrows;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +53,8 @@ public class Player : MonoBehaviour
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
+
+        //runningSound = GetComponent<RunningSound>();
 
     }
 
@@ -112,6 +123,7 @@ public class Player : MonoBehaviour
             case "Coin":
                 gameManager.IncCoins();
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(coinPickup, transform.position);
                 break;
             case "Obstacle":
                 if(!testing){
@@ -119,12 +131,23 @@ public class Player : MonoBehaviour
                         hasShield = false;
                         shield.SetActive(false);
                         // Destroy block animation
+
+                        Transform[] allChildren = collision.gameObject.GetComponentsInChildren<Transform>();
+                        foreach (Transform child in allChildren)
+                        {
+                            Animator blockAnimator = child.gameObject.GetComponent<Animator>();
+                            blockAnimator.Play("block_destoy");
+                        }
+                        
+                        collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                         collision.gameObject.SetActive(false);
+                        AudioSource.PlayClipAtPoint(breakWall, transform.position);
                     }
                     else{
                         body.velocity = new Vector2(0f,0f);
                         playerAnimator.Play("Die");
                         gameManager.EndGame();
+                        AudioSource.PlayClipAtPoint(gameOver, transform.position);
                     }
                     
                 }
@@ -133,25 +156,32 @@ public class Player : MonoBehaviour
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
+                    // play the runningSound sound
+                    //runningSound.PlayOneShot(runningSound, 0.5f);
+
                 }
                 break;
             case "Shield":
                 hasShield = true;
                 shield.SetActive(true);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(powerUp, transform.position);
                 break;
             case "Gun":
                 ammo += 3;
                 gameManager.SetAmmo(ammo);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(powerUp, transform.position);
                 break;
             case "ArrowUp":
                 body.velocity = new Vector2(0f,12f);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(arrows, transform.position);
                 break;
             case "ArrowDown":
                 body.velocity = new Vector2(0f,-10f);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(arrows, transform.position);
                 break;
             default:
                 break;
@@ -162,11 +192,14 @@ public class Player : MonoBehaviour
         if(!gameManager.gameOver){
             body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
             em.enabled = true;
+            // stop the runningSound sound
+            //runningSound.Stop();
         }
         
         if(!playerAnimator.GetBool("isFlying")){
             playerAnimator.Play("Jump");
             playerAnimator.SetBool("isFlying", true);
+            //runningSound.Stop();
         }
     }
 
@@ -176,6 +209,7 @@ public class Player : MonoBehaviour
             gameManager.SetAmmo(ammo);
             GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);
             nextFire = Time.time + fireRate;
+            AudioSource.PlayClipAtPoint(shoot, transform.position);
         }
         
     }
