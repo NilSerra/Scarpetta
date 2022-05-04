@@ -2145,7 +2145,6 @@ MonoBehaviour:
   hasShield: 0
   ammo: 0
   accelerationUp: 40
-  ps: {fileID: 1502786733}
   playerAnimator: {fileID: 839670899}
   csm: {fileID: 423769763}
   headSprite: {fileID: 2131194727}
@@ -7364,7 +7363,7 @@ MonoBehaviour:
   doubleWall1Prefab: {fileID: 4991001225675428795, guid: f51ee9eda995184499807286651ea769, type: 3}
   doubleWall2Prefab: {fileID: 4759142763650191571, guid: 2815eeac91d94b045950781166e8241c, type: 3}
   shieldPrefab: {fileID: 3271492532639100017, guid: 545907d1f1463ad479d5adae846755e8, type: 3}
-  gunPowerUpPrefab: {fileID: 1697878235714752504, guid: 5e7341081f827be43930ecef428bd6c4, type: 3}
+  gunPowerUpPrefab: {fileID: 1697878235714752504, guid: 111985949ec2d834ba4debcc8d8e63c3, type: 3}
   arrowUpPrefab: {fileID: 4744154613839282912, guid: e527d3302b5fc0240ba5f26497bd6ceb, type: 3}
   arrowDownPrefab: {fileID: 7528409414495124365, guid: 637cf2e59f78a4d4f9dfbddad66a31ab, type: 3}
   maxXspeed: 20

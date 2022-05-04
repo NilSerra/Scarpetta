@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 1859526668280732246}
   - component: {fileID: 4004917013279684631}
   - component: {fileID: 313167045811867695}
+  - component: {fileID: 1097924829701887269}
   m_Layer: 0
   m_Name: ArrowDownPrefab
   m_TagString: ArrowDown
@@ -347,6 +348,25 @@ PolygonCollider2D:
       - {x: 0.098770395, y: -0.014757976}
       - {x: 0.107376665, y: 0.0599177}
       - {x: 0.065982625, y: 0.07541141}
+--- !u!95 &1097924829701887269
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528409414495124365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 816ede3934be01749a5fa3c29617085e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8151452498124561404
 GameObject:
   m_ObjectHideFlags: 0

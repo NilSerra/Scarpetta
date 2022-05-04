@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 3486501493935629115}
   - component: {fileID: 2177637513952215418}
   - component: {fileID: 3311342824353589570}
+  - component: {fileID: 8608783426682273315}
   m_Layer: 0
   m_Name: ArrowUpPrefab
   m_TagString: ArrowUp
@@ -346,6 +347,25 @@ PolygonCollider2D:
       - {x: 0.10893846, y: -0.064075336}
       - {x: 0.10099308, y: 0.01924663}
       - {x: 0.045034215, y: 0.07219184}
+--- !u!95 &8608783426682273315
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4744154613839282912}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f34fefbc3cd38fa4bbed55ea049a6fa3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5239841151318531732
 GameObject:
   m_ObjectHideFlags: 0
