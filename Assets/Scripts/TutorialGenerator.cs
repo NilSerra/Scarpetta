@@ -178,7 +178,7 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[2].transform.position.x <= 6 && !hint2shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Collect coins by flying over them";
+            popupPanel.GetComponentInChildren<Text>().text = "You can collect coins";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
@@ -189,7 +189,7 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[3].transform.position.x <= 6 && !hint3shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Collect shield by flying over it";
+            popupPanel.GetComponentInChildren<Text>().text = "You can get a shield";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
@@ -211,7 +211,7 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[5].transform.position.x <= 6 && !hint5shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Collect gun to shoot";
+            popupPanel.GetComponentInChildren<Text>().text = "You can pick up a gun"; 
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
@@ -238,7 +238,7 @@ public class TutorialGenerator : MonoBehaviour
         if (entityBlock[7].transform.position.x <= 6 && !hint7shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
-            popupPanel.GetComponentInChildren<Text>().text = "Be careful with arrow up and down";
+            popupPanel.GetComponentInChildren<Text>().text = "Be careful with arrows up and down";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
