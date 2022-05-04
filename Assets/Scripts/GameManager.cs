@@ -77,4 +77,8 @@ public class GameManager : MonoBehaviour
     public void PlayGame(){
         SceneManager.LoadScene("MainScene");
     }
+
+    public void PlayTutorial(){
+        SceneManager.LoadScene("HelpSystem");
+    }
 }

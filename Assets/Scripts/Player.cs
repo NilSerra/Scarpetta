@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         em.enabled = false;
         shield = this.transform.Find("ShieldPlayerPrefab").gameObject;
 
-        LoadSkin();
+        // LoadSkin();
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");

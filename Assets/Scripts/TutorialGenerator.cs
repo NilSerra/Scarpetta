@@ -73,10 +73,6 @@ public class TutorialGenerator : MonoBehaviour
         }
         else{
             baseSpeed=0;
-            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
-                SceneManager.LoadScene("HelpSystem");
-                baseSpeed = 5;
-            }
         }
     }
 
