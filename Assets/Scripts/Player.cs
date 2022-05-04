@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 
 public class Player : MonoBehaviour
 {
@@ -103,6 +102,11 @@ public class Player : MonoBehaviour
             case "Ground":
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
+                    playerAnimator.SetBool("isFlying", false);
+                }
+                //this if to solve the problem of first time playing there is no animation playing
+                if (!gameManager.gameOver){
+                    playerAnimator.Play("Run");
                     playerAnimator.SetBool("isFlying", false);
                 }
                 break;
