@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     public bool useTouch;
 
+    public GameObject highestScore;
+    public GameObject finalScoreText;
+
     void Start()
     {
         score = 0;
@@ -59,12 +62,20 @@ public class GameManager : MonoBehaviour
         ammo = currentAmmo;
     }
     public void EndGame() {
-        if (score > PlayerPrefs.GetInt("HighestScore", 0))
-            PlayerPrefs.SetInt("HighestScore", (int) score);
-            PlayerPrefs.SetInt("TotalCoins", coins + PlayerPrefs.GetInt("TotalCoins"));
-
         gameOver=true;
         gameOverMenu.SetActive(true);
+
+        if (score > PlayerPrefs.GetInt("HighestScore", 0)){
+            PlayerPrefs.SetInt("HighestScore", (int) score);
+            highestScore.GetComponent<Text>().text = "New high score!";
+        }
+        else{
+            highestScore.GetComponent<Text>().text = "Your highest score is: " + PlayerPrefs.GetInt("HighestScore", 0).ToString();
+        }
+        finalScoreText.GetComponent<Text>().text = ((int)score).ToString();
+        
+        PlayerPrefs.SetInt("TotalCoins", coins + PlayerPrefs.GetInt("TotalCoins"));
+
         pauseButton.SetActive(false);
         audioSource.Stop();
     }
