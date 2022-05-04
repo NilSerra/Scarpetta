@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        pauseButton.SetActive(true);
     }
 
     // Update is called once per frame
@@ -24,16 +25,16 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PauseGame(){
-        // if (gameManager.score > PlayerPrefs.GetInt("HighestScore", 0))
-        //         PlayerPrefs.SetInt("HighestScore", (int) gameManager.score);
-        if(pauseMenu){
-            pauseMenu.SetActive(true);
-        }
-        if(pauseButton){
-            pauseButton.SetActive(false);
-        }
-        Time.timeScale = 0f;
-        isPaused=true;
+        if(!gameManager.gameOver){
+            if(pauseMenu){
+                pauseMenu.SetActive(true);
+            }
+            if(pauseButton){
+                pauseButton.SetActive(false);
+            }
+            Time.timeScale = 0f;
+            isPaused=true;
+            }
     }
 
     public void ResumeGame(){

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &506220476534158357
+--- !u!1 &96180592255719851
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8553005337275651534}
-  - component: {fileID: -2816880194632222833}
-  - component: {fileID: -1502887903551725641}
-  - component: {fileID: 3620018174827415630}
+  - component: {fileID: 96180592255719850}
+  - component: {fileID: 96180592255719848}
+  - component: {fileID: 96180592255719849}
   m_Layer: 0
-  m_Name: CoinPrefab
-  m_TagString: Coin
+  m_Name: ShieldPlayerPrefab
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8553005337275651534
+--- !u!4 &96180592255719850
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506220476534158357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 96180592255719851}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 3}
+  m_LocalScale: {x: 3.5, y: 5.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &-2816880194632222833
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!212 &96180592255719848
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506220476534158357}
+  m_GameObject: {fileID: 96180592255719851}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,68 +71,52 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7717009168347922525, guid: a8655723535629e438520116d720d4a7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -8400935615395884938, guid: 436dae094cc1cc84d97f63a56198b1ca, type: 3}
+  m_Color: {r: 0, g: 1, b: 1, a: 0.40392157}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.33, y: 0.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &-1502887903551725641
+--- !u!60 &96180592255719849
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506220476534158357}
-  m_Enabled: 1
+  m_GameObject: {fileID: 96180592255719851}
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.64, y: 0.45}
+    newSize: {x: 0.33, y: 0.66}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.029453985, y: 0.062884614}
-      - {x: -0.05625686, y: 0.031744502}
-      - {x: -0.054931324, y: -0.028674452}
-      - {x: -0.043849595, y: -0.041256867}
-      - {x: -0.02655907, y: -0.060233504}
-      - {x: 0.03083792, y: -0.057582423}
-      - {x: 0.05890797, y: -0.029931322}
-      - {x: 0.055594098, y: 0.031140115}
-      - {x: 0.026140112, y: 0.06023352}
---- !u!95 &3620018174827415630
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506220476534158357}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6f7ac0f9f83782c43bb4a037a94d5ed1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+    - - {x: -0.10555856, y: 0.22611003}
+      - {x: -0.24978192, y: 0.1308507}
+      - {x: -0.3193466, y: -0.020522997}
+      - {x: -0.31475195, y: -0.19282386}
+      - {x: -0.1268572, y: -0.22366317}
+      - {x: 0.010700569, y: -0.22053045}
+      - {x: 0.15232706, y: -0.2283139}
+      - {x: 0.29060555, y: -0.20110297}
+      - {x: 0.3196376, y: -0.17390114}
+      - {x: 0.31186226, y: 0.005117025}
+      - {x: 0.2584857, y: 0.12177268}
+      - {x: 0.101005554, y: 0.22365138}
