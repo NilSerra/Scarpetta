@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
         if(!gameManager.gameOver){
             if(pauseMenu){
                 pauseMenu.SetActive(true);
+                gameManager.audioSource.Pause();
             }
             if(pauseButton){
                 pauseButton.SetActive(false);
@@ -42,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
         isPaused=false;
+        gameManager.audioSource.Play();
     }
 
     public void GoToMainMenu(){

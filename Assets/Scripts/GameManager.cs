@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text coinsText;
     public Text ammoText;
+    public AudioSource audioSource;
 
     public bool useTouch;
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         coins = 0;
         ammo = 0;
         gameOverMenu.SetActive(false);
+        audioSource = this.GetComponent<AudioSource>();
         
         if(SystemInfo.deviceType == DeviceType.Desktop){
             useTouch = false;
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
         gameOver=true;
         gameOverMenu.SetActive(true);
         pauseButton.SetActive(false);
+        audioSource.Stop();
     }
 
     public void GoToMainMenu(){
