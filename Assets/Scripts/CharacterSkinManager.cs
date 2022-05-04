@@ -35,6 +35,8 @@ public class CharacterSkinManager : MonoBehaviour
     public Text CoinsTextCustomizationScreen;
     public GameObject popupPanel;
 
+    public AudioClip buySound;
+
 
     public int GetItemCost(string bodyPart, int index){
         if (titles.Contains(bodyPart)){
@@ -215,6 +217,7 @@ public class CharacterSkinManager : MonoBehaviour
         PlayerPrefs.SetInt(preferencesText, 1);
         SetCoinsPlayer(GetCoinsPlayer() - cost);
         CoinsTextCustomizationScreen.text = GetCoinsPlayer().ToString();
+        AudioSource.PlayClipAtPoint(buySound, Camera.main.transform.position);
     }
 
     public bool PlayerHasMoney(int costItem){

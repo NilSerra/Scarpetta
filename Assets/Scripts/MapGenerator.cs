@@ -119,14 +119,14 @@ public class MapGenerator : MonoBehaviour
             else if(random > 83){
                 // Arrow Up
                 entityBlock[i] = GameObject.Instantiate(arrowUpPrefab);
-                maxY = 2.5f;
+                maxY = 3f;
                 minXseparation = baseSpeed*0.75f;
                 maxXseparation = baseSpeed*1.1f;
             }
             else if(random > 80){
                 // Arrow Down
                 entityBlock[i] = GameObject.Instantiate(arrowDownPrefab);
-                maxY = 2.5f;
+                maxY = 3f;
                 minXseparation = baseSpeed*0.75f;
                 maxXseparation = baseSpeed*1.1f;
             }
