@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     public GameManager gameManager;
     public GameObject projectilePrefab;
+    private GameObject shield;
     public bool testing = false;
     public bool hasShield = false;
     public int ammo = 0;
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         em = ps.emission;
         em.enabled = false;
-
+        shield = this.transform.Find("ShieldPlayerPrefab").gameObject;
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
@@ -88,6 +89,7 @@ public class Player : MonoBehaviour
                 if(!testing){
                     if(hasShield){
                         hasShield = false;
+                        shield.SetActive(false);
                         // Destroy block animation
                         collision.gameObject.SetActive(false);
                     }
@@ -112,6 +114,7 @@ public class Player : MonoBehaviour
                 break;
             case "Shield":
                 hasShield = true;
+                shield.SetActive(true);
                 collision.gameObject.SetActive(false);
                 break;
             case "Gun":

@@ -84,10 +84,6 @@ public class MapGenerator : MonoBehaviour
         }
         else{
             baseSpeed=0;
-            if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
-                SceneManager.LoadScene("MainScene");
-                baseSpeed = 5;
-            }
         }
         playerAnimator.SetFloat("runningSpeed", Mathf.Clamp(baseSpeed/5.0f, 1, 4));
     }
