@@ -1968,6 +1968,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: buySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 61bf4d9b94104417a8df53cfc520426f, type: 3}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
       propertyPath: gunSprite
       value: 
       objectReference: {fileID: 285464474}

@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public AudioClip gameOver;
     public AudioClip powerUp;
     public AudioClip shoot;
+    public AudioClip arrows;
 
 
 
@@ -166,10 +167,12 @@ public class Player : MonoBehaviour
             case "ArrowUp":
                 body.velocity = new Vector2(0f,12f);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(arrows, transform.position);
                 break;
             case "ArrowDown":
                 body.velocity = new Vector2(0f,-10f);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(arrows, transform.position);
                 break;
             default:
                 break;
