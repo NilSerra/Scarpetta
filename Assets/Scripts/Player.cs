@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
 {
     public GameManager gameManager;
     public GameObject projectilePrefab;
+    private GameObject shield;
     public bool testing = false;
     public bool hasShield = false;
     public int ammo = 0;
@@ -18,6 +19,16 @@ public class Player : MonoBehaviour
     public Animator playerAnimator;
     private float fireRate = 0.5f;
     private float nextFire = 0f;
+
+    public CharacterSkinManager csm;
+    public SpriteRenderer headSprite;
+    public SpriteRenderer bodySprite;
+    public SpriteRenderer hand1Sprite;
+    public SpriteRenderer hand2Sprite;
+    public SpriteRenderer leg1Sprite;
+    public SpriteRenderer leg2Sprite;
+    public SpriteRenderer accessorySprite;
+    public SpriteRenderer gunSprite;
 
 
     //public AudioSource runningSound;
@@ -35,13 +46,31 @@ public class Player : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         em = ps.emission;
         em.enabled = false;
+        shield = this.transform.Find("ShieldPlayerPrefab").gameObject;
 
+        // LoadSkin();
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
 
         //runningSound = GetComponent<RunningSound>();
 
+    }
+
+    private void LoadSkin(){
+        headSprite.sprite = csm.GetSpriteFromBodyPart("head");
+
+        bodySprite.sprite = csm.GetSpriteFromBodyPart("body");
+        
+        hand1Sprite.sprite = csm.GetSpriteFromBodyPart("hands");
+        hand2Sprite.sprite = csm.GetSpriteFromBodyPart("hands");
+        
+        leg1Sprite.sprite = csm.GetSpriteFromBodyPart("legs");
+        leg2Sprite.sprite = csm.GetSpriteFromBodyPart("legs");
+        
+        accessorySprite.sprite = csm.GetSpriteFromBodyPart("accessory");
+        
+        gunSprite.sprite = csm.GetSpriteFromBodyPart("gun");
     }
 
     // Update is called once per frame
@@ -99,6 +128,7 @@ public class Player : MonoBehaviour
                 if(!testing){
                     if(hasShield){
                         hasShield = false;
+                        shield.SetActive(false);
                         // Destroy block animation
                         collision.gameObject.SetActive(false);
                         AudioSource.PlayClipAtPoint(breakWall, transform.position);
@@ -120,17 +150,10 @@ public class Player : MonoBehaviour
                     //runningSound.PlayOneShot(runningSound, 0.5f);
 
                 }
-                //this if to solve the problem of first time playing there is no animation playing
-                if (!gameManager.gameOver){
-                    playerAnimator.Play("Run");
-                    playerAnimator.SetBool("isFlying", false);
-                    // play the runningSound sound
-                    //runningSound.PlayOneShot(runningSound, 0.5f);
-
-                }
                 break;
             case "Shield":
                 hasShield = true;
+                shield.SetActive(true);
                 collision.gameObject.SetActive(false);
                 AudioSource.PlayClipAtPoint(powerUp, transform.position);
                 break;

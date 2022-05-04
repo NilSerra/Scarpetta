@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 {
    
     //Game Over
-    public Text gameOverText;
+    public GameObject pauseButton;
+    public GameObject gameOverMenu;
     public bool gameOver = false;
     //Score
     public float score;
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         coins = 0;
         ammo = 0;
-        gameOverText.gameObject.SetActive(false);
+        gameOverMenu.SetActive(false);
         
         if(SystemInfo.deviceType == DeviceType.Desktop){
             useTouch = false;
@@ -61,6 +62,23 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("TotalCoins", coins + PlayerPrefs.GetInt("TotalCoins"));
 
         gameOver=true;
-        gameOverText.gameObject.SetActive(true);
+        gameOverMenu.SetActive(true);
+        pauseButton.SetActive(false);
+    }
+
+    public void GoToMainMenu(){
+        SceneManager.LoadScene("MenuScreen");
+    }
+
+    public void QuitGame(){
+        Application.Quit();
+    }
+
+    public void PlayGame(){
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void PlayTutorial(){
+        SceneManager.LoadScene("HelpSystem");
     }
 }
