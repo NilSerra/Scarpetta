@@ -1980,6 +1980,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1339595061}
     - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: errorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 70133afb438654885b3bcbc002c09777, type: 3}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
       propertyPath: headSprite
       value: 
       objectReference: {fileID: 312911773}

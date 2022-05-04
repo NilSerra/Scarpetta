@@ -953,6 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highestScoreText: {fileID: 5319695}
   totalCoinsText: {fileID: 2095281241}
+  buttonSound: {fileID: 8300000, guid: 1406452b7c0f84b44a85c8cafd53378b, type: 3}
 --- !u!1001 &631840211
 PrefabInstance:
   m_ObjectHideFlags: 0

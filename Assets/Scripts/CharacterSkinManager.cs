@@ -36,6 +36,7 @@ public class CharacterSkinManager : MonoBehaviour
     public GameObject popupPanel;
 
     public AudioClip buySound;
+    public AudioClip errorSound;
 
 
     public int GetItemCost(string bodyPart, int index){
@@ -233,6 +234,9 @@ public class CharacterSkinManager : MonoBehaviour
 
     IEnumerator ActivatePopupMenu()
     {
+        // Reproduce the error sound
+        AudioSource.PlayClipAtPoint(errorSound, Camera.main.transform.position);
+
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         popupPanel.SetActive(true);
