@@ -19,6 +19,16 @@ public class Player : MonoBehaviour
     private float fireRate = 0.5f;
     private float nextFire = 0f;
 
+    public CharacterSkinManager csm;
+    public SpriteRenderer headSprite;
+    public SpriteRenderer bodySprite;
+    public SpriteRenderer hand1Sprite;
+    public SpriteRenderer hand2Sprite;
+    public SpriteRenderer leg1Sprite;
+    public SpriteRenderer leg2Sprite;
+    public SpriteRenderer accessorySprite;
+    public SpriteRenderer gunSprite;
+
 
 
     // Start is called before the first frame update
@@ -28,10 +38,27 @@ public class Player : MonoBehaviour
         em = ps.emission;
         em.enabled = false;
 
+        LoadSkin();
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
 
+    }
+
+    private void LoadSkin(){
+        headSprite.sprite = csm.GetSpriteFromBodyPart("head");
+
+        bodySprite.sprite = csm.GetSpriteFromBodyPart("body");
+        
+        hand1Sprite.sprite = csm.GetSpriteFromBodyPart("hands");
+        hand2Sprite.sprite = csm.GetSpriteFromBodyPart("hands");
+        
+        leg1Sprite.sprite = csm.GetSpriteFromBodyPart("legs");
+        leg2Sprite.sprite = csm.GetSpriteFromBodyPart("legs");
+        
+        accessorySprite.sprite = csm.GetSpriteFromBodyPart("accessory");
+        
+        gunSprite.sprite = csm.GetSpriteFromBodyPart("gun");
     }
 
     // Update is called once per frame

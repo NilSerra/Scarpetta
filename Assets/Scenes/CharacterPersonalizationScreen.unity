@@ -1153,11 +1153,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081189210}
   m_CullTransparentMesh: 1
---- !u!1 &1123064178 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8455715380333379134, guid: 81443c569ad01a0459a3f1e5bf333dfc, type: 3}
-  m_PrefabInstance: {fileID: 1571289895}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1147983058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,8 +1542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbcd3c859a3605438b47fd44172838a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterInGame: {fileID: 1123064178}
-  mainPlayerPrefab: {fileID: 8455715380333379134, guid: 81443c569ad01a0459a3f1e5bf333dfc, type: 3}
   headSprite: {fileID: 312911773}
   headSprites:
   - {fileID: 0}
@@ -1560,55 +1553,18 @@ MonoBehaviour:
   - {fileID: -4401704606230019827, guid: f4825492afdda3243bba9de743efad57, type: 3}
   headSpritesCost: 0000000064000000640000006400000064000000f4010000f4010000
   bodySprite: {fileID: 1339595061}
-  bodySprites:
-  - {fileID: -1743194722132219160, guid: 96441daad434de64b8b251b6d70bf7d3, type: 3}
-  - {fileID: -7739112529119816975, guid: 96441daad434de64b8b251b6d70bf7d3, type: 3}
-  - {fileID: -1845904194501359650, guid: 96441daad434de64b8b251b6d70bf7d3, type: 3}
-  - {fileID: -4517594066516188971, guid: 96441daad434de64b8b251b6d70bf7d3, type: 3}
-  - {fileID: 6560510854885717560, guid: 96441daad434de64b8b251b6d70bf7d3, type: 3}
-  - {fileID: -414415189203497752, guid: 96441daad434de64b8b251b6d70bf7d3, type: 3}
-  bodySpritesCost: 000000006400000064000000c80000002c010000f4010000
   leg1Sprite: {fileID: 988852313}
   leg2Sprite: {fileID: 358991620}
-  legSprites:
-  - {fileID: -2915034706872494343, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: -728150186094094199, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: 3894582078195042835, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: 4085793136712361830, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: 6731066775135229459, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: 8444259778946166519, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: -7807960199795560022, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: 2759210934662234445, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: -2196029540247852935, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  - {fileID: 5456082775107482113, guid: c25f1412dfa4b1b44908c0aeac7382fd, type: 3}
-  legSpritesCost: 000000003200000032000000320000003200000064000000c80000002c010000f4010000f4010000
   hand1Sprite: {fileID: 519849112}
   hand2Sprite: {fileID: 2066721388}
-  handSprites:
-  - {fileID: 6751002202477829170, guid: 9bb0d16d525a6794fa406a2aa8c30ab0, type: 3}
-  - {fileID: 1736978023890593550, guid: 9bb0d16d525a6794fa406a2aa8c30ab0, type: 3}
-  handSpritesCost: 0000000032000000
   accessorySprite: {fileID: 1251586359}
-  accessorySprites:
-  - {fileID: 892808516308410688, guid: aff16dc2482127847bf8db6715a8d64d, type: 3}
-  - {fileID: 4273578684052073108, guid: aff16dc2482127847bf8db6715a8d64d, type: 3}
-  - {fileID: 4884493740895095652, guid: aff16dc2482127847bf8db6715a8d64d, type: 3}
-  - {fileID: 704951545963458775, guid: aff16dc2482127847bf8db6715a8d64d, type: 3}
-  - {fileID: -2634748707184915, guid: aff16dc2482127847bf8db6715a8d64d, type: 3}
-  accessorySpritesCost: 0000000032000000320000003200000064000000
   gunSprite: {fileID: 285464474}
-  gunSprites:
-  - {fileID: 0}
-  - {fileID: 7362661061344524757, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
-  - {fileID: -7349882584872989000, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
-  - {fileID: -3476979527478288156, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
-  - {fileID: -9170448629031416532, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
-  gunSpritesCost: 0000000064000000640000006400000064000000
   contentList: {fileID: 115233640}
   listElementPrefab: {fileID: 2887147736853507292, guid: b935a0d4adaf9a44a937cf6e88b529a4, type: 3}
   titlePrefab: {fileID: 1095769417366940263, guid: 8795b6adb66c78448987325c08167fb1, type: 3}
   popupPanel: {fileID: 1147983058}
   CoinsText: {fileID: 874586199}
+  csm: {fileID: 1839844338}
 --- !u!4 &1716960421
 Transform:
   m_ObjectHideFlags: 0
@@ -1619,7 +1575,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1839844337}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1705,6 +1662,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &1839844337 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+  m_PrefabInstance: {fileID: 4935964409060211088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1839844338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+  m_PrefabInstance: {fileID: 4935964409060211088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c187d4750d5f22a4d9b87fa3503a25c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972183291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,3 +1912,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091200031}
   m_CullTransparentMesh: 1
+--- !u!1001 &4935964409060211088
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1716960421}
+    m_Modifications:
+    - target: {fileID: 4935964407410258528, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_Name
+      value: SkinManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258529, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: gunSprite
+      value: 
+      objectReference: {fileID: 285464474}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: bodySprite
+      value: 
+      objectReference: {fileID: 1339595061}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: headSprite
+      value: 
+      objectReference: {fileID: 312911773}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: leg1Sprite
+      value: 
+      objectReference: {fileID: 988852313}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: leg2Sprite
+      value: 
+      objectReference: {fileID: 358991620}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: popupPanel
+      value: 
+      objectReference: {fileID: 1147983058}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: hand1Sprite
+      value: 
+      objectReference: {fileID: 519849112}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: hand2Sprite
+      value: 
+      objectReference: {fileID: 2066721388}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: accessorySprite
+      value: 
+      objectReference: {fileID: 1251586359}
+    - target: {fileID: 4935964407410258530, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
+      propertyPath: CoinsTextCustomizationScreen
+      value: 
+      objectReference: {fileID: 874586199}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19e0317baa6b2d94d84dc0765b05931b, type: 3}
