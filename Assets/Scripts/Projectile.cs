@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Projectile : MonoBehaviour
 {
-    public float projectileVelocity = 40f;
+    public float projectileVelocity = 30f;
     private Rigidbody2D body;
 
     // Start is called before the first frame update

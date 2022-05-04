@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(!gameOver && (SceneManager.GetActiveScene().name == "MainScene" || SceneManager.GetActiveScene().name == "HelpSystem")){
             scoreText.text = ((int) score).ToString();
