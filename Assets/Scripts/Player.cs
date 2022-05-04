@@ -20,6 +20,14 @@ public class Player : MonoBehaviour
     private float nextFire = 0f;
 
 
+    //public AudioSource runningSound;
+    public AudioClip coinPickup;
+    public AudioClip breakWall;
+    public AudioClip gameOver;
+    public AudioClip powerUp;
+    public AudioClip shoot;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +39,8 @@ public class Player : MonoBehaviour
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
+
+        //runningSound = GetComponent<RunningSound>();
 
     }
 
@@ -83,6 +93,7 @@ public class Player : MonoBehaviour
             case "Coin":
                 gameManager.IncCoins();
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(coinPickup, transform.position);
                 break;
             case "Obstacle":
                 if(!testing){
@@ -90,11 +101,13 @@ public class Player : MonoBehaviour
                         hasShield = false;
                         // Destroy block animation
                         collision.gameObject.SetActive(false);
+                        AudioSource.PlayClipAtPoint(breakWall, transform.position);
                     }
                     else{
                         body.velocity = new Vector2(0f,0f);
                         playerAnimator.Play("Die");
                         gameManager.EndGame();
+                        AudioSource.PlayClipAtPoint(gameOver, transform.position);
                     }
                     
                 }
@@ -103,21 +116,29 @@ public class Player : MonoBehaviour
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
+                    // play the runningSound sound
+                    //runningSound.PlayOneShot(runningSound, 0.5f);
+
                 }
                 //this if to solve the problem of first time playing there is no animation playing
                 if (!gameManager.gameOver){
                     playerAnimator.Play("Run");
                     playerAnimator.SetBool("isFlying", false);
+                    // play the runningSound sound
+                    //runningSound.PlayOneShot(runningSound, 0.5f);
+
                 }
                 break;
             case "Shield":
                 hasShield = true;
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(powerUp, transform.position);
                 break;
             case "Gun":
                 ammo += 3;
                 gameManager.SetAmmo(ammo);
                 collision.gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(powerUp, transform.position);
                 break;
             case "ArrowUp":
                 body.velocity = new Vector2(0f,12f);
@@ -136,11 +157,14 @@ public class Player : MonoBehaviour
         if(!gameManager.gameOver){
             body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
             em.enabled = true;
+            // stop the runningSound sound
+            //runningSound.Stop();
         }
         
         if(!playerAnimator.GetBool("isFlying")){
             playerAnimator.Play("Jump");
             playerAnimator.SetBool("isFlying", true);
+            //runningSound.Stop();
         }
     }
 
@@ -150,6 +174,7 @@ public class Player : MonoBehaviour
             gameManager.SetAmmo(ammo);
             GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);
             nextFire = Time.time + fireRate;
+            AudioSource.PlayClipAtPoint(shoot, transform.position);
         }
         
     }
