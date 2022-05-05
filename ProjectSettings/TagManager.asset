@@ -11,6 +11,13 @@ TagManager:
   - Gun
   - ArrowUp
   - ArrowDown
+  - CoinBall
+  - DoubleWall
+  - DoubleWall1
+  - DoubleWall2
+  - 4BlockWall
+  - 5BlockWall
+  - 6BlockWall
   layers:
   - Default
   - TransparentFX

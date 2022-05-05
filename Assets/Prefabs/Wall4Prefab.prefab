@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 773037551411086342}
   m_Layer: 0
   m_Name: Wall4Prefab
-  m_TagString: Obstacle
+  m_TagString: 4BlockWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

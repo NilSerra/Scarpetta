@@ -32,6 +32,19 @@ public class MapGenerator : MonoBehaviour
     public GameObject gunPowerUpPrefab;
     public GameObject arrowUpPrefab;
     public GameObject arrowDownPrefab;
+
+    private Queue<GameObject> coinBallPrefabSet;
+    private Queue<GameObject> coinLinePrefabSet;
+    private Queue<GameObject> wall4BlocksPrefabSet;
+    private Queue<GameObject> wall5BlocksPrefabSet;
+    private Queue<GameObject> wall6BlocksPrefabSet;
+    private Queue<GameObject> doubleWallPrefabSet;
+    private Queue<GameObject> doubleWall1PrefabSet;
+    private Queue<GameObject> doubleWall2PrefabSet;
+    private Queue<GameObject> shieldPrefabSet;
+    private Queue<GameObject> gunPowerUpPrefabSet;
+    private Queue<GameObject> arrowUpPrefabSet;
+    private Queue<GameObject> arrowDownPrefabSet;
     public float maxXspeed = 20;
     public int speedIncreaseFactor = 60;
 
@@ -42,6 +55,33 @@ public class MapGenerator : MonoBehaviour
         ceiling = GameObject.Find("/MapGenerator/Ceiling");
         floor_2 = GameObject.Find("/MapGenerator/Floor_2");
         ceiling_2 = GameObject.Find("/MapGenerator/Ceiling_2");
+
+        coinBallPrefabSet = new Queue<GameObject>();
+        coinLinePrefabSet = new Queue<GameObject>();
+        wall4BlocksPrefabSet = new Queue<GameObject>();
+        wall5BlocksPrefabSet = new Queue<GameObject>();
+        wall6BlocksPrefabSet = new Queue<GameObject>();
+        doubleWallPrefabSet = new Queue<GameObject>();
+        doubleWall1PrefabSet = new Queue<GameObject>();
+        doubleWall2PrefabSet = new Queue<GameObject>();
+        shieldPrefabSet = new Queue<GameObject>();
+        gunPowerUpPrefabSet = new Queue<GameObject>();
+        arrowUpPrefabSet = new Queue<GameObject>();
+        arrowDownPrefabSet = new Queue<GameObject>();
+        
+        GenerateQueue(coinBallPrefabSet, coinBallPrefab);
+        GenerateQueue(coinLinePrefabSet, coinLinePrefab);
+        GenerateQueue(wall4BlocksPrefabSet, wall4BlocksPrefab);
+        GenerateQueue(wall5BlocksPrefabSet, wall5BlocksPrefab);
+        GenerateQueue(wall6BlocksPrefabSet, wall6BlocksPrefab);
+        GenerateQueue(doubleWallPrefabSet, doubleWallPrefab);
+        GenerateQueue(doubleWall1PrefabSet, doubleWall1Prefab);
+        GenerateQueue(doubleWall2PrefabSet, doubleWall2Prefab);
+        GenerateQueue(shieldPrefabSet, shieldPrefab);
+        GenerateQueue(gunPowerUpPrefabSet, gunPowerUpPrefab);
+        GenerateQueue(arrowUpPrefabSet, arrowUpPrefab);
+        GenerateQueue(arrowDownPrefabSet, arrowDownPrefab);
+
 
         entityBlockSeparation = 30;
         entityBlock1 = new GameObject[10];
@@ -104,87 +144,111 @@ public class MapGenerator : MonoBehaviour
             float random = Random.Range(0, 100);
             if(random > 93){
                 // Coin Line
-                entityBlock[i] = GameObject.Instantiate(coinLinePrefab);
+                // entityBlock[i] = GameObject.Instantiate(coinLinePrefab);
+                entityBlock[i] = DequeueOrInstantiate(coinLinePrefabSet, coinLinePrefab);
                 maxY = 4;
                 minXseparation = baseSpeed*0.65f;
                 maxXseparation = baseSpeed*1.1f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 86){
                 // Coin Ball
-                entityBlock[i] = GameObject.Instantiate(coinBallPrefab);
+                // entityBlock[i] = GameObject.Instantiate(coinBallPrefab);
+                entityBlock[i] = DequeueOrInstantiate(coinBallPrefabSet, coinBallPrefab);
                 maxY = 3;
                 minXseparation = baseSpeed*0.4f;
                 maxXseparation = baseSpeed*0.9f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 83){
                 // Arrow Up
-                entityBlock[i] = GameObject.Instantiate(arrowUpPrefab);
+                // entityBlock[i] = GameObject.Instantiate(arrowUpPrefab);
+                entityBlock[i] = DequeueOrInstantiate(arrowUpPrefabSet, arrowUpPrefab);
                 maxY = 3f;
                 minXseparation = baseSpeed*0.75f;
                 maxXseparation = baseSpeed*1.1f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 80){
                 // Arrow Down
-                entityBlock[i] = GameObject.Instantiate(arrowDownPrefab);
+                // entityBlock[i] = GameObject.Instantiate(arrowDownPrefab);
+                entityBlock[i] = DequeueOrInstantiate(arrowDownPrefabSet, arrowDownPrefab);
                 maxY = 3f;
                 minXseparation = baseSpeed*0.75f;
                 maxXseparation = baseSpeed*1.1f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 60){
                 // 4 Blocks Wall
-                entityBlock[i] = GameObject.Instantiate(wall4BlocksPrefab);
+                // entityBlock[i] = GameObject.Instantiate(wall4BlocksPrefab);
+                entityBlock[i] = DequeueOrInstantiate(wall4BlocksPrefabSet, wall4BlocksPrefab);
+                RestartAnimation(entityBlock[i]);
                 maxY = 3.35f;
                 minXseparation = baseSpeed*0.95f;
                 maxXseparation = baseSpeed*1.05f;
             }
             else if(random > 30){
                 // 5 Blocks Wall
-                entityBlock[i] = GameObject.Instantiate(wall5BlocksPrefab);
+                // entityBlock[i] = GameObject.Instantiate(wall5BlocksPrefab);
+                entityBlock[i] = DequeueOrInstantiate(wall5BlocksPrefabSet, wall5BlocksPrefab);
+                RestartAnimation(entityBlock[i]);
                 maxY = 2.9f;
                 minXseparation = baseSpeed*1.05f;
                 maxXseparation = baseSpeed*1.15f;
             }
             else if(random > 15){
                 // 6 Blocks Wall
-                entityBlock[i] = GameObject.Instantiate(wall6BlocksPrefab);
+                // entityBlock[i] = GameObject.Instantiate(wall6BlocksPrefab);
+                entityBlock[i] = DequeueOrInstantiate(wall6BlocksPrefabSet, wall6BlocksPrefab);
+                RestartAnimation(entityBlock[i]);
                 maxY = 2.55f;
                 minXseparation = baseSpeed*1.10f;
                 maxXseparation = baseSpeed*1.2f;
             }
             else if(random > 13){
                 // Double Wall
-                entityBlock[i] = GameObject.Instantiate(doubleWallPrefab);
+                // entityBlock[i] = GameObject.Instantiate(doubleWallPrefab);
+                entityBlock[i] = DequeueOrInstantiate(doubleWallPrefabSet, doubleWallPrefab);
+                RestartAnimation(entityBlock[i]);
                 maxY = 0f;
                 minXseparation = baseSpeed*1.4f;
                 maxXseparation = baseSpeed*1.6f;
             }
             else if(random > 9){
                 // Double Wall 1
-                entityBlock[i] = GameObject.Instantiate(doubleWall1Prefab);
+                // entityBlock[i] = GameObject.Instantiate(doubleWall1Prefab);
+                entityBlock[i] = DequeueOrInstantiate(doubleWall1PrefabSet, doubleWall1Prefab);
+                RestartAnimation(entityBlock[i]);
                 maxY = 0f;
                 minXseparation = baseSpeed*1.3f;
                 maxXseparation = baseSpeed*1.5f;
             }
             else if(random > 5){
                 // Double Wall 2
-                entityBlock[i] = GameObject.Instantiate(doubleWall2Prefab);
+                // entityBlock[i] = GameObject.Instantiate(doubleWall2Prefab);
+                entityBlock[i] = DequeueOrInstantiate(doubleWall2PrefabSet, doubleWall2Prefab);
+                RestartAnimation(entityBlock[i]);
                 maxY = 0f;
                 minXseparation = baseSpeed*1.3f;
                 maxXseparation = baseSpeed*1.5f;
             }
             else if(random > 2){
                 // Shield PowerUp
-                entityBlock[i] = GameObject.Instantiate(shieldPrefab);
+                // entityBlock[i] = GameObject.Instantiate(shieldPrefab);
+                entityBlock[i] = DequeueOrInstantiate(shieldPrefabSet, shieldPrefab);
                 maxY = 4;
                 minXseparation = baseSpeed*0.4f;
                 maxXseparation = baseSpeed*0.9f;
+                entityBlock[i].SetActive(true);
             }
             else if(random >= 0){
                 // Bullets PowerUp
-                entityBlock[i] = GameObject.Instantiate(gunPowerUpPrefab);
+                // entityBlock[i] = GameObject.Instantiate(gunPowerUpPrefab);
+                entityBlock[i] = DequeueOrInstantiate(gunPowerUpPrefabSet, gunPowerUpPrefab);
                 maxY = 4;
                 minXseparation = baseSpeed*0.4f;
                 maxXseparation = baseSpeed*0.9f;
+                entityBlock[i].SetActive(true);
             }
             else{
                 maxY = minXseparation = maxXseparation = 0f;
@@ -210,7 +274,83 @@ public class MapGenerator : MonoBehaviour
     }
     private void DestroyEntityBlock(GameObject[] entityBlock){
         for(int i=0; i < entityBlock.Length; i++){
-            Destroy(entityBlock[i]);
+            switch(entityBlock[i].tag){
+                case "CoinBall":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    coinBallPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "CoinLine":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    coinLinePrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "ArrowUp":
+                    entityBlock[i].SetActive(false);
+                    arrowUpPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "ArrowDown":
+                    entityBlock[i].SetActive(false);
+                    arrowDownPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "Shield":
+                    entityBlock[i].SetActive(false);
+                    shieldPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "Gun":
+                    entityBlock[i].SetActive(false);
+                    gunPowerUpPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "4BlockWall":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    wall4BlocksPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "5BlockWall":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    wall5BlocksPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "6BlockWall":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    wall6BlocksPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "DoubleWall":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    doubleWallPrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "DoubleWall1":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    doubleWall1PrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                case "DoubleWall2":
+                    for (int j = 0; j < entityBlock[i].transform.childCount; j++){
+                        entityBlock[i].transform.GetChild(j).gameObject.SetActive(true);
+                    }
+                    entityBlock[i].SetActive(false);
+                    doubleWall2PrefabSet.Enqueue(entityBlock[i]);
+                    break;
+                default:
+                    Destroy(entityBlock[i]);
+                    break;
+            }
         }
     }
 
@@ -220,5 +360,40 @@ public class MapGenerator : MonoBehaviour
         {
             background_element.transform.position = new Vector3(20, background_element.transform.position.y, background_element.transform.position.z);
         }
+    }
+
+    private void GenerateQueue(Queue<GameObject> queue, GameObject prefab){
+        for(int i=0; i < 5; i++){
+            queue.Enqueue(GameObject.Instantiate(prefab));
+        }
+    }
+
+    private GameObject DequeueOrInstantiate(Queue<GameObject> queue, GameObject prefab){
+        if(queue.Count == 0){
+            return GameObject.Instantiate(prefab);
+        }
+        return queue.Dequeue();
+    }
+
+    private void RestartAnimation(GameObject gameObject){
+        gameObject.SetActive(true);
+        if(gameObject.tag == "DoubleWall" || gameObject.tag == "DoubleWall1" || gameObject.tag == "DoubleWall2"){
+            for (int j = 0; j < gameObject.transform.childCount; j++){
+                Animator[] animators = gameObject.transform.GetChild(j).gameObject.GetComponentsInChildren<Animator>();
+                gameObject.transform.GetChild(j).gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                foreach(Animator anim in animators){
+                    anim.Play(0);
+                }
+            }
+        }
+        else{
+            Animator[] animators = gameObject.GetComponentsInChildren<Animator>();
+            foreach(Animator anim in animators){
+                anim.Play(0);
+            }
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        
+        
     }
 }
