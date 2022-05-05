@@ -769,6 +769,7 @@ GameObject:
   - component: {fileID: 574124534}
   - component: {fileID: 574124533}
   - component: {fileID: 574124537}
+  - component: {fileID: 574124538}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -879,6 +880,20 @@ MonoBehaviour:
   highestScoreText: {fileID: 5319695}
   totalCoinsText: {fileID: 2095281241}
   helpMessagePanel: {fileID: 1684961204}
+--- !u!114 &574124538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574124532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d318ea217c613408e442153dceddaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  superSize: 2
+  screenShotIndex: 0
 --- !u!1001 &631840211
 PrefabInstance:
   m_ObjectHideFlags: 0
