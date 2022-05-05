@@ -27,10 +27,7 @@ public class Projectile : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        
-        switch (collision.gameObject.tag)
-        {
-            case "Obstacle":
+            if(collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "4BlockWall"||collision.gameObject.tag == "5BlockWall"||collision.gameObject.tag == "6BlockWall"||collision.gameObject.tag == "DoubleWall"||collision.gameObject.tag == "DoubleWall1"||collision.gameObject.tag == "DoubleWall2"){
                 Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
                 foreach(Animator anim in animators){
                     anim.Play("block_destroy");
@@ -38,10 +35,6 @@ public class Projectile : MonoBehaviour
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 Destroy(this.gameObject);
                 AudioSource.PlayClipAtPoint(breakWall, transform.position);
-                break;
-            default:
-                break;
-        }
-        
+            }
     }
 }
