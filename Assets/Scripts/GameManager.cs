@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
             highestScore.GetComponent<Text>().text = "New high score!";
         }
         else{
-            highestScore.GetComponent<Text>().text = "Your highest score is: " + PlayerPrefs.GetInt("HighestScore", 0).ToString();
+            highestScore.GetComponent<Text>().text = "highest score: " + PlayerPrefs.GetInt("HighestScore", 0).ToString();
         }
         finalScoreText.GetComponent<Text>().text = ((int)score).ToString();
         
