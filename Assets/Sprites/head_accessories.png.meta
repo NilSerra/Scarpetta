@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: -4401704606230019827
     second: head_accessories_5
+  - first:
+      213: 3260289602926229552
+    second: head_accessories_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,12 +127,12 @@ TextureImporter:
       name: head_accessories_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 38
-        width: 32
-        height: 14
+        x: 0
+        y: 180
+        width: 40
+        height: 30
       alignment: 9
-      pivot: {x: 0.6, y: 0.4}
+      pivot: {x: 0.56571096, y: 0.47183788}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,12 +148,12 @@ TextureImporter:
       name: head_accessories_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 38
-        width: 32
-        height: 14
+        x: 0
+        y: 150
+        width: 40
+        height: 30
       alignment: 9
-      pivot: {x: 0.6, y: 0.4}
+      pivot: {x: 0.5583833, y: 0.46107736}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,12 +169,12 @@ TextureImporter:
       name: head_accessories_2
       rect:
         serializedVersion: 2
-        x: 82
-        y: 38
-        width: 32
-        height: 14
+        x: 0
+        y: 120
+        width: 40
+        height: 30
       alignment: 9
-      pivot: {x: 0.6, y: 0.4}
+      pivot: {x: 0.56854075, y: 0.44669038}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,12 +190,12 @@ TextureImporter:
       name: head_accessories_3
       rect:
         serializedVersion: 2
-        x: 9
-        y: 4
-        width: 26
-        height: 15
+        x: 0
+        y: 90
+        width: 40
+        height: 30
       alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0.5628291, y: 0.37814942}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +211,12 @@ TextureImporter:
       name: head_accessories_4
       rect:
         serializedVersion: 2
-        x: 49
-        y: 4
-        width: 26
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 60
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5456939, y: 0.40099666}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -229,12 +232,12 @@ TextureImporter:
       name: head_accessories_5
       rect:
         serializedVersion: 2
-        x: 87
-        y: 8
-        width: 28
-        height: 13
+        x: 0
+        y: 30
+        width: 40
+        height: 30
       alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      pivot: {x: 0.5228469, y: 0.42384338}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,6 +245,27 @@ TextureImporter:
       bones: []
       spriteID: d01857b5bf00ae2c0800000000000000
       internalID: -4401704606230019827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head_accessories_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 30
+      alignment: 9
+      pivot: {x: 0.51, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038315fbe10ee3d20800000000000000
+      internalID: 3260289602926229552
       vertices: []
       indices: 
       edges: []

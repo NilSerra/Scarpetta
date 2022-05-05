@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
 
 
     public void QuitGame(){
-        // PlayerPrefs.SetInt("FirstTimeOpening", 1);
+        PlayerPrefs.SetInt("FirstTimeOpening", 1);
         Application.Quit();
     }
 }
