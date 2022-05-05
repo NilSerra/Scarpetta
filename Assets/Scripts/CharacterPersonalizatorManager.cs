@@ -106,7 +106,7 @@ public class CharacterPersonalizatorManager : MonoBehaviour
             Button button = buttonObject.GetComponent<Button>();
 
             GameObject buttonText = buttonObject.transform.Find("Text").gameObject;
-            buttonText.GetComponent<Text>().text = csm.PlayerOwnsItem(csm.GetPlayerPrefNameForItem(title, i)) ? "set" : "buy";
+            buttonText.GetComponent<Text>().text = (price == 0 || csm.PlayerOwnsItem(csm.GetPlayerPrefNameForItem(title, i))) ? "set" : "buy";
 
             int tempIndex = i; //needs to be like this
             button.onClick.AddListener(() => csm.ChangeEquipment(title, tempIndex, buttonText));

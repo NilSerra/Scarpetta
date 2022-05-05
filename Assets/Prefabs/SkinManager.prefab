@@ -52,6 +52,7 @@ MonoBehaviour:
   accessorySprite: {fileID: 0}
   gunSprite: {fileID: 0}
   headSprites:
+  - {fileID: 0}
   - {fileID: 2637833978773608066, guid: f4825492afdda3243bba9de743efad57, type: 3}
   - {fileID: 5479478076555447819, guid: f4825492afdda3243bba9de743efad57, type: 3}
   - {fileID: 3728112206007066878, guid: f4825492afdda3243bba9de743efad57, type: 3}
@@ -90,7 +91,7 @@ MonoBehaviour:
   - {fileID: -7349882584872989000, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
   - {fileID: -3476979527478288156, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
   - {fileID: -9170448629031416532, guid: 0d6d1c492326e90479ef7fa8c8add281, type: 3}
-  headSpritesCost: 00000000c8000000c800000020030000e8030000dc050000
+  headSpritesCost: 00000000c8000000c8000000c800000020030000e8030000dc050000
   bodySpritesCost: 00000000c8000000c8000000d0070000881300000f270000
   legSpritesCost: 00000000c8000000c8000000c8000000e8030000e8030000dc050000d0070000d007000088130000
   handSpritesCost: 00000000e8030000
@@ -98,3 +99,5 @@ MonoBehaviour:
   gunSpritesCost: 00000000f4010000e803000088130000
   CoinsTextCustomizationScreen: {fileID: 0}
   popupPanel: {fileID: 0}
+  buySound: {fileID: 0}
+  errorSound: {fileID: 0}
