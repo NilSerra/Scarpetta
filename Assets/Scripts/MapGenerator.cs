@@ -368,7 +368,9 @@ public class MapGenerator : MonoBehaviour
 
     private void GenerateQueue(Queue<GameObject> queue, GameObject prefab){
         for(int i=0; i < 5; i++){
-            queue.Enqueue(GameObject.Instantiate(prefab));
+            GameObject obj = GameObject.Instantiate(prefab);
+            obj.SetActive(false);
+            queue.Enqueue(obj);
         }
     }
 
