@@ -6,32 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MapGenerator : MonoBehaviour
 {
-
-    public GameObject player;
-    public Animator playerAnimator;
-    public GameManager gameManager;
     private GameObject floor;
     private GameObject ceiling;
     private GameObject floor_2;
     private GameObject ceiling_2;
-    public float baseSpeed = 5f;
+
     private GameObject[] entityBlock1;
     private GameObject[] entityBlock2;
-    private float entityBlock1MinX;
-    private float entityBlock2MinX;
-    private float entityBlockSeparation;
-    public GameObject coinBallPrefab;
-    public GameObject coinLinePrefab;
-    public GameObject wall4BlocksPrefab;
-    public GameObject wall5BlocksPrefab;
-    public GameObject wall6BlocksPrefab;
-    public GameObject doubleWallPrefab;
-    public GameObject doubleWall1Prefab;
-    public GameObject doubleWall2Prefab;
-    public GameObject shieldPrefab;
-    public GameObject gunPowerUpPrefab;
-    public GameObject arrowUpPrefab;
-    public GameObject arrowDownPrefab;
 
     private Queue<GameObject> coinBallPrefabSet;
     private Queue<GameObject> coinLinePrefabSet;
@@ -45,8 +26,32 @@ public class MapGenerator : MonoBehaviour
     private Queue<GameObject> gunPowerUpPrefabSet;
     private Queue<GameObject> arrowUpPrefabSet;
     private Queue<GameObject> arrowDownPrefabSet;
-    public float maxXspeed = 20;
+
+    private float entityBlock1MinX;
+    private float entityBlock2MinX;
+    private float entityBlockSeparation;
+
+    public GameObject player;
+    public Animator playerAnimator;
+    public GameManager gameManager;
+    
+    public GameObject coinBallPrefab;
+    public GameObject coinLinePrefab;
+    public GameObject wall4BlocksPrefab;
+    public GameObject wall5BlocksPrefab;
+    public GameObject wall6BlocksPrefab;
+    public GameObject doubleWallPrefab;
+    public GameObject doubleWall1Prefab;
+    public GameObject doubleWall2Prefab;
+    public GameObject shieldPrefab;
+    public GameObject gunPowerUpPrefab;
+    public GameObject arrowUpPrefab;
+    public GameObject arrowDownPrefab;
+
     public int speedIncreaseFactor = 60;
+    public float maxXspeed = 20;
+    public float baseSpeed = 5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -81,7 +86,6 @@ public class MapGenerator : MonoBehaviour
         GenerateQueue(gunPowerUpPrefabSet, gunPowerUpPrefab);
         GenerateQueue(arrowUpPrefabSet, arrowUpPrefab);
         GenerateQueue(arrowDownPrefabSet, arrowDownPrefab);
-
 
         entityBlockSeparation = 30;
         entityBlock1 = new GameObject[10];
@@ -147,8 +151,8 @@ public class MapGenerator : MonoBehaviour
                 // entityBlock[i] = GameObject.Instantiate(coinLinePrefab);
                 entityBlock[i] = DequeueOrInstantiate(coinLinePrefabSet, coinLinePrefab);
                 maxY = 4;
-                minXseparation = baseSpeed*0.65f;
-                maxXseparation = baseSpeed*1.1f;
+                minXseparation = baseSpeed*1f;
+                maxXseparation = baseSpeed*1.2f;
                 entityBlock[i].SetActive(true);
             }
             else if(random > 86){
@@ -156,7 +160,7 @@ public class MapGenerator : MonoBehaviour
                 // entityBlock[i] = GameObject.Instantiate(coinBallPrefab);
                 entityBlock[i] = DequeueOrInstantiate(coinBallPrefabSet, coinBallPrefab);
                 maxY = 3;
-                minXseparation = baseSpeed*0.4f;
+                minXseparation = baseSpeed*0.5f;
                 maxXseparation = baseSpeed*0.9f;
                 entityBlock[i].SetActive(true);
             }
@@ -237,7 +241,7 @@ public class MapGenerator : MonoBehaviour
                 // entityBlock[i] = GameObject.Instantiate(shieldPrefab);
                 entityBlock[i] = DequeueOrInstantiate(shieldPrefabSet, shieldPrefab);
                 maxY = 4;
-                minXseparation = baseSpeed*0.4f;
+                minXseparation = baseSpeed*0.5f;
                 maxXseparation = baseSpeed*0.9f;
                 entityBlock[i].SetActive(true);
             }
@@ -246,7 +250,7 @@ public class MapGenerator : MonoBehaviour
                 // entityBlock[i] = GameObject.Instantiate(gunPowerUpPrefab);
                 entityBlock[i] = DequeueOrInstantiate(gunPowerUpPrefabSet, gunPowerUpPrefab);
                 maxY = 4;
-                minXseparation = baseSpeed*0.4f;
+                minXseparation = baseSpeed*0.5f;
                 maxXseparation = baseSpeed*0.9f;
                 entityBlock[i].SetActive(true);
             }
@@ -380,10 +384,10 @@ public class MapGenerator : MonoBehaviour
         if(gameObject.tag == "DoubleWall" || gameObject.tag == "DoubleWall1" || gameObject.tag == "DoubleWall2"){
             for (int j = 0; j < gameObject.transform.childCount; j++){
                 Animator[] animators = gameObject.transform.GetChild(j).gameObject.GetComponentsInChildren<Animator>();
-                gameObject.transform.GetChild(j).gameObject.GetComponent<BoxCollider2D>().enabled = true;
                 foreach(Animator anim in animators){
                     anim.Play(0);
                 }
+                gameObject.transform.GetChild(j).gameObject.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
         else{
@@ -393,7 +397,5 @@ public class MapGenerator : MonoBehaviour
             }
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
-        
-        
     }
 }
