@@ -149,6 +149,7 @@ public class MapGenerator : MonoBehaviour
                 maxY = 4;
                 minXseparation = baseSpeed*0.65f;
                 maxXseparation = baseSpeed*1.1f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 86){
                 // Coin Ball
@@ -157,6 +158,7 @@ public class MapGenerator : MonoBehaviour
                 maxY = 3;
                 minXseparation = baseSpeed*0.4f;
                 maxXseparation = baseSpeed*0.9f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 83){
                 // Arrow Up
@@ -165,6 +167,7 @@ public class MapGenerator : MonoBehaviour
                 maxY = 3f;
                 minXseparation = baseSpeed*0.75f;
                 maxXseparation = baseSpeed*1.1f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 80){
                 // Arrow Down
@@ -173,6 +176,7 @@ public class MapGenerator : MonoBehaviour
                 maxY = 3f;
                 minXseparation = baseSpeed*0.75f;
                 maxXseparation = baseSpeed*1.1f;
+                entityBlock[i].SetActive(true);
             }
             else if(random > 60){
                 // 4 Blocks Wall
@@ -235,6 +239,7 @@ public class MapGenerator : MonoBehaviour
                 maxY = 4;
                 minXseparation = baseSpeed*0.4f;
                 maxXseparation = baseSpeed*0.9f;
+                entityBlock[i].SetActive(true);
             }
             else if(random >= 0){
                 // Bullets PowerUp
@@ -243,11 +248,11 @@ public class MapGenerator : MonoBehaviour
                 maxY = 4;
                 minXseparation = baseSpeed*0.4f;
                 maxXseparation = baseSpeed*0.9f;
+                entityBlock[i].SetActive(true);
             }
             else{
                 maxY = minXseparation = maxXseparation = 0f;
             }
-            entityBlock[i].SetActive(true);
             //Placing the entities in the next entityBlock
             if(i == 0){
                 entityBlock[i].transform.position = new Vector3(entityBlockMinX+ Random.Range(minXseparation*100, maxXseparation*100)/100, RandomMoreWeightExtremes(maxY), 0);
@@ -371,6 +376,7 @@ public class MapGenerator : MonoBehaviour
     }
 
     private void RestartAnimation(GameObject gameObject){
+        gameObject.SetActive(true);
         if(gameObject.tag == "DoubleWall" || gameObject.tag == "DoubleWall1" || gameObject.tag == "DoubleWall2"){
             for (int j = 0; j < gameObject.transform.childCount; j++){
                 Animator[] animators = gameObject.transform.GetChild(j).gameObject.GetComponentsInChildren<Animator>();
