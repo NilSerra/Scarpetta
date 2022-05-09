@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static Debugging;
 
 public class CharacterSkinManager : MonoBehaviour
-{
-    
+{ 
     public SpriteRenderer headSprite;
     public SpriteRenderer bodySprite;
     public SpriteRenderer leg1Sprite;
@@ -38,7 +38,6 @@ public class CharacterSkinManager : MonoBehaviour
     public AudioClip buySound;
     public AudioClip errorSound;
 
-
     public int GetItemCost(string bodyPart, int index){
         if (titles.Contains(bodyPart)){
             switch (bodyPart){
@@ -58,7 +57,7 @@ public class CharacterSkinManager : MonoBehaviour
                     break;
             }
         }
-        Debug.Log("WHEN CALLING GetItemCost(): Error in body part name");
+        Debugging.DebugLog("WHEN CALLING GetItemCost(): Error in body part name");
         return 0;
     }
 
@@ -81,7 +80,7 @@ public class CharacterSkinManager : MonoBehaviour
                     break;
             }
         }
-        Debug.Log("WHEN CALLING GetSpriteItem(): Error in body part name");
+        Debugging.DebugLog("WHEN CALLING GetSpriteItem(): Error in body part name");
         return null;
     }
 
@@ -104,12 +103,12 @@ public class CharacterSkinManager : MonoBehaviour
                     break;
             }
         }
-        Debug.Log("WHEN CALLING GetSpriteListCount(): Error in body part name");
+        Debugging.DebugLog("WHEN CALLING GetSpriteListCount(): Error in body part name");
         return 0;
     }
 
     public void ChangeEquipment(string title, int elementIndex, GameObject buttonText){
-        Debug.Log(title + " pressed, item " + elementIndex);
+        Debugging.DebugLog(title + " pressed, item " + elementIndex);
         switch (title){
                 case "head":
                     ActionButtonPressed("head", elementIndex, headSprite, null, headSprites, headSpritesCost, buttonText);
@@ -132,7 +131,6 @@ public class CharacterSkinManager : MonoBehaviour
                 default:
                     break;
             }
-            
     }
 
     private void ActionButtonPressed(string bodyPart, int elementIndex, SpriteRenderer sprite, SpriteRenderer sprite2, List<Sprite> spriteList, List<int> costList, GameObject buttonText){
@@ -152,11 +150,11 @@ public class CharacterSkinManager : MonoBehaviour
             SetPlayerEquipment(bodyPart, elementIndex);
 
             buttonText.GetComponent<Text>().text = "set";
-            Debug.Log("Item bought for " + costList[elementIndex] + " coins.");
+            Debugging.DebugLog("Item bought for " + costList[elementIndex] + " coins.");
         }
         else{
             StartCoroutine(ActivatePopupMenu());
-            Debug.Log("Not enough coins.");
+            Debugging.DebugLog("Not enough coins.");
         }
     }
 
@@ -165,7 +163,7 @@ public class CharacterSkinManager : MonoBehaviour
         if (titles.Contains(bodyPart)){
             return bodyPart+"_"+index;
         }
-        Debug.Log("WHEN CALLING GetPlayerPrefNameForItem(): Error in body part name");
+        Debugging.DebugLog("WHEN CALLING GetPlayerPrefNameForItem(): Error in body part name");
         return "Error";
     }
 
@@ -173,12 +171,13 @@ public class CharacterSkinManager : MonoBehaviour
         if (titles.Contains(bodyPart)){
             return bodyPart+"_equiped";
         }
-        Debug.Log("WHEN CALLING GetPlayerPrefNameForItem(): Error in body part name");
+        Debugging.DebugLog("WHEN CALLING GetPlayerPrefNameForItem(): Error in body part name");
         return "Error";
     }
 
     public void SetPlayerEquipment(string bodyPart, int index){
         PlayerPrefs.SetInt(GetPlayerEquipmentPrefName(bodyPart), index);
+        Debugging.DebugLog("Item equipped for part " + bodyPart);
     }
 
     public int GetPlayerEquipmentIndex(string bodyPart){
@@ -206,7 +205,7 @@ public class CharacterSkinManager : MonoBehaviour
                     break;
             }
         }
-        Debug.Log("WHEN CALLING GetSpriteFromBodyPart(): Error in body part name");
+        Debugging.DebugLog("WHEN CALLING GetSpriteFromBodyPart(): Error in body part name");
         return null;
     }
 
@@ -238,16 +237,15 @@ public class CharacterSkinManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(errorSound, Camera.main.transform.position);
 
         //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        Debugging.DebugLog("Started Coroutine at timestamp : " + Time.time);
         popupPanel.SetActive(true);
 
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(1);
 
         //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        Debugging.DebugLog("Finished Coroutine at timestamp : " + Time.time);
         popupPanel.SetActive(false);
     }
-
 
 }

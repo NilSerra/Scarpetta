@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static Debugging;
 
 public class TutorialGenerator : MonoBehaviour
 {
@@ -77,8 +78,8 @@ public class TutorialGenerator : MonoBehaviour
     }
 
     private void generateEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
+        Debugging.DebugLog("Generating entities for hte tutorial");
         for(int i=0; i < entityBlock.Length; i++){
-            
             // put wall, wall, coinLine, shield, wall, gunPowerUp, wall, arrow up, arrow down
             if(i==0){
                 entityBlock[i] = GameObject.Instantiate(wall5BlocksPrefab);
@@ -136,6 +137,7 @@ public class TutorialGenerator : MonoBehaviour
             else if(i == 8){
                 entityBlock[i].transform.position = new Vector3(entityBlock[i-1].transform.position.x + 16, 0, 0);
             }
+            Debugging.DebugLog("Generated " + entityBlock[i].tag + " in position: " + entityBlock[i].transform.position.x + " , " + entityBlock[i].transform.position.y + ". ");
         }
     }
 
@@ -158,7 +160,6 @@ public class TutorialGenerator : MonoBehaviour
     }
 
     private void pauseForTutorial(GameObject[] entityBlock){
-
         if (entityBlock[0].transform.position.x <= 6 && !hint1shown){
             Time.timeScale = 0;
             popupPanel.SetActive(true);
@@ -169,6 +170,7 @@ public class TutorialGenerator : MonoBehaviour
                 popupPanel.GetComponentInChildren<Text>().text = "Press space to fly and avoid walls";
             }
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint1shown = true;
@@ -180,6 +182,7 @@ public class TutorialGenerator : MonoBehaviour
             popupPanel.SetActive(true);
             popupPanel.GetComponentInChildren<Text>().text = "You can collect coins";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint2shown = true;
@@ -191,6 +194,7 @@ public class TutorialGenerator : MonoBehaviour
             popupPanel.SetActive(true);
             popupPanel.GetComponentInChildren<Text>().text = "You can get a shield";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint3shown = true;
@@ -202,6 +206,7 @@ public class TutorialGenerator : MonoBehaviour
             popupPanel.SetActive(true);
             popupPanel.GetComponentInChildren<Text>().text = "With a shield you can fly through a wall";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint4shown = true;
@@ -213,6 +218,7 @@ public class TutorialGenerator : MonoBehaviour
             popupPanel.SetActive(true);
             popupPanel.GetComponentInChildren<Text>().text = "You can pick up a gun"; 
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint5shown = true;
@@ -229,6 +235,7 @@ public class TutorialGenerator : MonoBehaviour
                 popupPanel.GetComponentInChildren<Text>().text = "Press s to shoot and destroy walls";
             }
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.S)){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint6shown = true;
@@ -240,6 +247,7 @@ public class TutorialGenerator : MonoBehaviour
             popupPanel.SetActive(true);
             popupPanel.GetComponentInChildren<Text>().text = "Be careful with arrows up and down";
             if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("Jump")){
+                Debugging.DebugLog("Hint touched");
                 popupPanel.SetActive(false);
                 Time.timeScale = 1;
                 hint7shown = true;
@@ -255,6 +263,7 @@ public class TutorialGenerator : MonoBehaviour
                 popupPanel.SetActive(false);
                 popupPanel2.SetActive(false);
                 Time.timeScale = 1;
+                Debugging.DebugLog("Changing scene to Menu");
                 SceneManager.LoadScene("MenuScreen");
             }
         }

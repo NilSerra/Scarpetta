@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static Debugging;
 
 public class MenuManager : MonoBehaviour
 {
-
     public Text highestScoreText;
     public Text totalCoinsText;
     public GameObject helpMessagePanel;
-
 
     void Start() {
         float highestScore = PlayerPrefs.GetInt("HighestScore", 0);
@@ -21,6 +20,7 @@ public class MenuManager : MonoBehaviour
     }
 
     private void ShowHelpMessage(){
+        Debugging.DebugLog("Showing tutorial message");
         if(SceneManager.GetActiveScene().name == "MenuScreen" && PlayerPrefs.GetInt("FirstTimeOpening", 1)==1){
             helpMessagePanel.SetActive(true);
         }
@@ -29,21 +29,23 @@ public class MenuManager : MonoBehaviour
         }
     }
     public void PlayGame(){
+        Debugging.DebugLog("Changing scene to MainScene");
         SceneManager.LoadScene("MainScene");
     }
 
-    public void GoToOptions(){
+    public void GoToShop(){
+        Debugging.DebugLog("Changing scene to CharacterPersonalization");
         SceneManager.LoadScene("CharacterPersonalizationScreen");
     }
 
     public void PlayTutorial(){
+        Debugging.DebugLog("Changing scene to Tutorial");
         PlayerPrefs.SetInt("FirstTimeOpening", 0);
         SceneManager.LoadScene("HelpSystem");
     }
 
-
     public void QuitGame(){
-        // PlayerPrefs.SetInt("FirstTimeOpening", 1);
+        Debugging.DebugLog("Quitting game.");
         Application.Quit();
     }
 }

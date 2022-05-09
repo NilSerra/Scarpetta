@@ -322,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlockPrefab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8314871922955026285, guid: 669efb84fcd8e314b99e171c386d0e61, type: 3}
+      propertyPath: m_TagString
+      value: 4BlockWall
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8936792596917976999, guid: 669efb84fcd8e314b99e171c386d0e61, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 669efb84fcd8e314b99e171c386d0e61, type: 3}
@@ -650,6 +654,10 @@ PrefabInstance:
     - target: {fileID: 8314871922955026285, guid: 669efb84fcd8e314b99e171c386d0e61, type: 3}
       propertyPath: m_Name
       value: WallBlockPrefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314871922955026285, guid: 669efb84fcd8e314b99e171c386d0e61, type: 3}
+      propertyPath: m_TagString
+      value: 5BlockWall
       objectReference: {fileID: 0}
     - target: {fileID: 8936792596917976999, guid: 669efb84fcd8e314b99e171c386d0e61, type: 3}
       propertyPath: m_Size.x

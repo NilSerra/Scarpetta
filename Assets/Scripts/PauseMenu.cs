@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Debugging;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void PauseGame(){
+        Debugging.DebugLog("Game Paused.");
         if(!gameManager.gameOver){
             if(pauseMenu){
                 pauseMenu.SetActive(true);
@@ -39,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void ResumeGame(){
+        Debugging.DebugLog("Resuming Game.");
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
@@ -47,11 +50,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void GoToMainMenu(){
+        Debugging.DebugLog("Changing scene to Menu");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScreen");
-    }
-
-    public void QuitGame(){
-        Application.Quit();
     }
 }

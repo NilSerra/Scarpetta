@@ -5,18 +5,15 @@ using UnityEngine.UI;
 
 public class Projectile : MonoBehaviour
 {
-    public float projectileVelocity = 30f;
     private Rigidbody2D body;
     public AudioClip breakWall;
+    public float projectileVelocity = 30f;
 
-    // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-    
     }
 
-    // Update is called once per frame
     void Update()
     {
         body = GetComponent<Rigidbody2D>();
@@ -27,7 +24,7 @@ public class Projectile : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-            if(collision.gameObject.tag == "Obstacle" || collision.gameObject.tag == "4BlockWall"||collision.gameObject.tag == "5BlockWall"||collision.gameObject.tag == "6BlockWall"||collision.gameObject.tag == "DoubleWall"||collision.gameObject.tag == "DoubleWall1"||collision.gameObject.tag == "DoubleWall2"){
+            if(collision.gameObject.tag == "4BlockWall"||collision.gameObject.tag == "5BlockWall"||collision.gameObject.tag == "6BlockWall"||collision.gameObject.tag == "DoubleWall"||collision.gameObject.tag == "DoubleWall1"||collision.gameObject.tag == "DoubleWall2"){
                 Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
                 foreach(Animator anim in animators){
                     anim.Play("block_destroy");

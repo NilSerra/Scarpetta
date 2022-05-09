@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static Debugging;
 
 public class MapGenerator : MonoBehaviour
 {
@@ -88,8 +89,8 @@ public class MapGenerator : MonoBehaviour
         GenerateQueue(arrowDownPrefabSet, arrowDownPrefab);
 
         entityBlockSeparation = 30;
-        entityBlock1 = new GameObject[10];
-        entityBlock2 = new GameObject[10];
+        entityBlock1 = new GameObject[7];
+        entityBlock2 = new GameObject[7];
         entityBlock1MinX = 15;
         entityBlock2MinX = 15 + entityBlockSeparation;
         GenerateEntityBlock(entityBlock1, entityBlock1MinX);
@@ -142,6 +143,7 @@ public class MapGenerator : MonoBehaviour
     }
 
     private void GenerateEntityBlock(GameObject[] entityBlock, float entityBlockMinX){
+        Debugging.DebugLog("Generating new Entity Block ");
         for(int i=0; i < entityBlock.Length; i++){
             float maxY, minXseparation, maxXseparation;
             //Randomizing entities to spawn
@@ -267,6 +269,7 @@ public class MapGenerator : MonoBehaviour
                     entityBlock[i].SetActive(false);
                 }
             }
+            Debugging.DebugLog("Generated" + entityBlock[i].tag + " in: " + entityBlock[i].transform.position.x + " , " + entityBlock[i].transform.position.y);
         }
     }
     private float RandomMoreWeightExtremes(float x){
@@ -278,6 +281,7 @@ public class MapGenerator : MonoBehaviour
     }
     private void DestroyEntityBlock(GameObject[] entityBlock){
         for(int i=0; i < entityBlock.Length; i++){
+            Debugging.DebugLog("Enqueuing " + entityBlock[i].tag);
             switch(entityBlock[i].tag){
                 case "CoinBall":
                     for (int j = 0; j < entityBlock[i].transform.childCount; j++){
@@ -367,6 +371,7 @@ public class MapGenerator : MonoBehaviour
     }
 
     private void GenerateQueue(Queue<GameObject> queue, GameObject prefab){
+        Debugging.DebugLog("Generating pool of " + prefab.tag);
         for(int i=0; i < 5; i++){
             GameObject obj = GameObject.Instantiate(prefab);
             obj.SetActive(false);
@@ -376,12 +381,15 @@ public class MapGenerator : MonoBehaviour
 
     private GameObject DequeueOrInstantiate(Queue<GameObject> queue, GameObject prefab){
         if(queue.Count == 0){
+            Debugging.DebugLog("Instantiating new " + prefab.tag);
             return GameObject.Instantiate(prefab);
         }
+        Debugging.DebugLog("Dequeuing " + prefab.tag);
         return queue.Dequeue();
     }
 
     private void RestartAnimation(GameObject gameObject){
+        Debugging.DebugLog("Restarting Animation for " + gameObject.tag);
         gameObject.SetActive(true);
         if(gameObject.tag == "DoubleWall" || gameObject.tag == "DoubleWall1" || gameObject.tag == "DoubleWall2"){
             for (int j = 0; j < gameObject.transform.childCount; j++){
