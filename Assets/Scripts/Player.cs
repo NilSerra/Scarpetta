@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Animations;
+using static Debugging;
 
 public class Player : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour
     }
 
     private void LoadSkin(){
-        Debug.Log("Loading Character Skin");
+        Debugging.DebugLog("Loading Character Skin");
         headSprite.sprite = csm.GetSpriteFromBodyPart("head");
 
         bodySprite.sprite = csm.GetSpriteFromBodyPart("body");
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour
         accessorySprite.sprite = csm.GetSpriteFromBodyPart("accessory");
         
         gunSprite.sprite = csm.GetSpriteFromBodyPart("gun");
-        Debug.Log("Character Skin loaded successfully");
+        Debugging.DebugLog("Character Skin loaded successfully");
     }
 
     void Update()
@@ -107,7 +108,7 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Collision with " + collision.gameObject.tag);
+        Debugging.DebugLog("Collision with " + collision.gameObject.tag);
         switch (collision.gameObject.tag)
         {
             case "Coin":
@@ -146,7 +147,7 @@ public class Player : MonoBehaviour
             default:
                 if(!testing){
                     if(hasShield){
-                        Debug.Log("Shield Destroyed.");
+                        Debugging.DebugLog("Shield Destroyed.");
                         hasShield = false;
                         shield.SetActive(false);
 
@@ -158,7 +159,7 @@ public class Player : MonoBehaviour
 
                         AudioSource.PlayClipAtPoint(breakWall, transform.position);
                     }
-                    else{
+                    else if(!gameManager.gameOver){
                         body.velocity = new Vector2(0f,0f);
                         playerAnimator.Play("Die");
                         gameManager.EndGame();
@@ -181,7 +182,7 @@ public class Player : MonoBehaviour
 
     public void ShootProjectile(Vector3 position){
         if(ammo > 0 && !gameManager.gameOver && Time.time > nextFire){
-            Debug.Log("Shooting projectile");
+            Debugging.DebugLog("Shooting projectile");
             ammo -= 1;
             gameManager.SetAmmo(ammo);
             GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);

@@ -85,38 +85,29 @@ public class CharacterPersonalizatorManager : MonoBehaviour
 
         int count = csm.GetSpriteListCount(title);
 
-        try{
-            for(int i = 0; i < count; ++i){
-                GameObject element = GameObject.Instantiate(listElementPrefab);
-                GameObject imageObject = element.transform.Find("ImageItem").gameObject;
-                GameObject textObject = element.transform.Find("ItemPrice").gameObject;
-                GameObject buttonObject = element.transform.Find("BackButton").gameObject;
+        for(int i = 0; i < count; ++i){
+            GameObject element = GameObject.Instantiate(listElementPrefab);
+            GameObject imageObject = element.transform.Find("ImageItem").gameObject;
+            GameObject textObject = element.transform.Find("ItemPrice").gameObject;
+            GameObject buttonObject = element.transform.Find("BackButton").gameObject;
 
-                imageObject.GetComponent<Image>().sprite = csm.GetSpriteItem(title, i);
-                if (imageObject.GetComponent<Image>().sprite == null){
-                    imageObject.GetComponent<Image>().color = new Color32(255,255,225,0);
-                }
-                int price = i < count ? csm.GetItemCost(title, i) : 0;
-                textObject.GetComponent<Text>().text = price.ToString();
-                Button button = buttonObject.GetComponent<Button>();
-
-                GameObject buttonText = buttonObject.transform.Find("Text").gameObject;
-                buttonText.GetComponent<Text>().text = (price == 0 || csm.PlayerOwnsItem(csm.GetPlayerPrefNameForItem(title, i))) ? "set" : "buy";
-
-                int tempIndex = i;
-                button.onClick.AddListener(() => csm.ChangeEquipment(title, tempIndex, buttonText));
-
-                element.transform.SetParent(contentList.transform, false);
+            imageObject.GetComponent<Image>().sprite = csm.GetSpriteItem(title, i);
+            if (imageObject.GetComponent<Image>().sprite == null){
+                imageObject.GetComponent<Image>().color = new Color32(255,255,225,0);
             }
-            Debugging.DebugLog("Objects for part: " + title + " loaded successfully");
-            
-        }
-        catch(Exception e){
-            Debugging.DebugLog("Error loading objects for part: " + title);
-            Debug.LogException(e, this);
-        }
-        
+            int price = i < count ? csm.GetItemCost(title, i) : 0;
+            textObject.GetComponent<Text>().text = price.ToString();
+            Button button = buttonObject.GetComponent<Button>();
 
+            GameObject buttonText = buttonObject.transform.Find("Text").gameObject;
+            buttonText.GetComponent<Text>().text = (price == 0 || csm.PlayerOwnsItem(csm.GetPlayerPrefNameForItem(title, i))) ? "set" : "buy";
+
+            int tempIndex = i;
+            button.onClick.AddListener(() => csm.ChangeEquipment(title, tempIndex, buttonText));
+
+            element.transform.SetParent(contentList.transform, false);
+        }
+        Debugging.DebugLog("Objects for part: " + title + " loaded successfully");
     }
 
     public void GoBack(){
