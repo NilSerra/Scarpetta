@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static Debugging;
 
 public class GameManager : MonoBehaviour
 {
-   
     //Game Over
     public GameObject pauseButton;
     public GameObject gameOverMenu;
@@ -35,9 +35,11 @@ public class GameManager : MonoBehaviour
         
         if(SystemInfo.deviceType == DeviceType.Desktop){
             useTouch = false;
+            Debugging.DebugLog("Detected Desktop, not using touchscreen controls.");
         }
          else if(SystemInfo.deviceType == DeviceType.Handheld){
             useTouch = true;
+            Debugging.DebugLog("Detected mobile device, using touchscreen controls.");
         }
     }
 
@@ -78,21 +80,21 @@ public class GameManager : MonoBehaviour
 
         pauseButton.SetActive(false);
         audioSource.Stop();
+        Debugging.DebugLog("Game ended, showing game over screen.");
     }
 
     public void GoToMainMenu(){
+        Debugging.DebugLog("Changing scene to Menu");
         SceneManager.LoadScene("MenuScreen");
     }
 
-    public void QuitGame(){
-        Application.Quit();
-    }
-
     public void PlayGame(){
+        Debugging.DebugLog("Changing scene to MainScene");
         SceneManager.LoadScene("MainScene");
     }
 
     public void PlayTutorial(){
+        Debugging.DebugLog("Changing scene to Tutorial");
         SceneManager.LoadScene("HelpSystem");
     }
 }

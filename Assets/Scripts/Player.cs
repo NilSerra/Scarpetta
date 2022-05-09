@@ -6,21 +6,18 @@ using UnityEngine.Animations;
 
 public class Player : MonoBehaviour
 {
-    public GameManager gameManager;
-    public GameObject projectilePrefab;
     private GameObject shield;
-    public bool testing = false;
-    public bool hasShield = false;
-    public int ammo = 0;
-    public float accelerationUp=50f;
-    Rigidbody2D body;
-    // public ParticleSystem ps;
-    // private ParticleSystem.EmissionModule em;
-    public Animator playerAnimator;
+    private Rigidbody2D body;
+
     private float fireRate = 0.5f;
     private float nextFire = 0f;
 
+    public GameManager gameManager;
+    public GameObject projectilePrefab;
+    
+    public Animator playerAnimator;
     public CharacterSkinManager csm;
+
     public SpriteRenderer headSprite;
     public SpriteRenderer bodySprite;
     public SpriteRenderer hand1Sprite;
@@ -30,6 +27,10 @@ public class Player : MonoBehaviour
     public SpriteRenderer accessorySprite;
     public SpriteRenderer gunSprite;
 
+    public bool testing = false;
+    public bool hasShield = false;
+    public int ammo = 0;
+    public float accelerationUp=50f;
 
     //public AudioSource runningSound;
     public AudioClip coinPickup;
@@ -39,26 +40,19 @@ public class Player : MonoBehaviour
     public AudioClip shoot;
     public AudioClip arrows;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        // em = ps.emission;
-        // em.enabled = false;
         shield = this.transform.Find("ShieldPlayerPrefab").gameObject;
 
         LoadSkin();
 
         playerAnimator = GetComponentInChildren(typeof(Animator)) as Animator;
         playerAnimator.Play("Run");
-
-        //runningSound = GetComponent<RunningSound>();
-
     }
 
     private void LoadSkin(){
+        Debug.Log("Loading Character Skin");
         headSprite.sprite = csm.GetSpriteFromBodyPart("head");
 
         bodySprite.sprite = csm.GetSpriteFromBodyPart("body");
@@ -72,9 +66,9 @@ public class Player : MonoBehaviour
         accessorySprite.sprite = csm.GetSpriteFromBodyPart("accessory");
         
         gunSprite.sprite = csm.GetSpriteFromBodyPart("gun");
+        Debug.Log("Character Skin loaded successfully");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(!gameManager.useTouch){
@@ -99,12 +93,8 @@ public class Player : MonoBehaviour
             if((Input.GetButton("Jump")) || (Input.GetMouseButton(0) && Input.mousePosition.x >= Screen.width / 2.0) && !gameManager.gameOver){
                 Fly();
             }
-            // else{
-            //     em.enabled = false;
-            // }
         }
-        else{ 
-            // em.enabled = false;
+        else{
             var tapCount = Input.touchCount;
             for (var i = 0 ; i < tapCount ; i++) {
                 var touch = Input.GetTouch(i);
@@ -117,7 +107,7 @@ public class Player : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        
+        Debug.Log("Collision with " + collision.gameObject.tag);
         switch (collision.gameObject.tag)
         {
             case "Coin":
@@ -129,8 +119,6 @@ public class Player : MonoBehaviour
                 if (!gameManager.gameOver && playerAnimator.GetBool("isFlying")){
                     playerAnimator.Play("Land");
                     playerAnimator.SetBool("isFlying", false);
-                    // play the runningSound sound
-                    //runningSound.PlayOneShot(runningSound, 0.5f);
                 }
                 break;
             case "Shield":
@@ -158,9 +146,9 @@ public class Player : MonoBehaviour
             default:
                 if(!testing){
                     if(hasShield){
+                        Debug.Log("Shield Destroyed.");
                         hasShield = false;
                         shield.SetActive(false);
-                        // Destroy block animation
 
                         Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
                         foreach(Animator anim in animators){
@@ -176,7 +164,6 @@ public class Player : MonoBehaviour
                         gameManager.EndGame();
                         AudioSource.PlayClipAtPoint(gameOver, transform.position);
                     }
-                    
                 }
                 break;
         }
@@ -185,26 +172,21 @@ public class Player : MonoBehaviour
     private void Fly(){
         if(!gameManager.gameOver){
             body.AddForce(Vector2.up*accelerationUp, ForceMode2D.Force);
-            // em.enabled = true;
-            // stop the runningSound sound
-            //runningSound.Stop();
         }
-        
         if(!playerAnimator.GetBool("isFlying")){
             playerAnimator.Play("Jump");
             playerAnimator.SetBool("isFlying", true);
-            //runningSound.Stop();
         }
     }
 
     public void ShootProjectile(Vector3 position){
         if(ammo > 0 && !gameManager.gameOver && Time.time > nextFire){
+            Debug.Log("Shooting projectile");
             ammo -= 1;
             gameManager.SetAmmo(ammo);
             GameObject newProjectile = GameObject.Instantiate(projectilePrefab, new Vector3(position.x+0.6f, position.y+0.1f, position.z), Quaternion.identity);
             nextFire = Time.time + fireRate;
             AudioSource.PlayClipAtPoint(shoot, transform.position);
         }
-        
     }
 }
