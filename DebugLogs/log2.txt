@@ -1,0 +1,1980 @@
+Changing scene to MainScene
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MenuManager:PlayGame () (at Assets/Scripts/MenuManager.cs:32)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Loading Character Skin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:LoadSkin () (at Assets/Scripts/Player.cs:56)
+Player:Start () (at Assets/Scripts/Player.cs:49)
+
+Character Skin loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:LoadSkin () (at Assets/Scripts/Player.cs:70)
+Player:Start () (at Assets/Scripts/Player.cs:49)
+
+Generating pool of CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:78)
+
+Generating pool of CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:79)
+
+Generating pool of 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:80)
+
+Generating pool of 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:81)
+
+Generating pool of 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:82)
+
+Generating pool of DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:83)
+
+Generating pool of DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:84)
+
+Generating pool of DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:85)
+
+Generating pool of Shield
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:86)
+
+Generating pool of Gun
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:87)
+
+Generating pool of ArrowUp
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:88)
+
+Generating pool of ArrowDown
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:89)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:217)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:218)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedDoubleWall in: 22,10659 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated5BlockWall in: 27,82256 , -2,9
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:154)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedCoinLine in: 33,77362 , 1,44
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated4BlockWall in: 38,67487 , -3,35
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated4BlockWall in: 43,8483 , -0,35175
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:235)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:236)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedDoubleWall2 in: 50,91062 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing Gun
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:253)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedGun in: 54,8785 , 1,68
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated6BlockWall in: 50,59274 , -2,25675
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated5BlockWall in: 55,90501 , 0,9135
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing Gun
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:253)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+GeneratedGun in: 58,436 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated5BlockWall in: 63,8391 , -0,9135
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated6BlockWall in: 69,53882 , -2,55
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated6BlockWall in: 75,21837 , 2,55
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated5BlockWall in: 80,5471 , -1,8705
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Detected Desktop, not using touchscreen controls.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:Start () (at Assets/Scripts/GameManager.cs:38)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Game ended, showing game over screen.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:EndGame () (at Assets/Scripts/GameManager.cs:83)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:165)
+
+Changing scene to MainScene
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:PlayGame () (at Assets/Scripts/GameManager.cs:92)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Loading Character Skin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:LoadSkin () (at Assets/Scripts/Player.cs:56)
+Player:Start () (at Assets/Scripts/Player.cs:49)
+
+Character Skin loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:LoadSkin () (at Assets/Scripts/Player.cs:70)
+Player:Start () (at Assets/Scripts/Player.cs:49)
+
+Generating pool of CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:78)
+
+Generating pool of CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:79)
+
+Generating pool of 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:80)
+
+Generating pool of 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:81)
+
+Generating pool of 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:82)
+
+Generating pool of DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:83)
+
+Generating pool of DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:84)
+
+Generating pool of DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:85)
+
+Generating pool of Shield
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:86)
+
+Generating pool of Gun
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:87)
+
+Generating pool of ArrowUp
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:88)
+
+Generating pool of ArrowDown
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:89)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated4BlockWall in: 19,81558 , -1,85925
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:154)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedCoinLine in: 25,32451 , 2,52
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated6BlockWall in: 30,92297 , -2,55
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:163)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedCoinBall in: 34,41229 , -0,63
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated4BlockWall in: 39,61543 , 3,35
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:163)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedCoinBall in: 43,12754 , 1,485
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated4BlockWall in: 47,89342 , 1,45725
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated4BlockWall in: 50,05714 , -0,201
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated5BlockWall in: 55,43045 , 1,0875
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:217)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:218)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+GeneratedDoubleWall in: 63,35357 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated4BlockWall in: 68,27303 , 2,36175
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated5BlockWall in: 73,576 , 2,9
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated6BlockWall in: 79,28832 , -2,55
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Instantiating new 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:384)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated4BlockWall in: 84,17324 , 3,216
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Detected Desktop, not using touchscreen controls.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:Start () (at Assets/Scripts/GameManager.cs:38)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Enqueuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated6BlockWall in: 20,94228 , 1,33875
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated6BlockWall in: 26,90767 , -1,56825
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated6BlockWall in: 33,21503 , 1,64475
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated5BlockWall in: 39,22268 , 1,9575
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated4BlockWall in: 44,34686 , -0,05025
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:235)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:236)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+GeneratedDoubleWall2 in: 52,12552 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated4BlockWall in: 57,42655 , -0,55275
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Collision with 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Game ended, showing game over screen.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:EndGame () (at Assets/Scripts/GameManager.cs:83)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:165)
+
+Changing scene to Menu
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:GoToMainMenu () (at Assets/Scripts/GameManager.cs:87)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Changing scene to CharacterPersonalization
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MenuManager:GoToShop () (at Assets/Scripts/MenuManager.cs:37)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Creating Character Elements for part: head
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:81)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:39)
+
+Objects for part: head loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:110)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:39)
+
+Creating Character Elements for part: body
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:81)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:42)
+
+Objects for part: body loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:110)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:42)
+
+Creating Character Elements for part: legs
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:81)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:45)
+
+Objects for part: legs loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:110)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:45)
+
+Creating Character Elements for part: hands
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:81)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:48)
+
+Objects for part: hands loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:110)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:48)
+
+Creating Character Elements for part: accessory
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:81)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:51)
+
+Objects for part: accessory loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:110)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:51)
+
+Creating Character Elements for part: gun
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:81)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:54)
+
+Objects for part: gun loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:CreateElementsCharacterPart (string) (at Assets/Scripts/CharacterPersonalizatorManager.cs:110)
+CharacterPersonalizatorManager:Start () (at Assets/Scripts/CharacterPersonalizatorManager.cs:54)
+
+head pressed, item 3
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterSkinManager:ChangeEquipment (string,int,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:111)
+CharacterPersonalizatorManager/<>c__DisplayClass19_1:<CreateElementsCharacterPart>b__0 () (at Assets/Scripts/CharacterPersonalizatorManager.cs:106)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Item equipped for part head
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterSkinManager:SetPlayerEquipment (string,int) (at Assets/Scripts/CharacterSkinManager.cs:180)
+CharacterSkinManager:ActionButtonPressed (string,int,UnityEngine.SpriteRenderer,UnityEngine.SpriteRenderer,System.Collections.Generic.List`1<UnityEngine.Sprite>,System.Collections.Generic.List`1<int>,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:150)
+CharacterSkinManager:ChangeEquipment (string,int,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:114)
+CharacterPersonalizatorManager/<>c__DisplayClass19_1:<CreateElementsCharacterPart>b__0 () (at Assets/Scripts/CharacterPersonalizatorManager.cs:106)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Item bought for 200 coins.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterSkinManager:ActionButtonPressed (string,int,UnityEngine.SpriteRenderer,UnityEngine.SpriteRenderer,System.Collections.Generic.List`1<UnityEngine.Sprite>,System.Collections.Generic.List`1<int>,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:153)
+CharacterSkinManager:ChangeEquipment (string,int,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:114)
+CharacterPersonalizatorManager/<>c__DisplayClass19_1:<CreateElementsCharacterPart>b__0 () (at Assets/Scripts/CharacterPersonalizatorManager.cs:106)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+head pressed, item 3
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterSkinManager:ChangeEquipment (string,int,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:111)
+CharacterPersonalizatorManager/<>c__DisplayClass19_1:<CreateElementsCharacterPart>b__0 () (at Assets/Scripts/CharacterPersonalizatorManager.cs:106)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Item equipped for part head
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterSkinManager:SetPlayerEquipment (string,int) (at Assets/Scripts/CharacterSkinManager.cs:180)
+CharacterSkinManager:ActionButtonPressed (string,int,UnityEngine.SpriteRenderer,UnityEngine.SpriteRenderer,System.Collections.Generic.List`1<UnityEngine.Sprite>,System.Collections.Generic.List`1<int>,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:142)
+CharacterSkinManager:ChangeEquipment (string,int,UnityEngine.GameObject) (at Assets/Scripts/CharacterSkinManager.cs:114)
+CharacterPersonalizatorManager/<>c__DisplayClass19_1:<CreateElementsCharacterPart>b__0 () (at Assets/Scripts/CharacterPersonalizatorManager.cs:106)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Changing scene to Menu
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+CharacterPersonalizatorManager:GoBack () (at Assets/Scripts/CharacterPersonalizatorManager.cs:114)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Changing scene to MainScene
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MenuManager:PlayGame () (at Assets/Scripts/MenuManager.cs:32)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
+Loading Character Skin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:LoadSkin () (at Assets/Scripts/Player.cs:56)
+Player:Start () (at Assets/Scripts/Player.cs:49)
+
+Character Skin loaded successfully
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:LoadSkin () (at Assets/Scripts/Player.cs:70)
+Player:Start () (at Assets/Scripts/Player.cs:49)
+
+Generating pool of CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:78)
+
+Generating pool of CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:79)
+
+Generating pool of 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:80)
+
+Generating pool of 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:81)
+
+Generating pool of 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:82)
+
+Generating pool of DoubleWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:83)
+
+Generating pool of DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:84)
+
+Generating pool of DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:85)
+
+Generating pool of Shield
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:86)
+
+Generating pool of Gun
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:87)
+
+Generating pool of ArrowUp
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:88)
+
+Generating pool of ArrowDown
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateQueue (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:374)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:89)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:235)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:236)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedDoubleWall2 in: 21,81206 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated5BlockWall in: 27,49371 , -0,348
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing ArrowUp
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:172)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+GeneratedArrowUp in: 31,47249 , 2,025
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated6BlockWall in: 37,44727 , 0,19125
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated5BlockWall in: 42,96687 , -1,6095
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated6BlockWall in: 48,70078 , -1,224
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generated5BlockWall in: 54,24165 , 1,6965
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:96)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated4BlockWall in: 50,07554 , -3,35
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated6BlockWall in: 55,80856 , 0,49725
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:163)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+GeneratedCoinBall in: 58,72024 , -3
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:226)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:227)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+GeneratedDoubleWall1 in: 65,78608 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing Shield
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:244)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+GeneratedShield in: 68,33147 , 4
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated5BlockWall in: 73,64165 , -2,523
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Generated6BlockWall in: 79,15017 , 2,18025
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Start () (at Assets/Scripts/MapGenerator.cs:97)
+
+Detected Desktop, not using touchscreen controls.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:Start () (at Assets/Scripts/GameManager.cs:38)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with ArrowUp
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Enqueuing DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing ArrowUp
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Enqueuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:121)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:235)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:236)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+GeneratedDoubleWall2 in: 23,05041 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated4BlockWall in: 28,40767 , 1,65825
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated5BlockWall in: 34,54743 , -0,5655
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:154)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+GeneratedCoinLine in: 40,13568 , -4
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:208)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:209)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated6BlockWall in: 46,47879 , 2,55
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing ArrowDown
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:181)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+GeneratedArrowDown in: 52,13839 , -3
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Generated4BlockWall in: 57,37471 , -3,35
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:122)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Coin
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Shield
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Shield Destroyed.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:150)
+
+Enqueuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Enqueuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Enqueuing CoinBall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Enqueuing DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Enqueuing Shield
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Enqueuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Enqueuing 6BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DestroyEntityBlock (UnityEngine.GameObject[]) (at Assets/Scripts/MapGenerator.cs:284)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:126)
+
+Generating new Entity Block 
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:146)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Generated5BlockWall in: 20,89364 , 0,3045
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing CoinLine
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:154)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+GeneratedCoinLine in: 26,97416 , 4
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Generated5BlockWall in: 32,95924 , -2,9
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:190)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Restarting Animation for 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:191)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Generated4BlockWall in: 38,50977 , -2,7135
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:235)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Restarting Animation for DoubleWall2
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:236)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+GeneratedDoubleWall2 in: 45,82322 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:199)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Restarting Animation for 5BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:200)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Generated5BlockWall in: 52,00771 , 0,522
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Dequeuing DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:DequeueOrInstantiate (System.Collections.Generic.Queue`1<UnityEngine.GameObject>,UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:387)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:226)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Restarting Animation for DoubleWall1
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:RestartAnimation (UnityEngine.GameObject) (at Assets/Scripts/MapGenerator.cs:392)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:227)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+GeneratedDoubleWall1 in: 60,32072 , 0
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+MapGenerator:GenerateEntityBlock (UnityEngine.GameObject[],single) (at Assets/Scripts/MapGenerator.cs:272)
+MapGenerator:Update () (at Assets/Scripts/MapGenerator.cs:127)
+
+Collision with 4BlockWall
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Game ended, showing game over screen.
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:EndGame () (at Assets/Scripts/GameManager.cs:83)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:165)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Collision with Ground
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+Player:OnTriggerEnter2D (UnityEngine.Collider2D) (at Assets/Scripts/Player.cs:111)
+
+Changing scene to Menu
+UnityEngine.Debug:Log (object)
+Debugging:DebugLog (string) (at Assets/Scripts/Debug.cs:10)
+GameManager:GoToMainMenu () (at Assets/Scripts/GameManager.cs:87)
+UnityEngine.EventSystems.EventSystem:Update () (at Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs:385)
+
