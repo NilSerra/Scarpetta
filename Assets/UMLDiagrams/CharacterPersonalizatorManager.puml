@@ -1,0 +1,25 @@
+@startuml
+class CharacterPersonalizatorManager {
+    + headSprite : SpriteRenderer
+    + headSprites : List<Sprite>
+    + headSpritesCost : List<int>
+    + bodySprite : SpriteRenderer
+    + leg1Sprite : SpriteRenderer
+    + leg2Sprite : SpriteRenderer
+    + hand1Sprite : SpriteRenderer
+    + hand2Sprite : SpriteRenderer
+    + accessorySprite : SpriteRenderer
+    + gunSprite : SpriteRenderer
+    {static} titles : List<string>
+    + contentList : GameObject
+    + listElementPrefab : GameObject
+    + titlePrefab : GameObject
+    + popupPanel : GameObject
+    + CoinsText : Text
+    + csm : CharacterSkinManager
+    + GoBack() : void
+    + TestFunctionAddCoins() : void
+    + okButton() : void
+}
+MonoBehaviour <|-- CharacterPersonalizatorManager
+@enduml

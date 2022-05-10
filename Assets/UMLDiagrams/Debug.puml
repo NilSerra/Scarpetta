@@ -1,0 +1,6 @@
+@startuml
+class Debugging {
+    + {static} DebugLog(text:string) : void
+}
+MonoBehaviour <|-- Debugging
+@enduml

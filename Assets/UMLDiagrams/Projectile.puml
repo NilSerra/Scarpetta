@@ -1,0 +1,9 @@
+@startuml
+class Projectile {
+    + breakWall : AudioClip
+    + projectileVelocity : float = 30f
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- Projectile
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class ScreenShotCapturer {
+    + screenShotEnabled : bool = false
+    + screenShotIndex : int = 0
+    Update() : void
+}
+MonoBehaviour <|-- ScreenShotCapturer
+@enduml

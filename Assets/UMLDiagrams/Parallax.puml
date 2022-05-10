@@ -1,0 +1,23 @@
+@startuml
+class Parallax {
+    + cam : Camera
+    + widthThresold : Vector2
+    + layer0 : GameObject
+    + layer0Parallax : float = 0.9f
+    + layer1 : GameObject
+    + layer1Parallax : float = 0.7f
+    + layer2 : GameObject
+    + layer2Parallax : float = 0.4f
+    + layer3 : GameObject
+    + layer3Parallax : float = 0.2f
+    + floor : GameObject
+    + floorParallax : float = 1f
+    + background : GameObject
+    + map : MapGenerator
+    + tutorial : TutorialGenerator
+    + isTutorial : bool = false
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- Parallax
+@enduml

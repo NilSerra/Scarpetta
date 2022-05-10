@@ -1,0 +1,27 @@
+@startuml
+class GameManager {
+    + pauseButton : GameObject
+    + gameOverMenu : GameObject
+    + gameOver : bool = false
+    + score : float
+    + coins : int
+    + ammo : int
+    + scoreText : Text
+    + coinsText : Text
+    + ammoText : Text
+    + audioSource : AudioSource
+    + useTouch : bool
+    + highestScore : GameObject
+    + finalScoreText : GameObject
+    Start() : void
+    Update() : void
+    + IncScore(currentScore:float) : void
+    + IncCoins() : void
+    + SetAmmo(currentAmmo:int) : void
+    + EndGame() : void
+    + GoToMainMenu() : void
+    + PlayGame() : void
+    + PlayTutorial() : void
+}
+MonoBehaviour <|-- GameManager
+@enduml

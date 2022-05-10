@@ -1,0 +1,44 @@
+@startuml
+class CharacterSkinManager {
+    + headSprite : SpriteRenderer
+    + bodySprite : SpriteRenderer
+    + leg1Sprite : SpriteRenderer
+    + leg2Sprite : SpriteRenderer
+    + hand1Sprite : SpriteRenderer
+    + hand2Sprite : SpriteRenderer
+    + accessorySprite : SpriteRenderer
+    + gunSprite : SpriteRenderer
+    + headSprites : List<Sprite>
+    + bodySprites : List<Sprite>
+    + legSprites : List<Sprite>
+    + handSprites : List<Sprite>
+    + accessorySprites : List<Sprite>
+    + gunSprites : List<Sprite>
+    + headSpritesCost : List<int>
+    + bodySpritesCost : List<int>
+    + legSpritesCost : List<int>
+    + handSpritesCost : List<int>
+    + accessorySpritesCost : List<int>
+    + gunSpritesCost : List<int>
+    + {static} titles : List<string>
+    + CoinsTextCustomizationScreen : Text
+    + popupPanel : GameObject
+    + buySound : AudioClip
+    + errorSound : AudioClip
+    + GetItemCost(bodyPart:string, index:int) : int
+    + GetSpriteItem(bodyPart:string, index:int) : Sprite
+    + GetSpriteListCount(bodyPart:string) : int
+    + ChangeEquipment(title:string, elementIndex:int, buttonText:GameObject) : void
+    + GetPlayerPrefNameForItem(bodyPart:string, index:int) : string
+    + GetPlayerEquipmentPrefName(bodyPart:string) : string
+    + SetPlayerEquipment(bodyPart:string, index:int) : void
+    + GetPlayerEquipmentIndex(bodyPart:string) : int
+    + GetSpriteFromBodyPart(bodyPart:string) : Sprite
+    + PlayerOwnsItem(preferencesText:string) : bool
+    + PlayerHasMoney(costItem:int) : bool
+    + GetCoinsPlayer() : int
+    + SetCoinsPlayer(coins:int) : void
+    ActivatePopupMenu() : IEnumerator
+}
+MonoBehaviour <|-- CharacterSkinManager
+@enduml
