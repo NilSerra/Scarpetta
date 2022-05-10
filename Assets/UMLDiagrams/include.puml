@@ -1,0 +1,15 @@
+@startuml
+!include .\\CharacterPersonalizatorManager.puml
+!include .\\CharacterSkinManager.puml
+!include .\\Debug.puml
+!include .\\FloorMovement.puml
+!include .\\GameManager.puml
+!include .\\MapGenerator.puml
+!include .\\MenuManager.puml
+!include .\\Parallax.puml
+!include .\\PauseMenu.puml
+!include .\\Player.puml
+!include .\\Projectile.puml
+!include .\\ScreenShotCapturer.puml
+!include .\\TutorialGenerator.puml
+@enduml

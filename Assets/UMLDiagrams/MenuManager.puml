@@ -1,0 +1,13 @@
+@startuml
+class MenuManager {
+    + highestScoreText : Text
+    + totalCoinsText : Text
+    + helpMessagePanel : GameObject
+    Start() : void
+    + PlayGame() : void
+    + GoToShop() : void
+    + PlayTutorial() : void
+    + QuitGame() : void
+}
+MonoBehaviour <|-- MenuManager
+@enduml

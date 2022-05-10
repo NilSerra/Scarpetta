@@ -1,0 +1,28 @@
+@startuml
+class TutorialGenerator {
+    + gameManager : GameManager
+    + baseSpeed : float = 5f
+    + coinLinePrefab : GameObject
+    + wall5BlocksPrefab : GameObject
+    + wall6BlocksPrefab : GameObject
+    + shieldPrefab : GameObject
+    + gunPowerUpPrefab : GameObject
+    + arrowUpPrefab : GameObject
+    + arrowDownPrefab : GameObject
+    + maxXspeed : float = 20
+    + speedIncreaseFactor : int = 60
+    + entityBlock : GameObject[]
+    + popupPanel : GameObject
+    + popupPanel2 : GameObject
+    + hint1shown : bool = false
+    + hint2shown : bool = false
+    + hint3shown : bool = false
+    + hint4shown : bool = false
+    + hint5shown : bool = false
+    + hint6shown : bool = false
+    + hint7shown : bool = false
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- TutorialGenerator
+@enduml

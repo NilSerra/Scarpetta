@@ -1,0 +1,31 @@
+@startuml
+class Player {
+    + gameManager : GameManager
+    + projectilePrefab : GameObject
+    + playerAnimator : Animator
+    + csm : CharacterSkinManager
+    + headSprite : SpriteRenderer
+    + bodySprite : SpriteRenderer
+    + hand1Sprite : SpriteRenderer
+    + hand2Sprite : SpriteRenderer
+    + leg1Sprite : SpriteRenderer
+    + leg2Sprite : SpriteRenderer
+    + accessorySprite : SpriteRenderer
+    + gunSprite : SpriteRenderer
+    + testing : bool = false
+    + hasShield : bool = false
+    + ammo : int = 0
+    + accelerationUp : float = 50f
+    + coinPickup : AudioClip
+    + breakWall : AudioClip
+    + gameOver : AudioClip
+    + powerUp : AudioClip
+    + shoot : AudioClip
+    + arrows : AudioClip
+    Start() : void
+    Update() : void
+    FixedUpdate() : void
+    + ShootProjectile(position:Vector3) : void
+}
+MonoBehaviour <|-- Player
+@enduml

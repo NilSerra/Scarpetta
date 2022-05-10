@@ -1,0 +1,25 @@
+@startuml
+class MapGenerator {
+    + player : GameObject
+    + playerAnimator : Animator
+    + gameManager : GameManager
+    + coinBallPrefab : GameObject
+    + coinLinePrefab : GameObject
+    + wall4BlocksPrefab : GameObject
+    + wall5BlocksPrefab : GameObject
+    + wall6BlocksPrefab : GameObject
+    + doubleWallPrefab : GameObject
+    + doubleWall1Prefab : GameObject
+    + doubleWall2Prefab : GameObject
+    + shieldPrefab : GameObject
+    + gunPowerUpPrefab : GameObject
+    + arrowUpPrefab : GameObject
+    + arrowDownPrefab : GameObject
+    + speedIncreaseFactor : int = 60
+    + maxXspeed : float = 20
+    + baseSpeed : float = 5f
+    Start() : void
+    Update() : void
+}
+MonoBehaviour <|-- MapGenerator
+@enduml
