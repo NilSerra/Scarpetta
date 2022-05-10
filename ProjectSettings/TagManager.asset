@@ -18,6 +18,7 @@ TagManager:
   - 4BlockWall
   - 5BlockWall
   - 6BlockWall
+  - CoinLine
   layers:
   - Default
   - TransparentFX

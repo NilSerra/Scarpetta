@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static Debugging;
 
 public class Projectile : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
             if(collision.gameObject.tag == "4BlockWall"||collision.gameObject.tag == "5BlockWall"||collision.gameObject.tag == "6BlockWall"||collision.gameObject.tag == "DoubleWall"||collision.gameObject.tag == "DoubleWall1"||collision.gameObject.tag == "DoubleWall2"){
+                Debugging.DebugLog("Projectile hit block wall");
                 Animator[] animators = collision.gameObject.GetComponentsInChildren<Animator>();
                 foreach(Animator anim in animators){
                     anim.Play("block_destroy");

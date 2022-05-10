@@ -20,8 +20,8 @@ public class MenuManager : MonoBehaviour
     }
 
     private void ShowHelpMessage(){
-        Debugging.DebugLog("Showing tutorial message");
         if(SceneManager.GetActiveScene().name == "MenuScreen" && PlayerPrefs.GetInt("FirstTimeOpening", 1)==1){
+            Debugging.DebugLog("Showing tutorial message");
             helpMessagePanel.SetActive(true);
         }
         else{
