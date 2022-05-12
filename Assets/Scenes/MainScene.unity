@@ -1047,6 +1047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
+  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1054,6 +1055,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &519420029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
+  m_UpscaleRT: 1
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1982,10 +2003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1881568170}
   projectilePrefab: {fileID: 5522781717507625630, guid: dbf9771e41591df4aa053d206650a2d3, type: 3}
-  testing: 0
-  hasShield: 0
-  ammo: 0
-  accelerationUp: 40
   playerAnimator: {fileID: 839670899}
   csm: {fileID: 423769763}
   headSprite: {fileID: 2131194727}
@@ -1996,6 +2013,10 @@ MonoBehaviour:
   leg2Sprite: {fileID: 2131194722}
   accessorySprite: {fileID: 2131194721}
   gunSprite: {fileID: 2131194720}
+  testing: 0
+  hasShield: 0
+  ammo: 0
+  accelerationUp: 40
   coinPickup: {fileID: 8300000, guid: b6186da35600d42b5b9e402bb00dc4e9, type: 3}
   breakWall: {fileID: 8300000, guid: 542741810fa004f74b592bba9af3b3a7, type: 3}
   gameOver: {fileID: 8300000, guid: 07214b24e79d34ca4baa43b4e00b17e3, type: 3}
@@ -7230,7 +7251,6 @@ MonoBehaviour:
   player: {fileID: 839670898}
   playerAnimator: {fileID: 839670899}
   gameManager: {fileID: 1881568170}
-  baseSpeed: 5
   coinBallPrefab: {fileID: 236707830581945670, guid: 05990412e65f7c14ba1723d28c18771a, type: 3}
   coinLinePrefab: {fileID: 5812931581645596059, guid: 359f6c189826f51479213ff2a7c32545, type: 3}
   wall4BlocksPrefab: {fileID: 5855049430468456770, guid: 55410bf30dd547749b0507becd139884, type: 3}
@@ -7243,8 +7263,9 @@ MonoBehaviour:
   gunPowerUpPrefab: {fileID: 1697878235714752504, guid: 111985949ec2d834ba4debcc8d8e63c3, type: 3}
   arrowUpPrefab: {fileID: 4744154613839282912, guid: e527d3302b5fc0240ba5f26497bd6ceb, type: 3}
   arrowDownPrefab: {fileID: 7528409414495124365, guid: 637cf2e59f78a4d4f9dfbddad66a31ab, type: 3}
-  maxXspeed: 20
   speedIncreaseFactor: 30
+  maxXspeed: 20
+  baseSpeed: 5
 --- !u!4 &1566922838
 Transform:
   m_ObjectHideFlags: 0
@@ -7938,7 +7959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d318ea217c613408e442153dceddaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  superSize: 1
+  screenShotEnabled: 0
   screenShotIndex: 0
 --- !u!1 &2028717873
 GameObject:
