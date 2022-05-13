@@ -1,4 +1,4 @@
-@startuml
+@startuml PauseMenu
 class PauseMenu {
     + gameManager : GameManager
     + pauseMenu : GameObject

@@ -1,4 +1,4 @@
-@startuml
+@startuml TutorialGenerator
 class TutorialGenerator {
     + gameManager : GameManager
     + baseSpeed : float = 5f

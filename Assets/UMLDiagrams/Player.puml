@@ -1,4 +1,4 @@
-@startuml
+@startuml Player
 class Player {
     + gameManager : GameManager
     + projectilePrefab : GameObject

@@ -1,4 +1,4 @@
-@startuml
+@startuml CharacterSkinManager
 class CharacterSkinManager {
     + headSprite : SpriteRenderer
     + bodySprite : SpriteRenderer

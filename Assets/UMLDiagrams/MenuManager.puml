@@ -1,4 +1,4 @@
-@startuml
+@startuml MenuManager
 class MenuManager {
     + highestScoreText : Text
     + totalCoinsText : Text

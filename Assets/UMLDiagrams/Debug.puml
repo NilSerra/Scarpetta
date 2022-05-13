@@ -1,4 +1,4 @@
-@startuml
+@startuml Debugging
 class Debugging {
     + {static} DebugLog(text:string) : void
 }

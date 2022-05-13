@@ -1,4 +1,4 @@
-@startuml
+@startuml Projectile
 class Projectile {
     + breakWall : AudioClip
     + projectileVelocity : float = 30f

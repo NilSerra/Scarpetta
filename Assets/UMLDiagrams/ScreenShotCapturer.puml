@@ -1,4 +1,4 @@
-@startuml
+@startuml ScreenShotCapturer
 class ScreenShotCapturer {
     + screenShotEnabled : bool = false
     + screenShotIndex : int = 0

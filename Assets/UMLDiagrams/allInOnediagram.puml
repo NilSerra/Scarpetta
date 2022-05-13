@@ -1,0 +1,262 @@
+@startuml
+class CharacterPersonalizatorManager {
+    + headSprite : SpriteRenderer
+    + headSprites : List<Sprite>
+    + headSpritesCost : List<int>
+    + bodySprite : SpriteRenderer
+    + leg1Sprite : SpriteRenderer
+    + leg2Sprite : SpriteRenderer
+    + hand1Sprite : SpriteRenderer
+    + hand2Sprite : SpriteRenderer
+    + accessorySprite : SpriteRenderer
+    + gunSprite : SpriteRenderer
+    {static} titles : List<string>
+    + contentList : GameObject
+    + listElementPrefab : GameObject
+    + titlePrefab : GameObject
+    + popupPanel : GameObject
+    + CoinsText : Text
+    + csm : CharacterSkinManager
+    + GoBack() : void
+    + TestFunctionAddCoins() : void
+    + okButton() : void
+}
+
+
+
+class CharacterSkinManager {
+    + headSprite : SpriteRenderer
+    + bodySprite : SpriteRenderer
+    + leg1Sprite : SpriteRenderer
+    + leg2Sprite : SpriteRenderer
+    + hand1Sprite : SpriteRenderer
+    + hand2Sprite : SpriteRenderer
+    + accessorySprite : SpriteRenderer
+    + gunSprite : SpriteRenderer
+    + headSprites : List<Sprite>
+    + bodySprites : List<Sprite>
+    + legSprites : List<Sprite>
+    + handSprites : List<Sprite>
+    + accessorySprites : List<Sprite>
+    + gunSprites : List<Sprite>
+    + headSpritesCost : List<int>
+    + bodySpritesCost : List<int>
+    + legSpritesCost : List<int>
+    + handSpritesCost : List<int>
+    + accessorySpritesCost : List<int>
+    + gunSpritesCost : List<int>
+    + {static} titles : List<string>
+    + CoinsTextCustomizationScreen : Text
+    + popupPanel : GameObject
+    + buySound : AudioClip
+    + errorSound : AudioClip
+    + GetItemCost(bodyPart:string, index:int) : int
+    + GetSpriteItem(bodyPart:string, index:int) : Sprite
+    + GetSpriteListCount(bodyPart:string) : int
+    + ChangeEquipment(title:string, elementIndex:int, buttonText:GameObject) : void
+    + GetPlayerPrefNameForItem(bodyPart:string, index:int) : string
+    + GetPlayerEquipmentPrefName(bodyPart:string) : string
+    + SetPlayerEquipment(bodyPart:string, index:int) : void
+    + GetPlayerEquipmentIndex(bodyPart:string) : int
+    + GetSpriteFromBodyPart(bodyPart:string) : Sprite
+    + PlayerOwnsItem(preferencesText:string) : bool
+    + PlayerHasMoney(costItem:int) : bool
+    + GetCoinsPlayer() : int
+    + SetCoinsPlayer(coins:int) : void
+    ActivatePopupMenu() : IEnumerator
+}
+
+
+
+class Debugging {
+    + {static} DebugLog(text:string) : void
+}
+
+
+
+class GameManager {
+    + pauseButton : GameObject
+    + gameOverMenu : GameObject
+    + gameOver : bool = false
+    + score : float
+    + coins : int
+    + ammo : int
+    + scoreText : Text
+    + coinsText : Text
+    + ammoText : Text
+    + audioSource : AudioSource
+    + useTouch : bool
+    + highestScore : GameObject
+    + finalScoreText : GameObject
+    Start() : void
+    Update() : void
+    + IncScore(currentScore:float) : void
+    + IncCoins() : void
+    + SetAmmo(currentAmmo:int) : void
+    + EndGame() : void
+    + GoToMainMenu() : void
+    + PlayGame() : void
+    + PlayTutorial() : void
+}
+
+
+
+class MapGenerator {
+    + player : GameObject
+    + playerAnimator : Animator
+    + gameManager : GameManager
+    + coinBallPrefab : GameObject
+    + coinLinePrefab : GameObject
+    + wall4BlocksPrefab : GameObject
+    + wall5BlocksPrefab : GameObject
+    + wall6BlocksPrefab : GameObject
+    + doubleWallPrefab : GameObject
+    + doubleWall1Prefab : GameObject
+    + doubleWall2Prefab : GameObject
+    + shieldPrefab : GameObject
+    + gunPowerUpPrefab : GameObject
+    + arrowUpPrefab : GameObject
+    + arrowDownPrefab : GameObject
+    + speedIncreaseFactor : int = 60
+    + maxXspeed : float = 20
+    + baseSpeed : float = 5f
+    Start() : void
+    Update() : void
+}
+
+
+
+class MenuManager {
+    + highestScoreText : Text
+    + totalCoinsText : Text
+    + helpMessagePanel : GameObject
+    Start() : void
+    + PlayGame() : void
+    + GoToShop() : void
+    + PlayTutorial() : void
+    + QuitGame() : void
+}
+
+
+
+
+class Parallax {
+    + cam : Camera
+    + widthThresold : Vector2
+    + layer0 : GameObject
+    + layer0Parallax : float = 0.9f
+    + layer1 : GameObject
+    + layer1Parallax : float = 0.7f
+    + layer2 : GameObject
+    + layer2Parallax : float = 0.4f
+    + layer3 : GameObject
+    + layer3Parallax : float = 0.2f
+    + floor : GameObject
+    + floorParallax : float = 1f
+    + background : GameObject
+    + map : MapGenerator
+    + tutorial : TutorialGenerator
+    + isTutorial : bool = false
+    Start() : void
+    Update() : void
+}
+
+
+
+class PauseMenu {
+    + gameManager : GameManager
+    + pauseMenu : GameObject
+    + pauseButton : GameObject
+    + isPaused : bool
+    Start() : void
+    Update() : void
+    + PauseGame() : void
+    + ResumeGame() : void
+    + GoToMainMenu() : void
+}
+
+
+
+class Player {
+    + gameManager : GameManager
+    + projectilePrefab : GameObject
+    + playerAnimator : Animator
+    + csm : CharacterSkinManager
+    + headSprite : SpriteRenderer
+    + bodySprite : SpriteRenderer
+    + hand1Sprite : SpriteRenderer
+    + hand2Sprite : SpriteRenderer
+    + leg1Sprite : SpriteRenderer
+    + leg2Sprite : SpriteRenderer
+    + accessorySprite : SpriteRenderer
+    + gunSprite : SpriteRenderer
+    + testing : bool = false
+    + hasShield : bool = false
+    + ammo : int = 0
+    + accelerationUp : float = 50f
+    + coinPickup : AudioClip
+    + breakWall : AudioClip
+    + gameOver : AudioClip
+    + powerUp : AudioClip
+    + shoot : AudioClip
+    + arrows : AudioClip
+    Start() : void
+    Update() : void
+    FixedUpdate() : void
+    + ShootProjectile(position:Vector3) : void
+}
+
+
+class Projectile {
+    + breakWall : AudioClip
+    + projectileVelocity : float = 30f
+    Start() : void
+    Update() : void
+}
+
+
+
+class ScreenShotCapturer {
+    + screenShotEnabled : bool = false
+    + screenShotIndex : int = 0
+    Update() : void
+}
+
+
+class TutorialGenerator {
+    + gameManager : GameManager
+    + baseSpeed : float = 5f
+    + coinLinePrefab : GameObject
+    + wall5BlocksPrefab : GameObject
+    + wall6BlocksPrefab : GameObject
+    + shieldPrefab : GameObject
+    + gunPowerUpPrefab : GameObject
+    + arrowUpPrefab : GameObject
+    + arrowDownPrefab : GameObject
+    + maxXspeed : float = 20
+    + speedIncreaseFactor : int = 60
+    + entityBlock : GameObject[]
+    + popupPanel : GameObject
+    + popupPanel2 : GameObject
+    + hint1shown : bool = false
+    + hint2shown : bool = false
+    + hint3shown : bool = false
+    + hint4shown : bool = false
+    + hint5shown : bool = false
+    + hint6shown : bool = false
+    + hint7shown : bool = false
+    Start() : void
+    Update() : void
+}
+@enduml
+
+@startuml
+CharacterSkinManager -- CharacterPersonalizatorManager
+CharacterSkinManager -- Player
+GameManager -- MapGenerator
+GameManager -- PauseMenu
+GameManager -- Player
+GameManager -- TutorialGenerator
+MapGenerator -- Parallax
+TutorialGenerator -- Parallax
+@endluml

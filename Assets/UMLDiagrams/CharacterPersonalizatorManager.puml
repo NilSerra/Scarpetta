@@ -1,4 +1,4 @@
-@startuml
+@startuml CharacterPersonalizatorManager
 class CharacterPersonalizatorManager {
     + headSprite : SpriteRenderer
     + headSprites : List<Sprite>

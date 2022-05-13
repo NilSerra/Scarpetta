@@ -1,4 +1,4 @@
-@startuml
+@startuml Parallax
 class Parallax {
     + cam : Camera
     + widthThresold : Vector2
