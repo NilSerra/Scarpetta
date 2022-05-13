@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     public GameObject helpMessagePanel;
 
     void Start() {
+        Application.targetFrameRate = 60;
         float highestScore = PlayerPrefs.GetInt("HighestScore", 0);
         float totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
         highestScoreText.text = "HIGHEST SCORE " + highestScore+" m";

@@ -32,6 +32,7 @@ public class CharacterPersonalizatorManager : MonoBehaviour
     public CharacterSkinManager csm;
 
     private void Start() {
+        Application.targetFrameRate = 60;
         for(int index = 0; index < titles.Count; ++index){
             
             switch (titles[index]){
